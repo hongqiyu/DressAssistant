@@ -77,17 +77,78 @@
             tools:layout_editor_absoluteY="30dp"
             android:gravity="top"/>
 
-        <ImageView
+        <FrameLayout
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="200dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/SV1"
             android:layout_marginTop="12dp"
 
             tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="100dp" />
+            tools:layout_editor_absoluteY="100dp">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_gravity="bottom"
+                android:background="#33000000"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="图片标题"
+                    android:textColor="@android:color/white"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dip"
+                    android:orientation="horizontal">
+                    <View
+                        android:id="@+id/dot_0"
+                        android:layout_width="5dip"
+                        android:layout_height="5dip"
+                        android:layout_marginLeft="2dip"
+                        android:layout_marginRight="2dip"
+                        android:background="@drawable/ex"/>
+                    <View
+                        android:id="@+id/dot_1"
+                        android:layout_width="5dip"
+                        android:layout_height="5dip"
+                        android:layout_marginLeft="2dip"
+                        android:layout_marginRight="2dip"
+                        android:background="@drawable/ex"/>
+                    <View
+                        android:id="@+id/dot_2"
+                        android:layout_width="5dip"
+                        android:layout_height="5dip"
+                        android:layout_marginLeft="2dip"
+                        android:layout_marginRight="2dip"
+                        android:background="@drawable/ex"/>  
+                    <View
+                        android:id="@+id/dot_3"
+                        android:layout_width="5dip"
+                        android:layout_height="5dip"
+                        android:layout_marginLeft="2dip"
+                        android:layout_marginRight="2dip"
+                        android:background="@drawable/ex"/>  
+                          <View
+                    android:id="@+id/dot_4"
+                    android:layout_width="5dip"
+                    android:layout_height="5dip"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:background="@drawable/ex"/>  
+                                      
+                                </LinearLayout>  
+                        </LinearLayout>  
+                </FrameLayout>
         <LinearLayout
             android:id="@+id/LL"
             android:layout_below="@id/imageView"
