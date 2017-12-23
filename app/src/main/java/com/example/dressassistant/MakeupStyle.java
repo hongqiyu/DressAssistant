@@ -38,17 +38,17 @@ public class MakeupStyle extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Button but=(Button) findViewById(R.id.button6);
-        but.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent=new Intent(MakeupStyle.this,MakeupStyle.class);
-                startActivity(intent);
-            }
-        });
         Button butto=(Button) findViewById(R.id.button7);
         butto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MakeupStyle.this,MySpace.class);
+                startActivity(intent);
+            }
+        });
+        Button buttonn=(Button)findViewById(R.id.button);
+        buttonn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(MakeupStyle.this,MainActivity.class);
                 startActivity(intent);
             }
         });
