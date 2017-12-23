@@ -36,13 +36,29 @@
                android:layout_alignParentLeft="true"
                android:layout_alignParentStart="true">
            </Spinner>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="答案："
+                    android:id="@+id/tvv5"
+                    android:layout_below="@+id/q1"
+                    android:textSize="20dp"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:layout_below="@id/tvv5"
+                    android:id="@+id/et1"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="问题二："
                 android:textSize="20dp"
                 android:layout_marginTop="10dp"
-                android:layout_below="@+id/q1"
+                android:layout_below="@+id/et1"
                 android:id="@+id/tvv3"/>
             <Spinner
                 android:layout_width="match_parent"
@@ -54,10 +70,25 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="答案："
+                android:id="@+id/tvv6"
+                android:layout_below="@+id/q2"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:layout_below="@id/tvv6"
+                android:id="@+id/et2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="问题三："
                 android:textSize="20dp"
-                android:layout_below="@+id/q2"
+                android:layout_below="@+id/et2"
                 android:id="@+id/tvv4"/>
             <Spinner
                 android:layout_width="match_parent"
@@ -66,10 +97,25 @@
                 android:id="@+id/q3"
                 android:entries="@array/questions">
             </Spinner>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="答案："
+                android:id="@+id/tvv7"
+                android:layout_below="@+id/q3"
+                android:textSize="20dp"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:layout_below="@id/tvv7"
+                android:id="@+id/et3"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/q3"
+                android:layout_below="@+id/et3"
                 android:text="确定"
                 android:textSize="20dp"
                 android:textColor="#FFFFFF"

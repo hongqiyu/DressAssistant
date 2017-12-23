@@ -27,6 +27,7 @@
         <activity android:name=".MyClass"></activity>
         <activity android:name=".Login"></activity>
         <activity android:name=".Register"></activity>
+        <activity android:name=".Requestion"></activity>
     </application>
 
 </manifest>
