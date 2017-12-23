@@ -33,17 +33,17 @@ public class DressStyle extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button buttonn=(Button)findViewById(R.id.button);
+        buttonn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(DressStyle.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
         Button bu=(Button) findViewById(R.id.button8);
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(DressStyle.this,HairStyle.class);
-                startActivity(intent);
-            }
-        });
-        Button b=(Button) findViewById(R.id.button5);
-        b.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent=new Intent(DressStyle.this,DressStyle.class);
                 startActivity(intent);
             }
         });

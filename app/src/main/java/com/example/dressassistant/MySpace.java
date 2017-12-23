@@ -47,17 +47,17 @@ public class MySpace extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Button butto=(Button) findViewById(R.id.button7);
-        butto.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent=new Intent(MySpace.this,MySpace.class);
-                startActivity(intent);
-            }
-        });
         Button buu=(Button) findViewById(R.id.button10);
         buu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MySpace.this,Login.class);
+                startActivity(intent);
+            }
+        });
+        Button bb=(Button)findViewById(R.id.button);
+        bb.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(MySpace.this,MainActivity.class);
                 startActivity(intent);
             }
         });

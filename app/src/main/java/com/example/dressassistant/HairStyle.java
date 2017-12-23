@@ -22,13 +22,6 @@ public class HairStyle extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Button bub=(Button) findViewById(R.id.button8);
-        bub.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent=new Intent(HairStyle.this,HairStyle.class);
-                startActivity(intent);
-            }
-        });
         Button b=(Button) findViewById(R.id.button5);
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -47,6 +40,13 @@ public class HairStyle extends AppCompatActivity {
         butto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(HairStyle.this,MySpace.class);
+                startActivity(intent);
+            }
+        });
+        Button buttonn=(Button)findViewById(R.id.button);
+        buttonn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(HairStyle.this,MainActivity.class);
                 startActivity(intent);
             }
         });
