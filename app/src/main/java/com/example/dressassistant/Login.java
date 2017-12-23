@@ -106,6 +106,11 @@ public class Login extends AppCompatActivity {
                         if(isStrEmpty(strUserPwd) == false){
                             if(isValidUser(strUserName,strUserPwd) == true){
                                 Toast.makeText(Login.this,"用户登录成功！",Toast.LENGTH_SHORT).show();
+                               //登陆成功时跳转到主页面，并传参数
+                                String data = " Hello MainActivity";
+                                Intent intent=new Intent(Login.this,MainActivity.class);
+                                intent.putExtra("extra_data", data);
+                                startActivity(intent);
                             }
                             else{
                                 Toast.makeText(Login.this,"用户登录失败！",Toast.LENGTH_SHORT).show();

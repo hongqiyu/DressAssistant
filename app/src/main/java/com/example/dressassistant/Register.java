@@ -128,7 +128,7 @@ public class Register extends AppCompatActivity {
     }
 
     //数据库插入用户
-    private void insertUserInfo(String strUserName, String strUserPwd)
+    private boolean insertUserInfo(String strUserName, String strUserPwd)
     {
         int iUserType = 0;
         if(isExistUserName(strUserName) == false){
@@ -140,11 +140,13 @@ public class Register extends AppCompatActivity {
             {
                 db.insert("tuserinfo", null, cvRUserInfo);
                 Toast.makeText(Register.this,"注册成功！", Toast.LENGTH_SHORT).show();
+                return true;
             }
         }
         else{
             Toast.makeText(Register.this, "您要注册的用户名已经存在！", Toast.LENGTH_SHORT).show();
         }
+        return false;
     }
 
     @Override
@@ -169,7 +171,12 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
                 EditText EditText1 = (EditText) findViewById(R.id.editText1);   //读入xml用户名
                 EditText EditText2 = (EditText) findViewById(R.id.editText2);   //读入xml密码
-                insertUserInfo(EditText1.getText().toString(),EditText2.getText().toString());
+              //若注册成功，跳转到登陆页面
+               if(insertUserInfo(EditText1.getText().toString(),EditText2.getText().toString())){
+                   Intent intent=new Intent(Register.this,Login.class);
+                   startActivity(intent);
+               }
+
             }
         });
     }

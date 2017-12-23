@@ -5,6 +5,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.Button;
 import android.view.View;
 import android.widget.ImageView;
@@ -64,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         Button bu=(Button) findViewById(R.id.button8);
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -102,6 +106,10 @@ public class MainActivity extends AppCompatActivity {
         but3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 scrollTo();
+                //点击最热发型时显示返回的参数
+                Intent intent = getIntent();
+                String data = intent.getStringExtra("extra_data");
+                Toast.makeText(MainActivity.this, data, Toast.LENGTH_SHORT).show();
             }
         });
         Button but2=(Button) findViewById(R.id.button3);
@@ -154,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     /** 
@@ -280,6 +289,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 
 }
 
