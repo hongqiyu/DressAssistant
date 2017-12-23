@@ -88,6 +88,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="完成"
+                android:textSize="20dp"
                 android:textColor="#FFFFFF"
                 android:background="#EE3B3B"
                 android:layout_below="@+id/rb9"/>
