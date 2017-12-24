@@ -28,6 +28,9 @@
         <activity android:name=".Login"></activity>
         <activity android:name=".Register"></activity>
         <activity android:name=".Requestion"></activity>
+        <activity android:name=".Information"></activity>
+        <activity android:name=".Figure"></activity>
+        <activity android:name=".Question"></activity>
     </application>
 
 </manifest>

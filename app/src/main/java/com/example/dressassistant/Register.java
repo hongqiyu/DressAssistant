@@ -170,6 +170,8 @@ public class Register extends AppCompatActivity {
                 EditText EditText1 = (EditText) findViewById(R.id.editText1);   //读入xml用户名
                 EditText EditText2 = (EditText) findViewById(R.id.editText2);   //读入xml密码
                 insertUserInfo(EditText1.getText().toString(),EditText2.getText().toString());
+                Intent intent=new Intent(Register.this,Requestion.class);
+                startActivity(intent);
             }
         });
     }

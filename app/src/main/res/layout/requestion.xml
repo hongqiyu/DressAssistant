@@ -119,7 +119,8 @@
                 android:text="确定"
                 android:textSize="20dp"
                 android:textColor="#FFFFFF"
-                android:background="#EE3B3B"/>
+                android:background="#EE3B3B"
+                android:id="@+id/b1"/>
         </RelativeLayout>
         </ScrollView>
     </RelativeLayout>

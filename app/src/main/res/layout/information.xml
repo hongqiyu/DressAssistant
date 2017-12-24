@@ -47,7 +47,8 @@
                 android:text="下一步"
                 android:layout_below="@+id/et1"
                 android:textColor="#FFFFFF"
-                android:background="#EE3B3B"/>
+                android:background="#EE3B3B"
+                android:id="@+id/b1"/>
         </RelativeLayout>
     </ScrollView>
 
