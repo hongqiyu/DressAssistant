@@ -76,13 +76,13 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-//        TextView TVV=(TextView) findViewById(R.id.button22);
-//        TVV.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent intent=new Intent(Login.this,Question.class);
-//                startActivity(intent);
-//            }
-//        });
+        TextView TV=(TextView) findViewById(R.id.button22);
+        TV.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(Login.this,Forgetpageone.class);
+                startActivity(intent);
+            }
+        });
         //创建数据库，从asserts将数据库导入工程中
         helper = new DBHelper(this);
         try{

@@ -31,6 +31,9 @@
         <activity android:name=".Information"></activity>
         <activity android:name=".Figure"></activity>
         <activity android:name=".Question"></activity>
+        <activity android:name=".Forgetpageone"></activity>
+        <activity android:name=".Forgetpagetwo"></activity>
+        <activity android:name=".Forgetpagethree"></activity>
     </application>
 
 </manifest>
