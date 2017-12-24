@@ -127,7 +127,8 @@
                 android:text="下一步"
                 android:textColor="#FFFFFF"
                 android:background="#EE3B3B"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:id="@+id/b1"/>
             </RelativeLayout>
         </ScrollView>
     </RelativeLayout>

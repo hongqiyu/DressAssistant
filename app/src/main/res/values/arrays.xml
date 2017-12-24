@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="questions">
+        <item>你童年最好的朋友叫什么名字？</item>
+        <item>你迄今为止最喜欢的老师姓什么？</item>
+        <item>你小时候居住最久的那个地方叫什么名字？</item>
+        <item>你最喜欢哪个季节？</item>
+        <item>你最喜欢的歌手叫什么名字？</item>
+    </string-array>
+</resources>
