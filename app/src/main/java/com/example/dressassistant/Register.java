@@ -21,7 +21,7 @@ import java.io.IOException;
  */
 
 public class Register extends AppCompatActivity {
-    private static final String DB_NAME="ds.db";
+    private static final String DB_NAME="dbuser.db";
     private SQLiteDatabase db;
 
 //打开数据库
@@ -39,7 +39,7 @@ public class Register extends AppCompatActivity {
 
         try
         {
-            db.execSQL("CREATE TABLE IF NOT EXISTS PersInfo(_id INTEGER PRIMARY KEY, pers_UsID VARCHAR, pers_UsNa VARCHAR, pers_Password VARCHAR, pers_Phone VARCHAR, pers_HePi VARCHAR, pers_Birthday VARCHAR, pers_FILID VARCHAR, pers_FLID VARCHAR, pers_FaID VARCHAR, pers_CUID VARCHAR, pers_PlID VARCHAR, pers_FeID VARCHAR, pers_GDUID VARCHAR, pers_MyMe VARCHAR, pers_CPLID VARCHAR, pers_FCID VARCHAR, pers_Q1 VARCHAR, pers_Q2 VARCHAR, pers_Q3 VARCHAR, pers_A1 VARCHAR, pers_A2 VARCHAR, pers_A3 VARCHAR)");
+            db.execSQL("CREATE TABLE IF NOT EXISTS tuserinfo(_id INTEGER PRIMARY KEY AUTOINCREMENT, username VARCHAR, userpwd VARCHAR, usertype INTEGER)");
         }
         catch(SQLException se)
         {
@@ -50,7 +50,7 @@ public class Register extends AppCompatActivity {
 //检查管理员是否存在，没用到
     private boolean isExistAdmin()
     {
-        Cursor cursor = db.rawQuery("select * from PersInfo where usertype=1", null);
+        Cursor cursor = db.rawQuery("select * from tuserinfo where usertype=1", null);
         if(cursor.getCount()>0)
         {
             cursor.close();
@@ -113,10 +113,10 @@ public class Register extends AppCompatActivity {
         }
     }
 
-    //判断数据库中是否存在该用户名,用户名是pers_UsID，昵称是pers_UsNa
+    //判断数据库中是否存在该用户名
     private boolean isExistUserName(String strUserName)
     {
-        Cursor cursor = db.rawQuery("select * from PersInfo where pers_UsID='" + strUserName +"'", null);
+        Cursor cursor = db.rawQuery("select * from tuserinfo where username='" + strUserName +"'", null);
         if(cursor.getCount()>0){
             cursor.close();
             return true;
@@ -128,18 +128,17 @@ public class Register extends AppCompatActivity {
     }
 
     //数据库插入用户
-    private void insertUserInfo(String strUserName, String strUserNick,String strUserPwd)
+    private void insertUserInfo(String strUserName, String strUserPwd)
     {
         int iUserType = 0;
         if(isExistUserName(strUserName) == false){
             ContentValues cvRUserInfo = new ContentValues();
-            cvRUserInfo.put("pers_UsID",strUserName);//pers_UsID用户名
-            cvRUserInfo.put("pers_UsNa", strUserNick);//昵称
-            cvRUserInfo.put("pers_Password", strUserPwd);
-
+            cvRUserInfo.put("username",strUserName);
+            cvRUserInfo.put("userpwd", strUserPwd);
+            cvRUserInfo.put("usertype", iUserType);
             if(db != null)
             {
-                db.insert("PersInfo", null, cvRUserInfo);
+                db.insert("tuserinfo", null, cvRUserInfo);
                 Toast.makeText(Register.this,"注册成功！", Toast.LENGTH_SHORT).show();
             }
         }
@@ -170,7 +169,9 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
                 EditText EditText1 = (EditText) findViewById(R.id.editText1);   //读入xml用户名
                 EditText EditText2 = (EditText) findViewById(R.id.editText2);   //读入xml密码
-                insertUserInfo(EditText1.getText().toString(),EditText1.getText().toString(),EditText2.getText().toString());
+                insertUserInfo(EditText1.getText().toString(),EditText2.getText().toString());
+                Intent intent=new Intent(Register.this,Requestion.class);
+                startActivity(intent);
             }
         });
     }
