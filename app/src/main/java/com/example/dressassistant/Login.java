@@ -20,11 +20,11 @@ import java.io.IOException;
  */
 
 public class Login extends AppCompatActivity {
-    private static final String DB_NAME="dbuser.db";
+    private static final String DB_NAME="ds.db";
     private SQLiteDatabase db;
     //    判断用户名和密码是否存在
     private boolean isValidUser(String strUserName, String strUserPwd){
-        Cursor cursor = db.rawQuery("select * from tuserinfo where username='"+strUserName+"'and userpwd='"+strUserPwd+"'",null);
+        Cursor cursor = db.rawQuery("select * from PersInfo where pers_UsID='"+strUserName+"'and pers_Password='"+strUserPwd+"'",null);
         if(cursor.getCount() == 1){
             cursor.close();
             return true;
@@ -50,7 +50,7 @@ public class Login extends AppCompatActivity {
 
         try
         {
-            db.execSQL("CREATE TABLE IF NOT EXISTS tuserinfo(_id INTEGER PRIMARY KEY AUTOINCREMENT, username VARCHAR, userpwd VARCHAR, usertype INTEGER)");
+            db.execSQL("CREATE TABLE IF NOT EXISTS PersInfo(_id INTEGER PRIMARY KEY AUTOINCREMENT, pers_UsID VARCHAR, pers_UsNa VARCHAR, pers_Password VARCHAR, pers_Phone VARCHAR, pers_HePi VARCHAR, pers_Birthday VARCHAR, pers_FILID VARCHAR, pers_FLID VARCHAR, pers_FaID VARCHAR, pers_CUID VARCHAR, pers_PlID VARCHAR, pers_FeID VARCHAR, pers_GDUID VARCHAR, pers_MyMe VARCHAR, pers_CPLID VARCHAR, pers_FCID VARCHAR, pers_Q1 VARCHAR, pers_Q2 VARCHAR, pers_Q3 VARCHAR, pers_A1 VARCHAR, pers_A2 VARCHAR, pers_A3 VARCHAR)");
         }
         catch(SQLException se)
         {
@@ -106,6 +106,11 @@ public class Login extends AppCompatActivity {
                         if(isStrEmpty(strUserPwd) == false){
                             if(isValidUser(strUserName,strUserPwd) == true){
                                 Toast.makeText(Login.this,"用户登录成功！",Toast.LENGTH_SHORT).show();
+                                //登陆成功时跳转到主页面，并传参数
+                                String data = " Hello MainActivity";
+                                Intent intent=new Intent(Login.this,MainActivity.class);
+                                intent.putExtra("extra_data", data);
+                                startActivity(intent);
                             }
                             else{
                                 Toast.makeText(Login.this,"用户登录失败！",Toast.LENGTH_SHORT).show();
