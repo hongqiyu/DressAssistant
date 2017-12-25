@@ -20,7 +20,7 @@ import java.io.IOException;
  */
 
 public class Login extends AppCompatActivity {
-    private static final String DB_NAME="ds.db";
+    private static final String DB_NAME="dressassistant.db";
     private SQLiteDatabase db;
     //    判断用户名和密码是否存在
     private boolean isValidUser(String strUserName, String strUserPwd){

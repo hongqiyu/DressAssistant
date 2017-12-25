@@ -21,7 +21,7 @@ import java.io.IOException;
  */
 
 public class Register extends AppCompatActivity {
-    private static final String DB_NAME="ds.db";
+    private static final String DB_NAME="dressassistant.db";
     private SQLiteDatabase db;
 
 //打开数据库
