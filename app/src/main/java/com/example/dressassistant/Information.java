@@ -87,8 +87,8 @@ public class Information extends AppCompatActivity {
         setContentView(R.layout.information);
         //打开数据库
         OpenCreateDB();
-        //点击下一步
 
+        //点击下一步
         Button TVV=(Button) findViewById(R.id.b1);
         TVV.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
