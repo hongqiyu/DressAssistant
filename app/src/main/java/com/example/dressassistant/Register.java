@@ -91,7 +91,6 @@ public class Register extends AppCompatActivity {
     //数据库插入用户
     private void insertUserInfo(String strUserName, String strUserNick ,String strUserPwd)
     {
-        int iUserType = 0;
         if(isStrEmpty(strUserName) == false){
             if(isStrEmpty(strUserNick) == false){
                 if(isStrEmpty(strUserPwd) == false){
