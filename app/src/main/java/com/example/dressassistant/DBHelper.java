@@ -19,8 +19,8 @@ import java.io.OutputStream;
 public class DBHelper extends SQLiteOpenHelper {
     private static final int DB_VERSION = 1;
     private static String DB_PATH = "/data/data/com.example.dressassistant/databases/";
-    private static String DB_NAME = "dbuser.db";
-    private static String ASSETS_NAME = "dbuser.db";
+    private static String DB_NAME = "dressassistant.db";
+    private static String ASSETS_NAME = "dressassistant.db";
     private static final  int ASSETS_SUFFIX_BEGIN = 101;
     private static final  int ASSETS_SUFFIX_END  = 103;
 
