@@ -19,9 +19,9 @@ public class Forgetpagetwo extends AppCompatActivity {
     private static final String DB_NAME="dressassistant.db";
     private SQLiteDatabase db;
 
-    //    判断用户名是否存在
-    private boolean isValidUser(String strUserName){
-        Cursor cursor = db.rawQuery("select * from PersInfo where pers_UsID='"+strUserName+"'",null);
+    //    判断问题和回答是否存在
+    private boolean isValidUser(String strQ1, String strQ2, String strQ3, String strA1, String strA2, String strA3){
+        Cursor cursor = db.rawQuery("select * from PersInfo where pers_Q1='" + strQ1 + "'and pers_Q2='" + strQ2 + "'and pers_Q3='" + strQ3 + "'and pers_A1='" + strA1 + "'and pers_A2='" + strA2 + "'and pers_A3='" + strA3 ,null);
         if(cursor.getCount() == 1){
             cursor.close();
             return true;
@@ -66,6 +66,10 @@ public class Forgetpagetwo extends AppCompatActivity {
         {
             return false;
         }
+    }
+
+    private void function(String strQ1, String strQ2, String strQ3, String strA1, String strA2, String strA3){
+
     }
 
     @Override
