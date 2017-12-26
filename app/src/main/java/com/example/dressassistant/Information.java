@@ -1,5 +1,6 @@
 package com.example.dressassistant;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -8,7 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by 洪祺瑜 on 2017-12-24.
@@ -16,6 +19,7 @@ import android.widget.TextView;
 
 
 public class Information extends AppCompatActivity {
+
     private static final String DB_NAME="dressassistant.db";
     private SQLiteDatabase db;
     //打开数据库
@@ -56,15 +60,41 @@ public class Information extends AppCompatActivity {
         }
     }
 
+    private void insertHeWeInfo(String strHeight, String  strWeight){
+        if(isStrEmpty(strHeight) == false){
+            if(isStrEmpty(strWeight) == false){
+                ContentValues cvHeWeInfo = new ContentValues();
+                cvHeWeInfo.put("fide_Weight",strWeight);
+                cvHeWeInfo.put("fide_Height",strHeight);
+                if(db != null){
+                    db.insert("FIDe",null,cvHeWeInfo);
+                    Toast.makeText(Information.this,"设置成功！", Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(Information.this,Figure.class);
+                    startActivity(intent);
+                }
+            }
+            else {
+                Toast.makeText(Information.this,"体重不能为空！",Toast.LENGTH_SHORT).show();
+            }
+        }
+        else {
+            Toast.makeText(Information.this, "身高不能为空！",Toast.LENGTH_SHORT).show();
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.information);
+        //打开数据库
+        OpenCreateDB();
+        //点击下一步
+
         Button TVV=(Button) findViewById(R.id.b1);
         TVV.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent=new Intent(Information.this,Figure.class);
-                startActivity(intent);
+                EditText EditText1 = (EditText)findViewById(R.id.et);
+                EditText EditText2 = (EditText)findViewById(R.id.et1);
+                insertHeWeInfo(EditText1.getText().toString(),EditText2.getText().toString());
             }
         });
     }
