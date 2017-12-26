@@ -24,14 +24,23 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="30dp"
         android:gravity="top"/>
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="穿搭选择"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:id="@+id/te1"
+        android:layout_below="@+id/SV1"/>
     <!--场景选择-->
     <TextView
         android:id="@+id/t1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/SV1"
+        android:layout_below="@+id/te1"
         android:text="场景选择"
+        android:textSize="20dp"
         />
     <LinearLayout
         android:layout_height="wrap_content"
@@ -170,9 +179,9 @@
             />
     </LinearLayout>
     <View
-        android:layout_height="2px"
+        android:layout_height="10px"
         android:layout_width="match_parent"
-        android:background="#000000"
+        android:background="#E8E8E8"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/L4"
         android:id="@+id/view2" />
@@ -183,6 +192,7 @@
         android:layout_below="@+id/view2"
         android:id="@+id/t2"
         android:text="风格选择"
+        android:textSize="20dp"
         />
     <LinearLayout
         android:layout_height="wrap_content"
@@ -258,9 +268,9 @@
     </LinearLayout>
 
     <View
-        android:layout_height="2px"
+        android:layout_height="10px"
         android:layout_width="match_parent"
-        android:background="#000000"
+        android:background="#E8E8E8"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/L6"
         android:id="@+id/view" />
@@ -271,6 +281,7 @@
         android:text="单品推荐"
         android:layout_below="@+id/view"
         android:id="@+id/t3"
+        android:textSize="20dp"
         />
     <LinearLayout
         android:layout_height="wrap_content"
@@ -345,7 +356,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/L8"
-        android:text="个性化服装推荐" />
+        android:text="个性化服装推荐"
+        android:textColor="#FFFFFF"
+        android:background="#EE3B3B"
+        android:layout_marginTop="20dp"/>
 </RelativeLayout>
  </ScrollView>
 

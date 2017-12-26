@@ -44,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
     private int oldPosition=0;
     //存放图片的id  
     private int[] imageIds=new int[]{
-            R.drawable.co,
-            R.drawable.zo,
-            R.drawable.zt,
-            R.drawable.cc,
-            R.drawable.co
+            R.drawable.zrzrone,
+            R.drawable.ct,
+            R.drawable.zrfxtwo,
+            R.drawable.zrfxone,
+            R.drawable.zrfxthree
     };
     //存放图片的标题  
     private String[] titles=new String[]{
