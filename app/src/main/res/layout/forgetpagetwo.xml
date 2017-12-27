@@ -29,6 +29,10 @@
             android:layout_marginRight="11dp"
             android:text=" 问题一："
             android:textSize="22dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
 
     </LinearLayout>
     <LinearLayout
@@ -44,6 +48,10 @@
             android:layout_marginRight="11dp"
             android:text=" 答案："
             android:textSize="22dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="请输入答案"/>
 
     </LinearLayout>
 
@@ -62,6 +70,9 @@
             android:layout_marginRight="11dp"
             android:text=" 问题二："
             android:textSize="22dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
     <LinearLayout
@@ -79,6 +90,10 @@
             android:layout_marginRight="11dp"
             android:text=" 答案："
             android:textSize="22dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="请输入答案" />
     </LinearLayout>
 
     <LinearLayout
@@ -96,6 +111,9 @@
             android:layout_marginRight="11dp"
             android:text=" 问题三："
             android:textSize="22dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
     <LinearLayout
@@ -111,6 +129,10 @@
             android:layout_marginRight="11dp"
             android:text=" 答案："
             android:textSize="22dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="请输入答案"/>
 
     </LinearLayout>
 
