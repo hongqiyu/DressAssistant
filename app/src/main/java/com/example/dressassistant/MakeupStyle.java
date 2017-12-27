@@ -16,8 +16,8 @@ public class MakeupStyle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.makeupstyle);
-        ImageView imageButtonB=(ImageView) findViewById(R.id.imageButtonB);
-        imageButtonB.setOnClickListener(new View.OnClickListener(){
+        ImageView imageButtonG=(ImageView) findViewById(R.id.imageButtonG);
+        imageButtonG.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(MakeupStyle.this, MakeupDetails.class);
