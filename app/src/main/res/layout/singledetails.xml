@@ -9,7 +9,8 @@
     >
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/svv">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -56,8 +57,70 @@
                 android:layout_below="@+id/tvi4"
                 android:layout_marginTop="10dp"
                 android:id="@+id/tvi5"
-                android:text="2、下摆设计：包容度好，不挑身材，长度适中很显腿长。"
+                android:text="3、下摆设计：包容度好，不挑身材，长度适中很显腿长。"
                 android:textColor="#000000"/>
             </RelativeLayout>
         </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffff">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:text=""/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/zsc"
+            android:text=""/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:text=""/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/zdz"
+            android:text=""/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:text=""/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/zfx"
+            android:text=""/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:text=""/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/zjh"
+            android:text=""/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:text=""/>
+    </LinearLayout>
     </RelativeLayout>

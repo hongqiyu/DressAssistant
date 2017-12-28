@@ -34,6 +34,8 @@
         <activity android:name=".Forgetpageone"></activity>
         <activity android:name=".Forgetpagetwo"></activity>
         <activity android:name=".Forgetpagethree"></activity>
+        <activity android:name=".Single"></activity>
+        <activity android:name=".SingleDetails"></activity>
     </application>
 
 </manifest>

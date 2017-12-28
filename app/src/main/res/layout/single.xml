@@ -37,7 +37,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hdpmf1"/>
+                    android:src="@drawable/hdpmf1"
+                    android:id="@+id/ima"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -55,20 +56,24 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zjh"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
@@ -76,20 +81,24 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zjh"/>
                 </LinearLayout>
             </LinearLayout>
             <TextView
@@ -122,24 +131,28 @@
                 android:id="@+id/linear4">
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="25dp"
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zjh"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
@@ -147,20 +160,24 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zjh"/>
                 </LinearLayout>
             </LinearLayout>
             <TextView
@@ -194,23 +211,28 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                   >
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zjh"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
@@ -218,20 +240,24 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zjh"/>
                 </LinearLayout>
             </LinearLayout>
             <TextView
@@ -268,20 +294,24 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zjh"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
@@ -289,20 +319,24 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zjh"/>
                 </LinearLayout>
             </LinearLayout>
             <TextView
@@ -339,20 +373,24 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zjh"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
@@ -360,20 +398,24 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"/>
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zjh"/>
                 </LinearLayout>
             </LinearLayout>
             </RelativeLayout>
