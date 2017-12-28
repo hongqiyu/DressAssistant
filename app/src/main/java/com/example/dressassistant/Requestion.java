@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -22,6 +23,11 @@ import android.widget.Toast;
 public class Requestion extends AppCompatActivity {
     private static final String DB_NAME="dressassistant.db";
     private SQLiteDatabase db;
+    private static final String[] m_Countries = { "你童年最好的朋友叫什么名字？", "你迄今为止最喜欢的老师姓什么？", "你小时候居住最久的那个地方叫什么名字？", "你最喜欢哪个季节？", "你最喜欢的歌手叫什么名字？" }; //定义数组
+    private ArrayAdapter adapter; //存放数据
+    private Spinner spinnerCardNumber; //下拉框
+    private Spinner spinnerCardNumber2; //下拉框
+    private Spinner spinnerCardNumber3; //下拉框
 
     //判断xml上的输入是否为空
     private boolean isStrEmpty(String strInput)
@@ -94,6 +100,15 @@ public class Requestion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.requestion);
+        spinnerCardNumber = (Spinner)findViewById(R.id.q1);
+        spinnerCardNumber2 = (Spinner)findViewById(R.id.q2);
+        spinnerCardNumber3 = (Spinner)findViewById(R.id.q3);
+        //将可选内容与ArrayAdapter连接，
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, m_Countries);
+        //将adapter添加到m_Spinner中
+        spinnerCardNumber.setAdapter(adapter);
+        spinnerCardNumber2.setAdapter(adapter);
+        spinnerCardNumber3.setAdapter(adapter);
         //打开数据库
         OpenCreateDB();
         //点击
