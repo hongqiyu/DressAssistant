@@ -364,6 +364,16 @@
         android:textColor="#FFFFFF"
         android:background="#EE3B3B"
        />
+    <LinearLayout
+        android:id="@+id/Empty"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/button3">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#FFFFFF"/>
+    </LinearLayout>
 </RelativeLayout>
  </ScrollView>
 
