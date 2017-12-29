@@ -98,12 +98,16 @@ public class Register extends AppCompatActivity {
                         ContentValues cvRUserInfo = new ContentValues();
                         cvRUserInfo.put("pers_UsID",strUserName);//用户名
                         cvRUserInfo.put("pers_UsNa", strUserNick);//昵称
-                        cvRUserInfo.put("pers_Password", strUserPwd);
+                        cvRUserInfo.put("pers_Password", strUserPwd);//密码
                         if(db != null)
                         {
-                            db.insert("PersInfo", null, cvRUserInfo);
-                            Toast.makeText(Register.this,"注册成功！", Toast.LENGTH_SHORT).show();
+                            //db.insert("PersInfo", null, cvRUserInfo);
+                            Toast.makeText(Register.this,"输入成功！", Toast.LENGTH_SHORT).show();
+
                             Intent intent=new Intent(Register.this,Requestion.class);
+                            intent.putExtra("UserName",strUserName);
+                            intent.putExtra("UserNick",strUserNick);
+                            intent.putExtra("UserPwd",strUserPwd);
                             startActivity(intent);
                         }
                     }

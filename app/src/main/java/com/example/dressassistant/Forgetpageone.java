@@ -76,7 +76,9 @@ public class Forgetpageone extends AppCompatActivity {
         if(isStrEmpty(strUserName) == false){
             if(isValidUser(strUserName) == true) {
                 Toast.makeText(Forgetpageone.this, "输入成功！", Toast.LENGTH_SHORT).show();
+
                 Intent intent=new Intent(Forgetpageone.this,Forgetpagetwo.class);
+                intent.putExtra("UserName",strUserName);
                 startActivity(intent);
             }
             else {
