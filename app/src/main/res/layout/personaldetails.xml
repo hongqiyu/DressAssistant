@@ -18,7 +18,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/hgxhd1"
+                android:background="@drawable/hgxh3"
                 android:id="@+id/imvi1"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
@@ -95,7 +95,7 @@
             <!--<ImageView-->
                 <!--android:layout_width="match_parent"-->
                 <!--android:layout_height="wrap_content"-->
-                <!--android:src="@drawable/hgxhd1"-->
+                <!--android:src="@drawable/hgxh3"-->
                 <!--android:id="@+id/imvi1"/>-->
             <TextView
                 android:layout_width="match_parent"
@@ -129,17 +129,17 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/hgxhd2"/>
+                    android:background="@drawable/hgxh1"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/hgxhd3"/>
+                    android:src="@drawable/hgxh3"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/hgxhd4"/>
+                    android:src="@drawable/hgxh1"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -177,12 +177,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/hgxhd5"/>
+                    android:src="@drawable/hgxh1"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/hgxhd6"/>
+                    android:src="@drawable/hgxh2"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"

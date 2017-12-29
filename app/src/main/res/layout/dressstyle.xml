@@ -27,21 +27,27 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="穿搭选择"
+        android:text="时尚穿搭"
         android:textSize="20dp"
         android:textStyle="bold"
         android:gravity="center"
         android:id="@+id/te1"
         android:layout_below="@+id/SV1"/>
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/te1"
+        android:background="#E8E8E8"/>
     <!--场景选择-->
     <TextView
         android:id="@+id/t1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/te1"
+        android:layout_below="@+id/view3"
         android:text="场景选择"
-        android:textSize="20dp"
-        />
+        android:textSize="16dp"
+        android:gravity="center"/>
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -51,28 +57,29 @@
         >
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
+            android:layout_margin="10dp"
+            android:src="@drawable/zcjsb"
             />
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            />
+            android:src="@drawable/zcjyh"
+            android:layout_margin="10dp"/>
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            />
+            android:src="@drawable/zcjjh"
+            android:layout_margin="10dp"/>
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            />
+            android:src="@drawable/zcjgj"
+            android:layout_margin="10dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_height="wrap_content"
@@ -86,29 +93,29 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="场景A"
-            />
+            android:text="-上 班-"
+            android:textSize="10dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="场景B"
-            />
+            android:text="-约 会-"
+            android:textSize="10dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="场景C"
-            />
+            android:text="-聚 会-"
+            android:textSize="10dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="场景D"
-            />
+            android:text="-逛 街-"
+            android:textSize="10dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_height="wrap_content"
@@ -119,28 +126,28 @@
         >
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            />
+            android:src="@drawable/zcjly"
+            android:layout_margin="10dp"/>
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            />
+            android:src="@drawable/zcjjj"
+            android:layout_margin="10dp"/>
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            />
+            android:src="@drawable/zcjyd"
+            android:layout_margin="10dp"/>
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            />
+            android:src="@drawable/zcjlv"
+            android:layout_margin="10dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_height="wrap_content"
@@ -154,29 +161,29 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="场景E"
-            />
+            android:text="-旅 游-"
+            android:textSize="10dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="场景F"
-            />
+            android:text="-日 常-"
+            android:textSize="10dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="场景G"
-            />
+            android:text="-运 动-"
+            android:textSize="10dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="场景H"
-            />
+            android:text="-海 边-"
+            android:textSize="10dp"/>
     </LinearLayout>
     <View
         android:layout_height="10px"
@@ -192,8 +199,8 @@
         android:layout_below="@+id/view2"
         android:id="@+id/t2"
         android:text="风格选择"
-        android:textSize="20dp"
-        />
+        android:textSize="16dp"
+        android:gravity="center"/>
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -205,28 +212,31 @@
             android:id="@+id/pictureA"
             android:clickable="true"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            />
+            android:src="@drawable/zfgtm"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/zfgqx" />
+
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            />
+            android:src="@drawable/zfgzx"
+            android:layout_margin="10dp"/>
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            />
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/ex"
-            />
+            android:src="@drawable/zfgzhongx"
+            android:layout_margin="10dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_height="wrap_content"
@@ -242,29 +252,29 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="风格A"
-            />
+            android:text="-甜 美-"
+            android:textSize="10dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="风格B"
-            />
+            android:text="-清 新-"
+            android:textSize="10dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="风格C"
-            />
+            android:text="-知 性-"
+            android:textSize="10dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="风格D"
-            />
+            android:text="-中 性-"
+            android:textSize="10dp"/>
     </LinearLayout>
 
     <View
@@ -281,43 +291,39 @@
         android:text="单品推荐"
         android:layout_below="@+id/view"
         android:id="@+id/t3"
-        android:textSize="20dp"
-        />
+        android:textSize="16dp"
+        android:gravity="center"/>
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_below="@+id/t3"
-        android:id="@+id/L7"
-        >
+        android:id="@+id/L7">
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            android:id="@+id/imv1"
-            />
+            android:src="@drawable/zdpsy"
+            android:layout_margin="10dp"
+            android:id="@+id/imv1"/>
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            android:id="@+id/imv2"
-            />
+            android:src="@drawable/zdpsy"
+            android:layout_margin="10dp"/>
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            android:id="@+id/imv3"
-            />
+            android:src="@drawable/zcjjh"
+            android:layout_margin="10dp"/>
         <ImageView
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/ex"
-            android:id="@+id/imv4"
-            />
+            android:src="@drawable/zcjjh"
+            android:layout_margin="10dp"/>
     </LinearLayout>
     <LinearLayout
         android:layout_height="wrap_content"
@@ -331,29 +337,29 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="上装"
-            />
+            android:text="-上 衣-"
+            android:textSize="10dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="裤装"
-            />
+            android:text="-裤 装-"
+            android:textSize="10dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="裙装"
-            />
+            android:text="-裙 装-"
+            android:textSize="10dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="配饰"
-            />
+            android:text="-配 饰-"
+            android:textSize="10dp"/>
     </LinearLayout>
     <Button
         android:id="@+id/button3"
@@ -363,7 +369,7 @@
         android:text="个性化服装推荐"
         android:textColor="#FFFFFF"
         android:background="#EE3B3B"
-       />
+        android:layout_marginTop="20dp"/>
     <LinearLayout
         android:id="@+id/Empty"
         android:layout_width="match_parent"

@@ -40,6 +40,7 @@
                     android:src="@drawable/hdpmf1"
                     android:id="@+id/ima"/>
                 <ImageView
+                    android:id="@+id/im3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -56,22 +57,22 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxjh"/>
                 </LinearLayout>
@@ -81,22 +82,22 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxjh"/>
                 </LinearLayout>
@@ -114,15 +115,17 @@
                 android:layout_below="@+id/text3"
                 android:id="@+id/linear3">
                 <ImageView
+                    android:id="@+id/im1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:src="@drawable/hdpdwt1"/>
                 <ImageView
+                    android:id="@+id/im2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hdpdwt2"/>
+                    android:src="@drawable/hdpdwt1"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -131,26 +134,26 @@
                 android:id="@+id/linear4">
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="25dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxjh"/>
                 </LinearLayout>
@@ -160,22 +163,22 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@drawable/zxjh"/>
                 </LinearLayout>
@@ -196,12 +199,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hdpmndy1"/>
+                    android:src="@drawable/hdpdwt1"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hdpmndy2"/>
+                    android:src="@drawable/hdpdwt1"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -215,22 +218,22 @@
                    >
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxjh"/>
                 </LinearLayout>
@@ -240,22 +243,22 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxjh"/>
                 </LinearLayout>
@@ -281,7 +284,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hdpwy2"/>
+                    android:src="@drawable/hdpwy1"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -294,22 +297,22 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxjh"/>
                 </LinearLayout>
@@ -319,22 +322,22 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxjh"/>
                 </LinearLayout>
@@ -355,12 +358,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hdpmy1"/>
+                    android:src="@drawable/hdpwy1"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hdpmy2"/>
+                    android:src="@drawable/hdpwy1"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -373,22 +376,22 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxjh"/>
                 </LinearLayout>
@@ -398,22 +401,22 @@
                     android:layout_weight="1">
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxsc"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxdz"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxfx"/>
                     <ImageView
                         android:layout_width="0dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/zxjh"/>
                 </LinearLayout>
