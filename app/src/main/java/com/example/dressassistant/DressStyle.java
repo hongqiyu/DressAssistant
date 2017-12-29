@@ -68,6 +68,13 @@ public class DressStyle extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button bu3=(Button) findViewById(R.id.button3);
+        bu3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(DressStyle.this,Personal.class);
+                startActivity(intent);
+            }
+        });
     }
     }
 
