@@ -8,13 +8,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 
 /**
@@ -24,6 +23,11 @@ import android.widget.Toast;
 public class Requestion extends AppCompatActivity {
     private static final String DB_NAME="dressassistant.db";
     private SQLiteDatabase db;
+    private static final String[] m_Countries = { "你童年最好的朋友叫什么名字？", "你迄今为止最喜欢的老师姓什么？", "你小时候居住最久的那个地方叫什么名字？", "你最喜欢哪个季节？", "你最喜欢的歌手叫什么名字？" }; //定义数组
+    private ArrayAdapter adapter; //存放数据
+    private Spinner spinnerCardNumber; //下拉框
+    private Spinner spinnerCardNumber2; //下拉框
+    private Spinner spinnerCardNumber3; //下拉框
 
     //判断xml上的输入是否为空
     private boolean isStrEmpty(String strInput)
@@ -68,32 +72,17 @@ public class Requestion extends AppCompatActivity {
         if(isStrEmpty(strA1) == false){
             if(isStrEmpty(strA2) == false){
                 if(isStrEmpty(strA3) == false){
-                    if(isQuesSame(strQ1,strQ2) == false){
-                        if(isQuesSame(strQ1,strQ3) == false){
-                            if(isQuesSame(strQ2,strQ3) == false){
-                                cvQAInfo.put("pers_Q1",strQ1);
-                                cvQAInfo.put("pers_Q2",strQ2);
-                                cvQAInfo.put("pers_Q3",strQ3);
-                                cvQAInfo.put("pers_A1",strA1);
-                                cvQAInfo.put("pers_A2",strA2);
-                                cvQAInfo.put("pers_A3",strA3);
-                                if(db != null){
-                                    db.insert("PersInfo", null, cvQAInfo);
-                                    Toast.makeText(Requestion.this,"设置成功！", Toast.LENGTH_SHORT).show();
-                                    Intent intent=new Intent(Requestion.this,Information.class);
-                                    startActivity(intent);
-                                }
-                            }
-                            else {
-                                Toast.makeText(Requestion.this,"问题三不能与问题二相同",Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                        else {
-                            Toast.makeText(Requestion.this,"问题三不能与问题一相同",Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                    else{
-                        Toast.makeText(Requestion.this,"问题二不能与问题一相同",Toast.LENGTH_SHORT).show();
+                    cvQAInfo.put("pers_Q1",strQ1);
+                    cvQAInfo.put("pers_Q2",strQ2);
+                    cvQAInfo.put("pers_Q3",strQ3);
+                    cvQAInfo.put("pers_A1",strA1);
+                    cvQAInfo.put("pers_A2",strA2);
+                    cvQAInfo.put("pers_A3",strA3);
+                    if(db != null){
+                        db.insert("PersInfo", null, cvQAInfo);
+                        Toast.makeText(Requestion.this,"设置成功！", Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(Requestion.this,Information.class);
+                        startActivity(intent);
                     }
                 }
                 else {
@@ -108,72 +97,32 @@ public class Requestion extends AppCompatActivity {
             Toast.makeText(Requestion.this,"答案一不能为空",Toast.LENGTH_SHORT).show();
         }
     }
-    //判断复选框问题内容是否一致,若一致则true
-    private boolean isQuesSame(String str1, String str2)
-    {
-
-        if(str1.equals(str2)){
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    Spinner Q1,Q2,Q3;
-    String strQues1,strQues2,strQues3;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.requestion);
+        spinnerCardNumber = (Spinner)findViewById(R.id.q1);
+        spinnerCardNumber2 = (Spinner)findViewById(R.id.q2);
+        spinnerCardNumber3 = (Spinner)findViewById(R.id.q3);
+        //将可选内容与ArrayAdapter连接，
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, m_Countries);
+        //将adapter添加到m_Spinner中
+        spinnerCardNumber.setAdapter(adapter);
+        spinnerCardNumber2.setAdapter(adapter);
+        spinnerCardNumber3.setAdapter(adapter);
         //打开数据库
         OpenCreateDB();
-        final EditText A1 = (EditText)findViewById(R.id.et1);
-        final EditText A2 = (EditText)findViewById(R.id.et2);
-        final EditText A3 = (EditText)findViewById(R.id.et3);
-        Q1 = (Spinner)findViewById(R.id.q1);
-        Q2 = (Spinner)findViewById(R.id.q1);
-        Q3 = (Spinner)findViewById(R.id.q1);
-        strQues1 = (String)Q1.getSelectedItem();
-        strQues2 = (String)Q2.getSelectedItem();
-        strQues3 = (String)Q3.getSelectedItem();
-
-        Q1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                strQues1 = (String)Q1.getSelectedItem();
-                Toast.makeText(Requestion.this, strQues1, Toast.LENGTH_SHORT).show();
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-        Q2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                strQues2 = (String)Q2.getSelectedItem();
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-        Q3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                strQues3 = (String)Q3.getSelectedItem();
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        //点击确定
+        //点击
         Button b1 = (Button) findViewById(R.id.b1);
         b1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                insertQA(strQues1,strQues2,strQues3, A1.getText().toString(),
+                EditText A1 = (EditText)findViewById(R.id.et1);
+                EditText A2 = (EditText)findViewById(R.id.et2);
+                EditText A3 = (EditText)findViewById(R.id.et3);
+                Spinner Q1 = (Spinner)findViewById(R.id.q1);
+                Spinner Q2 = (Spinner)findViewById(R.id.q2);
+                Spinner Q3 = (Spinner)findViewById(R.id.q3);
+                insertQA(Q1.getSelectedItem().toString(),Q2.getSelectedItem().toString(),
+                        Q3.getSelectedItem().toString(), A1.getText().toString(),
                         A2.getText().toString(),A3.getText().toString());
             }
         });
