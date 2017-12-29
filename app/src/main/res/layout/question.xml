@@ -91,7 +91,8 @@
                 android:textSize="20dp"
                 android:textColor="#FFFFFF"
                 android:background="#EE3B3B"
-                android:layout_below="@+id/rb9"/>
+                android:layout_below="@+id/rb9"
+                android:id="@+id/b1"/>
             </RelativeLayout>
         </ScrollView>
     </RelativeLayout>

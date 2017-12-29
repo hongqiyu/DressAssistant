@@ -45,13 +45,15 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="肩宽、无腰、窄臀"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:gravity="center" />
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="腹部、臀、大腿脂肪较多"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -80,13 +82,15 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="腰腹赘肉较多，臀部丰满"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:gravity="center"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="细腰，明显的S曲线"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:gravity="center"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -99,22 +103,28 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:src="@drawable/hztx"/>
+
                 <ImageView
+                    android:id="@+id/imageView2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/llt5"
                 android:id="@+id/llt6">
+
                 <TextView
+                    android:id="@+id/textView32"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="胸宽、腰宽、臀宽相差较小"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -127,7 +137,8 @@
                 android:text="下一步"
                 android:textColor="#FFFFFF"
                 android:background="#EE3B3B"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:id="@+id/b1"/>
             </RelativeLayout>
         </ScrollView>
     </RelativeLayout>

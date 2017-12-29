@@ -230,7 +230,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:background="@drawable/zdbanone"
+            android:background="@drawable/zdbtusy"
             android:text=" " />
         <Button
             android:id="@+id/button5"
