@@ -31,7 +31,6 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:id="@+id/q1"
-               android:entries="@array/questions"
                android:layout_below="@+id/tvv2"
                android:layout_alignParentLeft="true"
                android:layout_alignParentStart="true">
@@ -65,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvv3"
                 android:id="@+id/q2"
-                android:entries="@array/questions">
+               >
             </Spinner>
             <TextView
                 android:layout_width="match_parent"
@@ -95,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvv4"
                 android:id="@+id/q3"
-                android:entries="@array/questions">
+                >
             </Spinner>
             <TextView
                 android:layout_width="match_parent"

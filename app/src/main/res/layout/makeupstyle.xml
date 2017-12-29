@@ -7,6 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context="com.example.dressassistant.MakeupStyle">
     <ScrollView
         android:layout_width="match_parent"
@@ -28,44 +29,53 @@
             android:layout_height="wrap_content"
             android:text="妆容选择"
             android:layout_below="@+id/SV1"
-            android:textSize="20sp"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textStyle="bold"
             android:id="@+id/tt1"
             />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="风格选择"
+                android:textSize="20dp"
+                android:layout_below="@+id/tt1"
+                android:id="@+id/te3"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@+id/tt1"
+            android:layout_below="@+id/te3"
             android:id="@+id/Li1">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/imageButtonA"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                app:srcCompat="@mipmap/ic_launcher_round" />
+               android:src="@drawable/hqxf"/>
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/imageButtonB"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                app:srcCompat="@mipmap/ic_launcher_round"
+               android:src="@drawable/hyjf"
                 />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/imageButtonC"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                app:srcCompat="@mipmap/ic_launcher_round" />
+                android:src="@drawable/homf" />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/imageButtonD"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                app:srcCompat="@mipmap/ic_launcher_round" />
+                android:src="@drawable/hrmf" />
 
         </LinearLayout>
 
@@ -80,7 +90,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="清新"
+                android:text="清新风"
                 android:gravity="center"
                 />
             <TextView
@@ -89,7 +99,7 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="御姐"
+                android:text="御姐风"
                />
             <TextView
                 android:id="@+id/textViewC"
@@ -97,7 +107,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="欧美"
+                android:text="欧美风"
                 />
 
             <TextView
@@ -106,7 +116,7 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="软妹"
+                android:text="软妹风"
                 />
         </LinearLayout>
 
@@ -117,35 +127,35 @@
             android:layout_below="@+id/Li2"
             android:id="@+id/Li3">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/imageButtonE"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                app:srcCompat="@mipmap/ic_launcher_round" />
+                android:src="@drawable/hrxz" />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/imageButtonF"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                app:srcCompat="@mipmap/ic_launcher_round"
+               android:src="@drawable/hyxz"
 
                 />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/imageButtonG"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@mipmap/ic_launcher_round" />
+                android:src="@drawable/hyhz" />
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/imageButtonH"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                app:srcCompat="@mipmap/ic_launcher_round" />
+                android:src="@drawable/hqsf" />
 
         </LinearLayout>
 
@@ -160,7 +170,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="日系"
+                android:text="日系妆"
                 android:gravity="center"
                 />
             <TextView
@@ -169,7 +179,7 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="眼妆"
+                android:text="烟熏妆"
                 />
             <TextView
                 android:id="@+id/textViewG"
@@ -177,7 +187,7 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="眉毛"
+                android:text="约会妆"
                 />
 
             <TextView
@@ -186,78 +196,73 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:layout_height="match_parent"
-                android:text="唇妆"
+                android:text="轻熟妆"
                 />
         </LinearLayout>
-    <View
-        android:layout_height="2px"
-        android:layout_width="match_parent"
-        android:background="#000000"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/Li4"
-        android:id="@+id/view" />
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/view"
-            android:text="明星妆容"
-            android:textSize="20dp"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_below="@+id/textView3"
-            android:id="@+id/Li6">
-
-            <ImageButton
-                android:id="@+id/imageButtonStarA"
+            <View
+                android:layout_height="10px"
+                android:layout_width="match_parent"
+                android:background="#E8E8E8"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/Li4"
+                android:id="@+id/view2" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view2"
+                android:id="@+id/tvvv"
+                android:text="妆容部位选择"
+                android:textSize="20dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvvv"
+                android:id="@+id/Li5">
+              <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:srcCompat="@mipmap/ic_launcher" />
-
-            <ImageButton
-                android:id="@+id/imageButton19"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/ic_launcher" />
-
-            <ImageButton
-                android:id="@+id/imageButton20"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@mipmap/ic_launcher" />
-
-        </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Li8"
-        android:layout_below="@+id/Li6">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="a某"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="b某"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="c某"
-            android:gravity="center"/>
-    </LinearLayout>
+                  android:src="@drawable/hyz"
+                  />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/hcz"
+                    />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/hycz"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Li5"
+                android:id="@+id/Li6">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="眼妆"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="唇妆"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="咬唇妆"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+            </LinearLayout>
             </RelativeLayout>
     </ScrollView>
     <LinearLayout

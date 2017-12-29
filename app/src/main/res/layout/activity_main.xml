@@ -38,13 +38,95 @@
                 />
 
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/LL7"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@+id/LL4">
+
+            <LinearLayout
+                android:id="@+id/Ll5"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/IM17"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxsc"/>
+                <ImageView
+                    android:id="@+id/IM18"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxdz"/>
+                <ImageView
+                    android:id="@+id/IM19"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxfx"/>
+                <ImageView
+                    android:id="@+id/IM20"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxjh"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Ll6"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/IM21"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxsc"/>
+                <ImageView
+                    android:id="@+id/IM22"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxdz"/>
+                <ImageView
+                    android:id="@+id/IM23"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxfx"/>
+                <ImageView
+                    android:id="@+id/IM24"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxjh"/>
+            </LinearLayout>
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Empty"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/LL7">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#FFFFFF"/>
+            </LinearLayout>
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-- 最热发型 --"
             android:textColor="#636363"
-            android:layout_below="@+id/LL3"
+            android:layout_below="@+id/LL6"
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
             />
@@ -69,6 +151,78 @@
                 android:layout_margin="3dp"
                 app:srcCompat="@drawable/zrzrtwo"
                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LL6"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@+id/LL3">
+
+            <LinearLayout
+                android:id="@+id/Ll3"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/IM9"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxsc"/>
+                <ImageView
+                    android:id="@+id/IM10"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxdz"/>
+                <ImageView
+                    android:id="@+id/IM11"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxfx"/>
+                <ImageView
+                    android:id="@+id/IM12"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxjh"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Ll4"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/IM13"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxsc"/>
+                <ImageView
+                    android:id="@+id/IM14"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxdz"/>
+                <ImageView
+                    android:id="@+id/IM15"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxfx"/>
+                <ImageView
+                    android:id="@+id/IM16"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxjh"/>
+            </LinearLayout>
+
         </LinearLayout>
 
 
@@ -223,6 +377,7 @@
                 android:layout_margin="3dp"
                 app:srcCompat="@drawable/zrmdone" />
 
+
             <ImageView
                 android:id="@+id/imageView9"
                 android:layout_width="300dp"
@@ -232,6 +387,80 @@
                 app:srcCompat="@drawable/zrmdtwo" />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/LL5"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@id/LL2"
+            >
+            <LinearLayout
+                android:id="@+id/Ll1"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/IM1"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxsc"/>
+                <ImageView
+                    android:id="@+id/IM2"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxdz"/>
+                <ImageView
+                    android:id="@+id/IM3"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxfx"/>
+                <ImageView
+                    android:id="@+id/IM4"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxjh"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Ll2"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/IM5"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxsc"/>
+                <ImageView
+                    android:id="@+id/IM6"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxdz"/>
+                <ImageView
+                    android:id="@+id/IM7"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxfx"/>
+                <ImageView
+                    android:id="@+id/IM8"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zxjh"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
 
         <TextView
             android:id="@+id/textView4"
@@ -239,7 +468,7 @@
             android:layout_height="wrap_content"
             android:text="-- 最热妆容 --"
             android:textColor="#636363"
-            android:layout_below="@+id/LL2"
+            android:layout_below="@+id/LL5"
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>

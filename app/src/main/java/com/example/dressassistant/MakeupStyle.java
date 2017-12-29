@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class MakeupStyle extends AppCompatActivity {
 
@@ -16,8 +16,8 @@ public class MakeupStyle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.makeupstyle);
-        ImageButton imageButtonB=(ImageButton) findViewById(R.id.imageButtonB);
-        imageButtonB.setOnClickListener(new View.OnClickListener(){
+        ImageView imageButtonG=(ImageView) findViewById(R.id.imageButtonG);
+        imageButtonG.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(MakeupStyle.this, MakeupDetails.class);
