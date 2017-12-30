@@ -54,25 +54,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zsc"/>
+                    android:background="@drawable/zxsc"/>
                 <ImageView
                     android:id="@+id/IM18"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zdz"/>
+                    android:background="@drawable/zxdz"/>
                 <ImageView
                     android:id="@+id/IM19"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zfx"/>
+                    android:background="@drawable/zxfx"/>
                 <ImageView
                     android:id="@+id/IM20"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zjh"/>
+                    android:background="@drawable/zxjh"/>
 
             </LinearLayout>
 
@@ -87,25 +87,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zsc"/>
+                    android:background="@drawable/zxsc"/>
                 <ImageView
                     android:id="@+id/IM22"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zdz"/>
+                    android:background="@drawable/zxdz"/>
                 <ImageView
                     android:id="@+id/IM23"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zfx"/>
+                    android:background="@drawable/zxfx"/>
                 <ImageView
                     android:id="@+id/IM24"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zjh"/>
+                    android:background="@drawable/zxjh"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -169,25 +169,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zsc"/>
+                    android:background="@drawable/zxsc"/>
                 <ImageView
                     android:id="@+id/IM10"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zdz"/>
+                    android:background="@drawable/zxdz"/>
                 <ImageView
                     android:id="@+id/IM11"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zfx"/>
+                    android:background="@drawable/zxfx"/>
                 <ImageView
                     android:id="@+id/IM12"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zjh"/>
+                    android:background="@drawable/zxjh"/>
 
             </LinearLayout>
 
@@ -202,25 +202,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zsc"/>
+                    android:background="@drawable/zxsc"/>
                 <ImageView
                     android:id="@+id/IM14"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zdz"/>
+                    android:background="@drawable/zxdz"/>
                 <ImageView
                     android:id="@+id/IM15"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zfx"/>
+                    android:background="@drawable/zxfx"/>
                 <ImageView
                     android:id="@+id/IM16"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zjh"/>
+                    android:background="@drawable/zxjh"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -403,25 +403,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zsc"/>
+                    android:background="@drawable/zxsc"/>
                 <ImageView
                     android:id="@+id/IM2"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zdz"/>
+                    android:background="@drawable/zxdz"/>
                 <ImageView
                     android:id="@+id/IM3"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zfx"/>
+                    android:background="@drawable/zxfx"/>
                 <ImageView
                     android:id="@+id/IM4"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zjh"/>
+                    android:background="@drawable/zxjh"/>
 
             </LinearLayout>
 
@@ -436,25 +436,25 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zsc"/>
+                    android:background="@drawable/zxsc"/>
                 <ImageView
                     android:id="@+id/IM6"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zdz"/>
+                    android:background="@drawable/zxdz"/>
                 <ImageView
                     android:id="@+id/IM7"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zfx"/>
+                    android:background="@drawable/zxfx"/>
                 <ImageView
                     android:id="@+id/IM8"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zjh"/>
+                    android:background="@drawable/zxjh"/>
             </LinearLayout>
 
 
