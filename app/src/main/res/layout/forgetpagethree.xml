@@ -20,16 +20,18 @@
         android:layout_marginTop="90dp"
         android:layout_centerHorizontal="true"
         android:id="@+id/linearLayout5">
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text=" 新密码："
-            android:textSize="22dp"/>
+            android:textSize="22dp" />
+
         <EditText
+            android:id="@+id/et1"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            />
+            android:layout_height="50dp" />
 
     </LinearLayout>
     <LinearLayout
@@ -43,10 +45,11 @@
             android:layout_weight="1"
             android:text=" 确认新密码："
             android:textSize="22dp"/>
+
         <EditText
+            android:id="@+id/et2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

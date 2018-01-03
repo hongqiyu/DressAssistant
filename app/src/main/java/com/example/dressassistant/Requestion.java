@@ -33,18 +33,7 @@ public class Requestion extends AppCompatActivity {
     private Spinner spinnerCardNumber2; //下拉框
     private Spinner spinnerCardNumber3; //下拉框
 
-    //接收上一个界面传递过来的数据
-   /* String UserName,UserNick,UserPwd;
-    private void receive(){
-        Intent intent = getIntent();
-        UserName = intent.getStringExtra("UserName");
-        //Log.i(TAG, "-->>" + UserName);
-        UserNick = intent.getStringExtra("UserNick");
-        //Log.i(TAG, "-->>" + UserNick);
-        UserPwd = intent.getStringExtra("UserPwd");
-        //Log.i(TAG, "-->>" + UserPwd);
-    }*/
-    //判断xml上的输入是否为空
+
     private boolean isStrEmpty(String strInput)
     {
         if(strInput.equals(""))

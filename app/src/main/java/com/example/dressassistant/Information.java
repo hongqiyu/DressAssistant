@@ -61,17 +61,9 @@ public class Information extends AppCompatActivity {
     }
 
     private void insertHeWeInfo(String strHeight, String  strWeight){
-        String UserName,UserNick,UserPwd,Q1,Q2,Q3,A1,A2,A3;
-        /*Intent intent = getIntent();
-        UserName = intent.getStringExtra("UserName");
-        UserNick = intent.getStringExtra("UserNick");
-        UserPwd = intent.getStringExtra("UserPwd");
-        Q1 = intent.getStringExtra("Q1");
-        Q2 = intent.getStringExtra("Q2");
-        Q3 = intent.getStringExtra("Q3");
-        A1 = intent.getStringExtra("A1");
-        A2 = intent.getStringExtra("A2");
-        A3 = intent.getStringExtra("A3");*/
+        /*String UserName;
+        Intent intent = getIntent();
+        UserName = intent.getStringExtra("UserName");*/
         if(isStrEmpty(strHeight) == false){
             if(isStrEmpty(strWeight) == false){
                 ContentValues cvHeWeInfo = new ContentValues();
@@ -81,13 +73,14 @@ public class Information extends AppCompatActivity {
                     db.insert("FIDe",null,cvHeWeInfo);
                     Toast.makeText(Information.this,"设置成功！", Toast.LENGTH_SHORT).show();
                     Intent in=new Intent(Information.this,Figure.class);
+
                     /*in.putExtra("Q1",Q1);
                     in.putExtra("Q2",Q2);
                     in.putExtra("Q3",Q3);
                     in.putExtra("A1",A1);
                     in.putExtra("A2",A2);
                     in.putExtra("A3",A3);
-                    in.putExtra("UserName",UserName);
+
                     in.putExtra("UserNick",UserNick);
                     in.putExtra("UserPwd",UserPwd);
                     in.putExtra("strWeight",strWeight);
