@@ -17,22 +17,6 @@ public class DressStyle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dressstyle);
-        TextView textA = (TextView) findViewById(R.id.textA);
-        textA.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DressStyle.this, DressDetails.class);
-                startActivity(intent);
-            }
-        });
-        ImageView pictureA = (ImageView) findViewById(R.id.pictureA);
-        pictureA.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DressStyle.this, DressDetails.class);
-                startActivity(intent);
-            }
-        });
         Button buttonn=(Button)findViewById(R.id.button);
         buttonn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
