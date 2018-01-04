@@ -106,10 +106,9 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:text="发型选择"
         android:gravity="center"
-        android:textStyle="bold"
         android:layout_below="@+id/SV1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
