@@ -101,9 +101,7 @@ public class Register extends AppCompatActivity {
                         cvRUserInfo.put("pers_Password", strUserPwd);//密码
                         if(db != null)
                         {
-                            //db.insert("PersInfo", null, cvRUserInfo);
                             Toast.makeText(Register.this,"输入成功！", Toast.LENGTH_SHORT).show();
-
                             Intent intent=new Intent(Register.this,Requestion.class);
                             intent.putExtra("UserName",strUserName);
                             intent.putExtra("UserNick",strUserNick);
