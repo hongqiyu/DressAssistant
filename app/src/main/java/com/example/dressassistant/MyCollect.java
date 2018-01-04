@@ -21,13 +21,5 @@ public class MyCollect extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Button button4 = (Button)findViewById(R.id.button8);
-        button4.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(MyCollect.this,MyClass.class);
-                startActivity(intent);
-            }
-        });
     }
 }
