@@ -61,30 +61,21 @@ public class Information extends AppCompatActivity {
     }
 
     private void insertHeWeInfo(String strHeight, String  strWeight){
-        /*String UserName;
+
         Intent intent = getIntent();
-        UserName = intent.getStringExtra("UserName");*/
+        String UserName = intent.getStringExtra("UserName");
+
         if(isStrEmpty(strHeight) == false){
             if(isStrEmpty(strWeight) == false){
                 ContentValues cvHeWeInfo = new ContentValues();
+                cvHeWeInfo.put("fide_FiID",UserName);
                 cvHeWeInfo.put("fide_Weight",strWeight);
                 cvHeWeInfo.put("fide_Height",strHeight);
                 if(db != null){
                     db.insert("FIDe",null,cvHeWeInfo);
                     Toast.makeText(Information.this,"设置成功！", Toast.LENGTH_SHORT).show();
                     Intent in=new Intent(Information.this,Figure.class);
-
-                    /*in.putExtra("Q1",Q1);
-                    in.putExtra("Q2",Q2);
-                    in.putExtra("Q3",Q3);
-                    in.putExtra("A1",A1);
-                    in.putExtra("A2",A2);
-                    in.putExtra("A3",A3);
-
-                    in.putExtra("UserNick",UserNick);
-                    in.putExtra("UserPwd",UserPwd);
-                    in.putExtra("strWeight",strWeight);
-                    in.putExtra("strHeight",strHeight);*/
+                    in.putExtra("UserName",UserName);
                     startActivity(in);
                 }
             }
