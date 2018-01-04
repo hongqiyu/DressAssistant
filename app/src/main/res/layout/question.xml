@@ -19,7 +19,7 @@
                 android:gravity="center"
                 android:textSize="34dp"
                 android:id="@+id/tvv"/>
-            <RadioButton
+            <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvv"
@@ -27,7 +27,7 @@
             android:text="脖子粗"
             android:textSize="20dp"
                 android:id="@+id/rb1"/>
-            <RadioButton
+            <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rb1"
@@ -35,49 +35,49 @@
                 android:textSize="20dp"
                 android:id="@+id/rb2"
                 />
-            <RadioButton
+            <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rb2"
                 android:text="胸大"
                 android:textSize="20dp"
                 android:id="@+id/rb3"/>
-            <RadioButton
+            <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rb3"
                 android:text="胸小"
                 android:textSize="20dp"
                 android:id="@+id/rb4"/>
-            <RadioButton
+            <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rb4"
                 android:text="手臂粗"
                 android:textSize="20dp"
                 android:id="@+id/rb5"/>
-            <RadioButton
+            <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rb5"
                 android:text="腰粗"
                 android:textSize="20dp"
                 android:id="@+id/rb6"/>
-            <RadioButton
+            <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rb6"
                 android:text="腿粗"
                 android:textSize="20dp"
                 android:id="@+id/rb7"/>
-            <RadioButton
+            <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rb7"
                 android:text="腿短"
                 android:textSize="20dp"
                 android:id="@+id/rb8"/>
-            <RadioButton
+            <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rb8"
