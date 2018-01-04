@@ -109,15 +109,6 @@ public class Requestion extends AppCompatActivity {
                                     db.insert("PersInfo", null, cvQAInfo);
                                     Toast.makeText(Requestion.this,"注册成功！", Toast.LENGTH_SHORT).show();
                                     Intent in=new Intent(Requestion.this,Information.class);
-                                    /*in.putExtra("Q1",strQ1);
-                                    in.putExtra("Q2",strQ2);
-                                    in.putExtra("Q3",strQ3);
-                                    in.putExtra("A1",strA1);
-                                    in.putExtra("A2",strA2);
-                                    in.putExtra("A3",strA3);
-                                    in.putExtra("UserName",UserName);
-                                    in.putExtra("UserNick",UserNick);
-                                    in.putExtra("UserPwd",UserPwd);*/
                                     startActivity(in);
                                 }
                             }
