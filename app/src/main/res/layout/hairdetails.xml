@@ -18,7 +18,6 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:gravity="center"
-        android:textStyle="bold"
         android:text="欧美风"
         />
     <LinearLayout

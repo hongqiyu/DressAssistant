@@ -29,9 +29,8 @@
             android:layout_height="wrap_content"
             android:text="妆容选择"
             android:layout_below="@+id/SV1"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:gravity="center"
-            android:textStyle="bold"
             android:id="@+id/tt1"
             />
             <TextView
