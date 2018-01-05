@@ -16,76 +16,76 @@
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="80dp"
     android:layout_below="@+id/li2"
     android:id="@+id/li3"
     >
-    <ImageButton
+    <ImageView
         android:id="@+id/imageButton7"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        app:srcCompat="@mipmap/ic_launcher_round"
+        android:src="@drawable/hqs"
          />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/imageButton6"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        app:srcCompat="@mipmap/ic_launcher_round"
+        android:src="@drawable/hsn"
        />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/imageButton5"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        app:srcCompat="@mipmap/ic_launcher_round"
+       android:src="@drawable/hyj"
       />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/imageButton4"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        app:srcCompat="@mipmap/ic_launcher_round"
+        android:src="@drawable/hka"
        />
 </LinearLayout>
 
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="80dp"
     android:layout_below="@+id/te2"
     android:id="@+id/li1">
-    <ImageButton
+    <ImageView
         android:id="@+id/imageButton8"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
-        app:srcCompat="@mipmap/ic_launcher_round" />
-    <ImageButton
+        android:src="@drawable/hom"/>
+    <ImageView
         android:id="@+id/imageButton3"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
-        app:srcCompat="@mipmap/ic_launcher_round"
+        android:src="@drawable/hhr"
         />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/imageButton2"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
-        app:srcCompat="@mipmap/ic_launcher_round"
+        android:src="@drawable/hqx"
         />
-    <ImageButton
+    <ImageView
         android:id="@+id/imageButton"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
-        app:srcCompat="@mipmap/ic_launcher_round"
+       android:src="@drawable/hcs"
          />
 
 </LinearLayout>
@@ -106,10 +106,9 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:text="发型选择"
         android:gravity="center"
-        android:textStyle="bold"
         android:layout_below="@+id/SV1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -201,9 +200,80 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="朴素风"
+        android:text="可爱风"
          />
 </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/li4"
+                android:id="@+id/ttt2"
+                android:text="发型选择"
+                android:textSize="20dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ttt2"
+                android:id="@+id/li5">
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/hdf" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/hcf" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/hzc" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/li6"
+                android:layout_below="@+id/li5">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="短发"
+                    android:textSize="20dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:text="长发"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:text="中长发"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Empty"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/li6">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#FFFFFF"/>
+            </LinearLayout>
             </RelativeLayout>
     </ScrollView>
     <LinearLayout

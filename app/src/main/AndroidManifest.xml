@@ -18,13 +18,11 @@
         </activity>
         <activity android:name=".HairDetails"></activity>
         <activity android:name=".HairStyle"></activity>
-        <activity android:name=".DressDetails"></activity>
         <activity android:name=".DressStyle"></activity>
         <activity android:name=".MakeupStyle"></activity>
         <activity android:name=".MakeupDetails"></activity>
         <activity android:name=".MySpace"></activity>
         <activity android:name=".MyCollect"></activity>
-        <activity android:name=".MyClass"></activity>
         <activity android:name=".Login"></activity>
         <activity android:name=".Register"></activity>
         <activity android:name=".Requestion"></activity>
@@ -38,6 +36,13 @@
         <activity android:name=".SingleDetails"></activity>
         <activity android:name=".Personal"></activity>
         <activity android:name=".PersonalDetails"></activity>
+        <activity android:name=".HairInformation"></activity>
+        <activity android:name=".Myself"></activity>
+        <activity android:name=".ChangeName"></activity>
+        <activity android:name=".ChangeSignature"></activity>
+        <activity android:name=".ChangeTele"></activity>
+        <activity android:name=".ChangeBirth"></activity>
+        <activity android:name=".ChangePassword"></activity>
     </application>
 
 </manifest>

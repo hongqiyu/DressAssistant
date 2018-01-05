@@ -16,13 +16,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="30dp"
         android:gravity="center"
-        android:textSize="22dp"
-        android:textStyle="bold"
-        android:text="发型详情"
+        android:text="欧美风"
         />
     <LinearLayout
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         >
@@ -30,13 +29,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/style"
+            android:src="@drawable/hpgt"
             />
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/style"
+            android:src="@drawable/hbbt"
             />
     </LinearLayout>
     <LinearLayout
@@ -60,7 +59,7 @@
             />
     </LinearLayout>
     <LinearLayout
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         >
@@ -68,13 +67,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/style"
+            android:src="@drawable/hdbl"
             />
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/style"
+            android:id="@+id/ive1"
+            android:src="@drawable/hbwz"
             />
     </LinearLayout>
     <LinearLayout

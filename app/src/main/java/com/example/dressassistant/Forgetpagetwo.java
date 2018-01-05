@@ -59,29 +59,32 @@ public class Forgetpagetwo extends AppCompatActivity {
             return false;
         }
     }
-    String Q1,Q2,Q3;
+    String Q1,Q2,Q3,A1,A2,A3;
     //将密保问题取出
     private void QueryQues(String strUserName){
 
         Cursor cursor = db.rawQuery("select * from PersInfo where pers_UsID='" + strUserName + "'",null);
         if(cursor.moveToFirst()){  //循环遍历查找数组
-             Q1 = cursor.getString(cursor.getColumnIndex("pers_Q1"));
-             Q2 = cursor.getString(cursor.getColumnIndex("pers_Q2"));
-             Q3 = cursor.getString(cursor.getColumnIndex("pers_Q3"));
+            Q1 = cursor.getString(cursor.getColumnIndex("pers_Q1"));
+            Q2 = cursor.getString(cursor.getColumnIndex("pers_Q2"));
+            Q3 = cursor.getString(cursor.getColumnIndex("pers_Q3"));
+            A1 = cursor.getString(cursor.getColumnIndex("pers_A1"));
+            A2 = cursor.getString(cursor.getColumnIndex("pers_A2"));
+            A3 = cursor.getString(cursor.getColumnIndex("pers_A3"));
            // Toast.makeText(Forgetpagetwo.this,Q1,Toast.LENGTH_SHORT).show();
         }
         cursor.close();
     }
 
+
+
     //    判断问题和回答是否匹配
-    private boolean isRightAnswer(String UserName, String strA1, String strA2, String strA3){
-        Cursor cursor = db.rawQuery("select * from PersInfo where pers_UsID='" + UserName + "'and pers_A1='" + strA1 + "'and pers_A2='" + strA2 + "'and pers_A3='" + strA3 ,null);
-        if(cursor.getCount() == 1){
-            cursor.close();
+    private boolean isRightAnswer(String Answer, String reAnswer){
+        if(Answer.equals(reAnswer)){
             return true;
         }
-        else {
-            cursor.close();
+        else
+        {
             return false;
         }
     }
@@ -97,34 +100,44 @@ public class Forgetpagetwo extends AppCompatActivity {
         //从上一个界面传送UserName
         Intent intent = getIntent();
         final String UserName = intent.getStringExtra("UserName");
-        QueryQues(UserName);//取出密保问题
 
+
+        QueryQues(UserName);//取出密保问题
         //密保问题显示在TextView上
         TV1.setText(Q1);
         TV2.setText(Q2);
         TV3.setText(Q3);
         //点击下一步
         Button b=(Button) findViewById(R.id.button24);
-        Button.OnClickListener listener= new Button.OnClickListener(){
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-
                 EditText ET1 = (EditText)findViewById(R.id.et1);
                 EditText ET2 = (EditText)findViewById(R.id.et2);
                 EditText ET3 = (EditText)findViewById(R.id.et3);
                 String strA1 = ET1.getText().toString();
                 String strA2 = ET2.getText().toString();
                 String strA3 = ET3.getText().toString();
-
                 if(isStrEmpty(strA1) == false) {
                     if (isStrEmpty(strA2) == false){
                         if (isStrEmpty(strA3) == false){
-                            if(isRightAnswer(UserName,strA1,strA2,strA3)){
-                                Toast.makeText(Forgetpagetwo.this,"问题与答案匹配！",Toast.LENGTH_SHORT).show();
-                                Intent in=new Intent(Forgetpagetwo.this,Forgetpagethree.class);
-                                startActivity(in);
+                            if(isRightAnswer(A1,strA1)){
+                                if (isRightAnswer(A2,strA2)) {
+                                    if(isRightAnswer(A3,strA3)){
+                                        Toast.makeText(Forgetpagetwo.this,"问题与答案匹配！",Toast.LENGTH_SHORT).show();
+                                        Intent in=new Intent(Forgetpagetwo.this,Forgetpagethree.class);
+                                        //将UserName再传给下一个界面
+                                        in.putExtra("UserName",UserName);
+                                        startActivity(in);
+                                    }else {
+                                        Toast.makeText(Forgetpagetwo.this,"答案三错误，请重新输入！",Toast.LENGTH_SHORT).show();
+                                    }
+                                }else {
+                                    Toast.makeText(Forgetpagetwo.this,"答案二错误，请重新输入！",Toast.LENGTH_SHORT).show();
+                                }
                             }
                             else {
-                                Toast.makeText(Forgetpagetwo.this,"答案错误，请重新输入！",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Forgetpagetwo.this,"答案一错误，请重新输入！",Toast.LENGTH_SHORT).show();
                             }
                         }
                         else {
@@ -140,7 +153,6 @@ public class Forgetpagetwo extends AppCompatActivity {
                     ET1.setFocusable(true);
                 }
             }
-        };
-        b.setOnClickListener(listener);
+        });
     }
 }

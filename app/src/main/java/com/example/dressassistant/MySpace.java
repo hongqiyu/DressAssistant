@@ -18,14 +18,6 @@ public class MySpace extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.myspace);
-        ImageButton button2 = (ImageButton)findViewById(R.id.imageButton2);
-        button2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(MySpace.this,MyCollect.class);
-                startActivity(intent);
-            }
-        });
         Button bu=(Button) findViewById(R.id.button8);
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -58,6 +50,20 @@ public class MySpace extends AppCompatActivity {
         bb.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MySpace.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button bt=(Button)findViewById(R.id.buttonb);
+        bt.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(MySpace.this,MyCollect.class);
+                startActivity(intent);
+            }
+        });
+        LinearLayout l=(LinearLayout)findViewById(R.id.Lin2);
+        l.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(MySpace.this,Myself.class);
                 startActivity(intent);
             }
         });

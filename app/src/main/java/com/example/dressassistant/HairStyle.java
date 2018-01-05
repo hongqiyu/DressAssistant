@@ -9,13 +9,14 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 public class HairStyle extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hairstyle);
-        ImageButton bu=(ImageButton) findViewById(R.id.imageButton8);
+        ImageView bu=(ImageView) findViewById(R.id.imageButton8);
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(HairStyle.this,HairDetails.class);
@@ -47,6 +48,13 @@ public class HairStyle extends AppCompatActivity {
         buttonn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(HairStyle.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        ImageView iv=(ImageView)findViewById(R.id.imageView12);
+        iv.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(HairStyle.this,HairDetails.class);
                 startActivity(intent);
             }
         });

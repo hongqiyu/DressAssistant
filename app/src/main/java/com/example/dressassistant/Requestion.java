@@ -33,18 +33,7 @@ public class Requestion extends AppCompatActivity {
     private Spinner spinnerCardNumber2; //下拉框
     private Spinner spinnerCardNumber3; //下拉框
 
-    //接收上一个界面传递过来的数据
-   /* String UserName,UserNick,UserPwd;
-    private void receive(){
-        Intent intent = getIntent();
-        UserName = intent.getStringExtra("UserName");
-        //Log.i(TAG, "-->>" + UserName);
-        UserNick = intent.getStringExtra("UserNick");
-        //Log.i(TAG, "-->>" + UserNick);
-        UserPwd = intent.getStringExtra("UserPwd");
-        //Log.i(TAG, "-->>" + UserPwd);
-    }*/
-    //判断xml上的输入是否为空
+
     private boolean isStrEmpty(String strInput)
     {
         if(strInput.equals(""))
@@ -120,15 +109,6 @@ public class Requestion extends AppCompatActivity {
                                     db.insert("PersInfo", null, cvQAInfo);
                                     Toast.makeText(Requestion.this,"注册成功！", Toast.LENGTH_SHORT).show();
                                     Intent in=new Intent(Requestion.this,Information.class);
-                                    /*in.putExtra("Q1",strQ1);
-                                    in.putExtra("Q2",strQ2);
-                                    in.putExtra("Q3",strQ3);
-                                    in.putExtra("A1",strA1);
-                                    in.putExtra("A2",strA2);
-                                    in.putExtra("A3",strA3);
-                                    in.putExtra("UserName",UserName);
-                                    in.putExtra("UserNick",UserNick);
-                                    in.putExtra("UserPwd",UserPwd);*/
                                     startActivity(in);
                                 }
                             }

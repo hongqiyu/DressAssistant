@@ -18,9 +18,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/text1"
                 android:text="上装推荐"
-                android:textSize="34dp"
+                android:textSize="30dp"
                 android:gravity="center"
-                android:textStyle="bold"/>
+                />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
