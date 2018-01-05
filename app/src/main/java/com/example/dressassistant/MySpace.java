@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class MySpace extends AppCompatActivity {
 
@@ -63,7 +64,10 @@ public class MySpace extends AppCompatActivity {
         LinearLayout l=(LinearLayout)findViewById(R.id.Lin2);
         l.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent=new Intent(MySpace.this,Myself.class);
+                Intent in = getIntent();
+                String UserName = in.getStringExtra("UserName");
+                Intent intent = new Intent(MySpace.this,Myself.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });

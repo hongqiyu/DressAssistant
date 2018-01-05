@@ -72,15 +72,17 @@ public class Forgetpagethree extends AppCompatActivity {
         if(isStrEmpty(UserPwd) == false){
             if(isStrEmpty(reUserPwd) == false){
                 if(isPwdSame(UserPwd,reUserPwd)){
-                    //两种方法都可以
-                    ContentValues cvUpdatePwd = new ContentValues();
-                    cvUpdatePwd.put("pers_Password",UserPwd);
-                    db.update("PersInfo",cvUpdatePwd,"pers_UsID = ?",new String[] { UserName });
-                    //final String updateData = "update PersInfo set pers_Password = '"+UserPwd+"'where pers_UsID ='"+UserName+"'";
-                    //db.execSQL(updateData);
-                    Toast.makeText(Forgetpagethree.this,"修改成功，快去登录吧！",Toast.LENGTH_SHORT).show();
-                    Intent intent=new Intent(Forgetpagethree.this,Login.class);
-                    startActivity(intent);
+                    if(db!=null){
+                        //两种方法都可以
+                        ContentValues cvUpdatePwd = new ContentValues();
+                        cvUpdatePwd.put("pers_Password",UserPwd);
+                        db.update("PersInfo",cvUpdatePwd,"pers_UsID = ?",new String[] { UserName });
+                        //final String updateData = "update PersInfo set pers_Password = '"+UserPwd+"'where pers_UsID ='"+UserName+"'";
+                        //db.execSQL(updateData);
+                        Toast.makeText(Forgetpagethree.this,"修改成功，快去登录吧！",Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(Forgetpagethree.this,Login.class);
+                        startActivity(intent);
+                    }
                 }
                 else {
                     Toast.makeText(Forgetpagethree.this,"两次输入的密码不匹配！",Toast.LENGTH_SHORT).show();
