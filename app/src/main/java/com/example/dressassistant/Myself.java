@@ -63,13 +63,12 @@ public class Myself extends AppCompatActivity {
         OpenCreateDB();
         Intent in = getIntent();
         final String UserName = in.getStringExtra("UserName");
+
         QueryQues(UserName);
         TextView tv1 = (TextView)findViewById(R.id.tv1);
         tv1.setText(NickName);
-
         TextView tv2 = (TextView)findViewById(R.id.tv2);
         tv2.setText(phoneNum);
-
         TextView tv3 = (TextView)findViewById(R.id.tv3);
         tv3.setText(birthday);
 
@@ -86,7 +85,6 @@ public class Myself extends AppCompatActivity {
         l1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(Myself.this,ChangeSignature.class);
-
                 startActivity(intent);
             }
         });
@@ -110,6 +108,7 @@ public class Myself extends AppCompatActivity {
         l4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(Myself.this,ChangePassword.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });

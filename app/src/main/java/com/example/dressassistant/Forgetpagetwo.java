@@ -78,7 +78,7 @@ public class Forgetpagetwo extends AppCompatActivity {
 
 
 
-    //    判断问题和回答是否匹配
+    //    判断回答和数据库中回答是否匹配
     private boolean isRightAnswer(String Answer, String reAnswer){
         if(Answer.equals(reAnswer)){
             return true;
