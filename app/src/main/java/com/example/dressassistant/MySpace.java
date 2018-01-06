@@ -69,6 +69,7 @@ public class MySpace extends AppCompatActivity {
                 Intent intent = new Intent(MySpace.this,Myself.class);
                 intent.putExtra("UserName",UserName);
                 startActivity(intent);
+
             }
         });
     }

@@ -98,7 +98,6 @@ public class ChangePassword extends AppCompatActivity {
 
     private void updatePwd(String strOldPassword,String strNewPassword,String strReNewPassworord,String strUserName)
     {
-
         if(isStrEmpty(strOldPassword) == false){
             if(isStrEmpty(strNewPassword) == false){
                 if(isStrEmpty(strReNewPassworord) == false){
@@ -144,7 +143,7 @@ public class ChangePassword extends AppCompatActivity {
 
 
 
-        Button b = (Button)findViewById(R.id.b);
+        Button b = (Button)findViewById(R.id.b1);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
