@@ -321,7 +321,7 @@ public class MainActivity extends AppCompatActivity {
         //打开数据库
         OpenCreateDB();
         Intent intent = getIntent();
-        final String userID = intent.getStringExtra("userID");
+        final String userID = intent.getStringExtra("UserName");
 //        String resTypeName = getContext().getResources().getResourceTypeName(id)
 
 //
