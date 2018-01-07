@@ -134,7 +134,7 @@ public class Login extends AppCompatActivity {
                         }
                     }
                     else{
-                        Toast.makeText(Login.this,"用户名不得为空！",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this,"用户名不得为空!！",Toast.LENGTH_SHORT).show();
                         editText.setFocusable(true);
                     }
                 }
