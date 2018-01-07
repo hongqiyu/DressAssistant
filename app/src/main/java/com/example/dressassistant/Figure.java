@@ -43,9 +43,9 @@ public class Figure extends AppCompatActivity {
             Log.d("tag",String.format(msg,se.getClass(), se.getMessage()));
         }
     }
-    String  sshoulder,sneck,schest,sarm,swaist,sleWi,sleHe,ship;
-    private void FIDeInfo(String strShoulder,String strNeck,String strChest,String strArm,String strWaist,String strLeWi,String strLeHe,String strHip){
-
+    String  sshoulder,sneck,schest,sarm,swaist,sleWi,sleHe,ship,sname;
+    private void FIDeInfo(String strShoulder,String strNeck,String strChest,String strArm,String strWaist,String strLeWi,String strLeHe,String strHip,String strName){
+        sname = strName;
         sshoulder = strShoulder;
         sneck = strNeck;
         schest = strChest;
@@ -56,23 +56,26 @@ public class Figure extends AppCompatActivity {
         ship = strHip;
     }
 
-    private void insertFIDeInfo(String strShoulder,String strNeck,String strChest,String strArm,String strWaist,String strLeWi,String strLeHe,String strHip){
+    private void insertFIDeInfo(String strShoulder,String strNeck,String strChest,String strArm,String strWaist,String strLeWi,String strLeHe,String strHip,String strName){
         String UserName;
         //接受上个界面的UserName
         Intent intent = getIntent();
         UserName = intent.getStringExtra("UserName");
 
-        ContentValues cvFIDeInfo = new ContentValues();
-        cvFIDeInfo.put("fide_Shoulder",strShoulder);
-        cvFIDeInfo.put("fide_Neck",strNeck);
-        cvFIDeInfo.put("fide_Chest",strChest);
-        cvFIDeInfo.put("fide_Arm",strArm);
-        cvFIDeInfo.put("fide_Waist",strWaist);
-        cvFIDeInfo.put("fide_LeWi",strLeWi);
-        cvFIDeInfo.put("fide_LeHe",strLeHe);
-        cvFIDeInfo.put("fide_Hip",strHip);
+
         if(db != null) {
-            db.insert("FIDe", null, cvFIDeInfo);
+            ContentValues cvFIDeInfo = new ContentValues();
+            cvFIDeInfo.put("fide_Shoulder",strShoulder);
+            cvFIDeInfo.put("fide_Neck",strNeck);
+            cvFIDeInfo.put("fide_Chest",strChest);
+            cvFIDeInfo.put("fide_Arm",strArm);
+            cvFIDeInfo.put("fide_Waist",strWaist);
+            cvFIDeInfo.put("fide_LeWi",strLeWi);
+            cvFIDeInfo.put("fide_LeHe",strLeHe);
+            cvFIDeInfo.put("fide_Hip",strHip);
+            cvFIDeInfo.put("fide_FiNa",strName);
+            db.update("FIDe",cvFIDeInfo,"fide_FiID = ?",new String[] { UserName });
+            //db.insert("FIDe", null, cvFIDeInfo);
             Toast.makeText(Figure.this, "设置成功！", Toast.LENGTH_SHORT).show();
             Intent in = new Intent(Figure.this,Question.class);
             in.putExtra("UserName",UserName);
@@ -105,7 +108,7 @@ public class Figure extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(Figure.this,"选",Toast.LENGTH_SHORT).show();
-                String  shoulder,neck,chest,arm,waist,leWi,leHe,hip;
+                String  shoulder,neck,chest,arm,waist,leWi,leHe,hip,name;
                 shoulder = "1";//肩宽
                 neck = "0";
                 chest = "0";
@@ -114,8 +117,9 @@ public class Figure extends AppCompatActivity {
                 leWi = "0";
                 leHe = "0";
                 hip = "-1";//窄臀
+                name = "倒三角";
                 iv1.setSelected(true);
-                FIDeInfo(shoulder,neck,chest,arm,waist,leWi,leHe,hip);
+                FIDeInfo(shoulder,neck,chest,arm,waist,leWi,leHe,hip,name);
             }
         });
         //点击第二张身材图，梨形
@@ -125,7 +129,7 @@ public class Figure extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(Figure.this,"2",Toast.LENGTH_SHORT).show();
-                String  shoulder,neck,chest,arm,waist,leWi,leHe,hip;
+                String  shoulder,neck,chest,arm,waist,leWi,leHe,hip,name;
                 shoulder = "0";
                 neck = "0";
                 chest = "0";
@@ -134,8 +138,9 @@ public class Figure extends AppCompatActivity {
                 leWi = "1";//腿粗
                 leHe = "0";
                 hip = "1";//宽臀
+                name = "梨形";
                 iv2.setSelected(true);
-                FIDeInfo(shoulder,neck,chest,arm,waist,leWi,leHe,hip);
+                FIDeInfo(shoulder,neck,chest,arm,waist,leWi,leHe,hip,name);
 
             }
         });
@@ -146,7 +151,7 @@ public class Figure extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(Figure.this,"3",Toast.LENGTH_SHORT).show();
-                String  shoulder,neck,chest,arm,waist,leWi,leHe,hip;
+                String  shoulder,neck,chest,arm,waist,leWi,leHe,hip,name;
                 shoulder = "0";
                 neck = "0";
                 chest = "0";
@@ -155,8 +160,9 @@ public class Figure extends AppCompatActivity {
                 leWi = "0";
                 leHe = "0";
                 hip = "1";//宽臀
+                name = "苹果形";
                 iv3.setSelected(true);
-                FIDeInfo(shoulder,neck,chest,arm,waist,leWi,leHe,hip);
+                FIDeInfo(shoulder,neck,chest,arm,waist,leWi,leHe,hip,name);
             }
         });
 
@@ -167,7 +173,7 @@ public class Figure extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(Figure.this,"4",Toast.LENGTH_SHORT).show();
-                String  shoulder,neck,chest,arm,waist,leWi,leHe,hip;
+                String  shoulder,neck,chest,arm,waist,leWi,leHe,hip,name;
                 shoulder = "0";
                 neck = "0";
                 chest = "0";
@@ -176,8 +182,9 @@ public class Figure extends AppCompatActivity {
                 leWi = "0";
                 leHe = "0";
                 hip = "0";
+                name = "沙漏型";
                 iv4.setSelected(true);
-                FIDeInfo(shoulder,neck,chest,arm,waist,leWi,leHe,hip);
+                FIDeInfo(shoulder,neck,chest,arm,waist,leWi,leHe,hip,name);
             }
         });
 
@@ -188,7 +195,7 @@ public class Figure extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(Figure.this,"5",Toast.LENGTH_SHORT).show();
-                String  shoulder,neck,chest,arm,waist,leWi,leHe,hip;
+                String  shoulder,neck,chest,arm,waist,leWi,leHe,hip,name;
                 shoulder = "0";
                 neck = "0";
                 chest = "0";
@@ -197,8 +204,9 @@ public class Figure extends AppCompatActivity {
                 leWi = "0";
                 leHe = "0";
                 hip = "0";
+                name = "直筒型";
                 iv5.setSelected(true);
-                FIDeInfo(shoulder,neck,chest,arm,waist,leWi,leHe,hip);
+                FIDeInfo(shoulder,neck,chest,arm,waist,leWi,leHe,hip,name);
             }
         });
 
@@ -206,7 +214,7 @@ public class Figure extends AppCompatActivity {
         TVV.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(isIVSelected(iv1,iv2,iv3,iv4,iv5)){
-                    insertFIDeInfo(sshoulder,sneck,schest,sarm,swaist,sleWi,sleHe,ship);
+                    insertFIDeInfo(sshoulder,sneck,schest,sarm,swaist,sleWi,sleHe,ship,sname);
                 }
                 else {
                     Toast.makeText(Figure.this,"请选择一个身形",Toast.LENGTH_SHORT).show();

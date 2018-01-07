@@ -376,10 +376,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button butto=(Button) findViewById(R.id.button7);
         butto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                Intent in = getIntent();
+                String UserName = in.getStringExtra("UserName");
                 Intent intent=new Intent(MainActivity.this,MySpace.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });

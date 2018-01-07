@@ -58,10 +58,11 @@
                 android:layout_below="@+id/view2"
                 android:id="@+id/llot2"
                 android:background="#ffffff">
+
                 <EditText
+                    android:id="@+id/et"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    />
+                    android:layout_height="match_parent" />
             </LinearLayout>
             <View
                 android:id="@+id/view1"
@@ -69,14 +70,16 @@
                 android:layout_height="20dp"
                 android:layout_below="@+id/llot2"
                 android:background="#E8E8E8"/>
+
             <Button
+                android:id="@+id/b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/view1"
+                android:background="#EE3B3B"
                 android:text="确定"
                 android:textColor="#ffffff"
-                android:textSize="18dp"
-                android:layout_below="@+id/view1"
-                android:background="#EE3B3B"/>
+                android:textSize="18dp" />
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>

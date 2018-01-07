@@ -83,19 +83,17 @@ public class Requestion extends AppCompatActivity {
     //插入密保问题和密保答案
     private void insertQA(String strQ1, String strQ2, String strQ3, String strA1, String strA2, String strA3)
     {
-
-        Intent intent = getIntent();
-        String UserName = intent.getStringExtra("UserName");
-        String UserNick = intent.getStringExtra("UserNick");
-        String UserPwd = intent.getStringExtra("UserPwd");
-
-        ContentValues cvQAInfo = new ContentValues();
         if(isStrEmpty(strA1) == false){
             if(isStrEmpty(strA2) == false){
                 if(isStrEmpty(strA3) == false){
                     if(isQuesSame(strQ1,strQ2) == false){
                         if(isQuesSame(strQ1,strQ3) == false){
                             if(isQuesSame(strQ2,strQ3) == false){
+                                Intent intent = getIntent();
+                                String UserName = intent.getStringExtra("UserName");
+                                String UserNick = intent.getStringExtra("UserNick");
+                                String UserPwd = intent.getStringExtra("UserPwd");
+                                ContentValues cvQAInfo = new ContentValues();
                                 cvQAInfo.put("pers_Q1",strQ1);
                                 cvQAInfo.put("pers_Q2",strQ2);
                                 cvQAInfo.put("pers_Q3",strQ3);
@@ -108,8 +106,9 @@ public class Requestion extends AppCompatActivity {
                                 if(db != null){
                                     db.insert("PersInfo", null, cvQAInfo);
                                     Toast.makeText(Requestion.this,"注册成功！", Toast.LENGTH_SHORT).show();
-                                    Intent in=new Intent(Requestion.this,Information.class);
-                                    startActivity(in);
+                                    intent = new Intent(Requestion.this,Information.class);
+                                    intent.putExtra("UserName",UserName);
+                                    startActivity(intent);
                                 }
                             }
                             else {
