@@ -328,6 +328,7 @@ public class MainActivity extends AppCompatActivity {
 //        insertSuOrSe("suit", R.drawable.cc, "cc", 6);
 //        insertHaOrMa("makeup",R.drawable.zrzrone, "zrzrone", null, "no",6);
         showInMain();
+
         ImageView imageView8=(ImageView) findViewById(R.id.imageView8);
         String drawable =getResources().getResourceName(R.id.imageView8);
         Toast.makeText(MainActivity.this, drawable, Toast.LENGTH_SHORT).show();
