@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -35,7 +36,9 @@ import android.support.v7.app.AppCompatActivity;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -165,17 +168,11 @@ public class MainActivity extends AppCompatActivity {
         bmp.compress(Bitmap.CompressFormat.PNG,100,os); //设置压缩格式，存入流
         ContentValues values = new ContentValues();
         if(type == "haircut"){
-
-
-
             Cursor cursor = db.rawQuery("select * from AllPicture where alpi_PiID='" + photoId +"'", null);
             if(cursor.getCount()>0) {
                 cursor.close();
-
             }
             else {
-
-
                 //插入图片汇总表
                 ContentValues AllPicture = new ContentValues();
                 AllPicture.put("alpi_PiID", photoId);
@@ -203,11 +200,8 @@ public class MainActivity extends AppCompatActivity {
             Cursor cursor = db.rawQuery("select * from AllPicture where alpi_PiID='" + photoId +"'", null);
             if(cursor.getCount()>0) {
                 cursor.close();
-
             }
             else {
-
-
                 //插入图片汇总表
                 ContentValues AllPicture = new ContentValues();
                 AllPicture.put("alpi_PiID", photoId);
@@ -269,15 +263,97 @@ public class MainActivity extends AppCompatActivity {
             i++;
         }
     }
+    public boolean deleteFavorite(String id, String userID){
+        //删除收藏夹的图片
+        String sql = "delete from FavoriteDetail wherefade_FaID = '" + id + "'";
+        db.execSQL(sql);
+        //减少图片汇总表的人气值
+        Cursor cur = null;
+        cur = db.rawQuery("select * from AllPicture where alpi_PiID = '" + id + "'", null);
+        cur.moveToFirst();
+        int PoVa = cur.getInt(cur.getColumnIndex("alpi_PoVa")) - 1;
+        sql = "update [AllPicture] set alpi_PoVa = '" + PoVa + "'where alpi_PiID = '" + id + "'";
+        try {
+            db.execSQL(sql);
+            return true;
+        }catch(SQLException e){
+            return false;
+        }
+    }
+
+    public void Favorite(String id, String userID) {
+        Cursor cur = null;
+        cur = db.rawQuery("select * from FavoriteDetail where fade_FaID = '" + id + "'", null);
+        if(cur.getCount()>0)
+            deleteFavorite(id, userID);
+        else if (cur.getCount() == 0)
+            addFavorite(id, userID);
+    }
+
+    public boolean addFavorite(String id, String userID){
+        //系统时间
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
+        Date curDate = new Date(System.currentTimeMillis());
+        String str = formatter.format(curDate);
+        //插入收藏夹表
+        ContentValues FavoriteDetail = new ContentValues();
+        FavoriteDetail.put("fade_FaID", userID);
+        FavoriteDetail.put("fade_PiID", id);
+        FavoriteDetail.put("fade_Time", str);
+        db.insert("FavoriteDetail", null, FavoriteDetail);
+        //增加图片汇总表的人气值
+        Cursor cur = null;
+        cur = db.rawQuery("select * from AllPicture where alpi_PiID = '" + id + "'", null);
+        cur.moveToFirst();
+        int PoVa = cur.getInt(cur.getColumnIndex("alpi_PoVa")) + 1;
+        String sql = "update [AllPicture] set alpi_PoVa = '" + PoVa + "'where alpi_PiID = '" + id + "'";
+        try {
+            db.execSQL(sql);
+            return true;
+        }catch(SQLException e){
+            return false;
+        }
+    }
+
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //打开数据库
         OpenCreateDB();
+
+        Intent intent = getIntent();
+        final String userID = intent.getStringExtra("userID");
+//        String resTypeName = getContext().getResources().getResourceTypeName(id)
+
 //
 //        insertSuOrSe("suit", R.drawable.cc, "cc", 6);
 //        insertHaOrMa("makeup",R.drawable.zrzrone, "zrzrone", null, "no",6);
         showInMain();
+        ImageView imageView8=(ImageView) findViewById(R.id.imageView8);
+        String drawable =getResources().getResourceName(R.id.imageView8);
+        Toast.makeText(MainActivity.this, drawable, Toast.LENGTH_SHORT).show();
+        ImageView.OnClickListener listener = new ImageView.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int id = v.getId();
+                switch (id) {
+                    case R.id.IM1:
+                    case R.id.IM5:
+                    case R.id.IM9:
+                    case R.id.IM13:
+                    case R.id.IM17:
+                    case R.id.IM21:
+//                        Favorite(v.getId().getBackground(), userID);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        };
+        ImageView IM4 =(ImageView) findViewById(R.id.IM1);
+        IM4.setOnClickListener(listener);
+
+
 
         Button bu=(Button) findViewById(R.id.button8);
         bu.setOnClickListener(new View.OnClickListener() {
@@ -319,7 +395,7 @@ public class MainActivity extends AppCompatActivity {
                 scrollTo();
                 //点击最热发型时显示返回的参数
                 Intent intent = getIntent();
-                String data = intent.getStringExtra("extra_data");
+                String data = intent.getStringExtra("userID");
                 Toast.makeText(MainActivity.this, data, Toast.LENGTH_SHORT).show();
             }
         });

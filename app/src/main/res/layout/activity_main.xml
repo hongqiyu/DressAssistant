@@ -100,12 +100,13 @@
                     android:layout_height="25dp"
                     android:layout_weight="1"
                     android:background="@drawable/zxfx"/>
+
                 <ImageView
                     android:id="@+id/IM24"
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zxjh"/>
+                    android:background="@drawable/zxjh" />
             </LinearLayout>
         </LinearLayout>
 
@@ -436,7 +437,8 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:background="@drawable/zxsc"/>
+                    android:background="@drawable/zxsc" />
+
                 <ImageView
                     android:id="@+id/IM6"
                     android:layout_width="0dp"
