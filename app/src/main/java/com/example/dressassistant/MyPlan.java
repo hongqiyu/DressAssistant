@@ -74,6 +74,7 @@ public class MyPlan extends AppCompatActivity {
         Cursor cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName +"'",null);
         if(cur.getCount() == 0) {
             Toast.makeText(MyPlan.this, "还未有计划，快去添加", Toast.LENGTH_SHORT).show();
+            cur.close();
             return;
         }
         String suit = null;
@@ -86,6 +87,6 @@ public class MyPlan extends AppCompatActivity {
         getPhoto(suit,R.id.mr1);
         getPhoto(makeup,R.id.mr2);
         getPhoto(hair,R.id.mr3);
-
+        cur.close();
     }
 }

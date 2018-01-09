@@ -297,17 +297,21 @@ public class MainActivity extends AppCompatActivity {
         cur.close();
     }
 
+    private String SystemTime;
+    public void getSystemTime(){
+        //系统时间
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Date curDate = new Date(System.currentTimeMillis());
+        SystemTime = formatter.format(curDate);
+    }
     //加入收藏夹
     public boolean addFavorite(String id) {
-        //系统时间
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
-        Date curDate = new Date(System.currentTimeMillis());
-        String str = formatter.format(curDate);
+
         //插入收藏夹表
         ContentValues FavoriteDetail = new ContentValues();
         FavoriteDetail.put("fade_FaID", UserName);
         FavoriteDetail.put("fade_PiID", id);
-        FavoriteDetail.put("fade_Time", str);
+        FavoriteDetail.put("fade_Time", SystemTime);
         db.insert("FavoriteDetail", null, FavoriteDetail);
         //增加图片汇总表的人气值
         Cursor cur = null;
@@ -331,21 +335,32 @@ public class MainActivity extends AppCompatActivity {
     //明日计划
     public void tomorrowPlan(String id, String type) {
         Cursor cur = null;
-        cur = db.rawQuery("select * from PlDe where plde_PlID = '" + UserName + "'", null);
+        Cursor cur1 = null;
+        cur1 = db.rawQuery("select * from UHPl where uhpl_UsID = '" + UserName + "' and htpl_Time = '"+ SystemTime + "'", null);
+        if(cur1.getCount() == 0){
+            ContentValues UHPl = new ContentValues();
+            UHPl.put("uhpl_UsID", UserName);
+            UHPl.put("uhpl_PlID", UserName+SystemTime);
+            UHPl.put("htpl_Time", SystemTime);
+            db.insert("UHPl", null, UHPl);
+        }
+
+        cur = db.rawQuery("select * from PlDe where plde_PlID = '" + UserName+SystemTime + "'", null);
         if (cur.getCount() == 0) {
             addTomoPlan(id, type);
-        } else
+            Toast.makeText(MainActivity.this, "计划添加成功", Toast.LENGTH_SHORT).show();
+        }
+        else
             updateTomoPlan(id, type);
+        cur1.close();
         cur.close();
     }
     //新建明日计划
     public void addTomoPlan(String id, String type) {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
-        Date curDate = new Date(System.currentTimeMillis());
-        String str = formatter.format(curDate);
         //插入type类型计划
         ContentValues PlDe = new ContentValues();
-        PlDe.put("plde_PlID", UserName);
+        PlDe.put("plde_PlID", UserName+SystemTime);
+        PlDe.put("plde_Time", SystemTime);
         if (type == "suit")
             PlDe.put("plde_SuID", id);
         else if (type == "makeup")
@@ -354,7 +369,6 @@ public class MainActivity extends AppCompatActivity {
             PlDe.put("plde_HaID", id);
         try {
             db.insert("PlDe", null, PlDe);
-            Toast.makeText(MainActivity.this, "计划添加成功", Toast.LENGTH_SHORT).show();
         }catch(Exception e){
             Toast.makeText(MainActivity.this, "新建明日计划出现异常!", Toast.LENGTH_SHORT).show();
         }
@@ -366,17 +380,15 @@ public class MainActivity extends AppCompatActivity {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
         Date curDate = new Date(System.currentTimeMillis());
         String str = formatter.format(curDate);
-        ContentValues PlDe = new ContentValues();
         String flag = "change";
-        PlDe.put("plde_PlID", UserName);
         if (type == "suit") {
-            cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName + "' and plde_SuID != '" + null + "'", null);
-            String sql = "update [PlDe] set plde_SuID = '" + id + "'where plde_PlID = '" + UserName + "'";
+            cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName+SystemTime + "' and plde_SuID != '" + null + "'", null);
+            String sql = "update [PlDe] set plde_SuID = '" + id + "'where plde_PlID = '" + UserName+SystemTime + "'";
             //若已存在该图片，替换？
             if (cur.getCount() > 0) {
-                cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName + "' and plde_SuID = '" + id + "'", null);
+                cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName+SystemTime + "' and plde_SuID = '" + id + "'", null);
                 if(cur.getCount() > 0) {
-                    sql = "update [PlDe] set plde_SuID ='" + null + "'where plde_PlID = '" + UserName + "'";
+                    sql = "update [PlDe] set plde_SuID ='" + null + "'where plde_PlID = '" + UserName+SystemTime + "'";
                     flag = "delete";
                 }
                 exTomoPlan(id, sql, flag);
@@ -384,15 +396,17 @@ public class MainActivity extends AppCompatActivity {
             //不存在该图片修改该用户计划，加入
             else {
                 db.execSQL(sql);
+//                sql = "update [PlDe] set plde_Time = '" + SystemTime + "' where plde_PlID = '" + UserName + "'";
+//                db.execSQL(sql);
             }
         }
         else if (type == "makeup") {
-            cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName + "' and plde_MaID != '" + null + "'", null);
-            String sql = "update [PlDe] set plde_MaID = '" + id + "'where plde_PlID = '" + UserName + "'";
+            cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName+SystemTime + "' and plde_MaID != '" + null + "'", null);
+            String sql = "update [PlDe] set plde_MaID = '" + id + "'where plde_PlID = '" + UserName+SystemTime + "'";
             if (cur.getCount() > 0) {
-                cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName + "' and plde_MaID = '" + id + "'", null);
+                cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName+SystemTime + "' and plde_MaID = '" + id + "'", null);
                 if(cur.getCount() > 0) {
-                    sql = "update [PlDe] set plde_MaID ='" + null + "' where plde_PlID = '" + UserName + "'";
+                    sql = "update [PlDe] set plde_MaID ='" + null + "' where plde_PlID = '" + UserName+SystemTime + "'";
                     flag = "delete";
                 }
                 exTomoPlan(id, sql, flag);
@@ -402,12 +416,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         else if (type == "haircut") {
-            cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName + "' and plde_HaID != '" + null + "'", null);
-            String sql = "update [PlDe] set plde_HaID = '" + id + "'where plde_PlID = '" + UserName + "'";
+            cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName+SystemTime + "' and plde_HaID != '" + null + "'", null);
+            String sql = "update [PlDe] set plde_HaID = '" + id + "'where plde_PlID = '" + UserName+SystemTime + "'";
             if (cur.getCount() > 0) {
-                cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName + "' and plde_HaID = '" + id + "'", null);
+                cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName+SystemTime + "' and plde_HaID = '" + id + "'", null);
                 if(cur.getCount() > 0) {
-                    sql = "update [PlDe] set plde_HaID ='" + null + "' where plde_PlID = '" + UserName + "'";
+                    sql = "update [PlDe] set plde_HaID ='" + null + "' where plde_PlID = '" + UserName+SystemTime + "'";
                     flag = "delete";
                 }
                 exTomoPlan(id, sql, flag);
@@ -449,11 +463,11 @@ public class MainActivity extends AppCompatActivity {
     public void deleteTomoPlan(String id, String type) {
         String sql = null;
         if (type == "suit")
-            sql = "update [PlDe] set plde_SuID = '" + null + "' where plde_PlID = '" + UserName + "'";
+            sql = "update [PlDe] set plde_SuID = '" + null + "' where plde_PlID = '" + UserName+SystemTime + "'";
         else if (type == "makeup")
-            sql = "update [PlDe] set plde_MaID = '" + null + "' where plde_PlID = '" + UserName + "'";
+            sql = "update [PlDe] set plde_MaID = '" + null + "' where plde_PlID = '" + UserName+SystemTime + "'";
         else if (type == "haircut")
-            sql = "update [PlDe] set plde_HaID = '" + null + "' where plde_PlID = '" + UserName + "'";
+            sql = "update [PlDe] set plde_HaID = '" + null + "' where plde_PlID = '" + UserName+SystemTime + "'";
         db.execSQL(sql);
     }
     private String UserName;
@@ -466,6 +480,7 @@ public class MainActivity extends AppCompatActivity {
         OpenCreateDB();
 //        insertSuOrSe("suit", R.drawable.cc, "cc", 6);
 //        insertHaOrMa("haircut",R.drawable.hfxbwz, "hfxbwz", null, "no",10);
+        getSystemTime();
         showInMain();
         ImageView.OnClickListener listener = new ImageView.OnClickListener() {
             @Override
