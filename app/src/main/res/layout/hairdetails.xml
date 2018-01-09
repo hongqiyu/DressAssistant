@@ -233,13 +233,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hpgt"
+                    android:src="@drawable/hsmw"
                     />
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hbbt"
+                    android:src="@drawable/hdmw"
                     />
             </LinearLayout>
             <LinearLayout
@@ -254,14 +254,14 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="苹果头"
+                    android:text="双马尾"
                     />
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="波波头"
+                    android:text="低马尾"
                     />
             </LinearLayout>
             <LinearLayout
@@ -331,13 +331,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hpgt"
+                    android:src="@drawable/hfs"
                     />
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hbbt"
+                    android:src="@drawable/hwz"
                     />
             </LinearLayout>
             <LinearLayout
@@ -352,14 +352,14 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="苹果头"
+                    android:text="法式马尾辫"
                     />
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="波波头"
+                    android:text="韩式丸子头"
                     />
             </LinearLayout>
             <LinearLayout
@@ -429,14 +429,15 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hpgt"
+                    android:src="@drawable/hhb"
                     />
+
                 <ImageView
+                    android:id="@+id/imageView16"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hbbt"
-                    />
+                    android:src="@drawable/hwg" />
             </LinearLayout>
             <LinearLayout
                 android:layout_height="wrap_content"
@@ -450,14 +451,14 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="苹果头"
+                    android:text="花苞头"
                     />
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="波波头"
+                    android:text="蜈蚣辫"
                     />
             </LinearLayout>
             <LinearLayout
@@ -515,6 +516,16 @@
                         android:layout_weight="1"
                         android:background="@drawable/zxjh"/>
                 </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Empty"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/lf">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="#FFFFFF"/>
             </LinearLayout>
 </RelativeLayout>
         </ScrollView>
