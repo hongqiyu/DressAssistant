@@ -70,17 +70,17 @@
                     android:layout_width="0dp"
                     android:layout_height="25dp"
                     android:layout_weight="1"
+                    />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
                     android:background="@drawable/zxsc"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="25dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/zxdz"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="25dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/zxfx"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="25dp"
@@ -95,17 +95,17 @@
                         android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
                         android:background="@drawable/zxsc"/>
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="25dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/zxdz"/>
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="25dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/zxfx"/>
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="25dp"
@@ -163,17 +163,17 @@
                         android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
                         android:background="@drawable/zxsc"/>
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="25dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/zxdz"/>
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="25dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/zxfx"/>
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="25dp"
@@ -188,17 +188,17 @@
                         android:layout_width="0dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
                         android:background="@drawable/zxsc"/>
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="25dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/zxdz"/>
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="25dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/zxfx"/>
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="25dp"
