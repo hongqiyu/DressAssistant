@@ -29,7 +29,7 @@ public class MySpace extends AppCompatActivity {
         Button bu=(Button) findViewById(R.id.button8);
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent=new Intent(MySpace.this,HairStyle.class);
+                Intent intent=new Intent(MySpace.this,HairDetails.class);
                 startActivity(intent);
             }
         });
