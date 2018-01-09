@@ -25,7 +25,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:src="@drawable/hqs"
+        android:src="@drawable/zfxqs"
          />
 
     <ImageView
@@ -33,7 +33,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:src="@drawable/hsn"
+        android:src="@drawable/zfxsn"
        />
 
     <ImageView
@@ -41,7 +41,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-       android:src="@drawable/hyj"
+       android:src="@drawable/zfxzx"
       />
 
     <ImageView
@@ -64,13 +64,13 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
-        android:src="@drawable/hom"/>
+        android:src="@drawable/zfxom"/>
     <ImageView
         android:id="@+id/imageButton3"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
-        android:src="@drawable/hhr"
+        android:src="@drawable/zfxrh"
         />
 
     <ImageView
@@ -78,14 +78,14 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
-        android:src="@drawable/hqx"
+        android:src="@drawable/zfxqx"
         />
     <ImageView
         android:id="@+id/imageButton"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
-       android:src="@drawable/hcs"
+       android:src="@drawable/zfxcs"
          />
 
 </LinearLayout>
@@ -138,7 +138,7 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
-        android:text="韩日风"
+        android:text="日韩风"
         android:gravity="center"
          />
 
@@ -191,7 +191,7 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="御姐风"
+        android:text="中性风"
          />
 
     <TextView
