@@ -333,7 +333,6 @@ public class MainActivity extends AppCompatActivity {
         } else
             updateTomoPlan(id, type);
     }
-
     //新建明日计划
     public void addTomoPlan(String id, String type) {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日 HH:mm:ss");
