@@ -469,7 +469,7 @@ public class MainActivity extends AppCompatActivity {
         //打开数据库
         OpenCreateDB();
 //        insertSuOrSe("suit", R.drawable.cc, "cc", 6);
-//        insertHaOrMa("haircut",R.drawable.hfxbwz, "hfxbwz", null, "no",10);
+        insertHaOrMa("haircut",R.drawable.lhairpgt, "lhiarpgt", null, "no",-1);
         showInMain();
         ImageView.OnClickListener listener = new ImageView.OnClickListener() {
             @Override

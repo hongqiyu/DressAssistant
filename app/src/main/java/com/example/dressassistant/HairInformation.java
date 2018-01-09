@@ -66,7 +66,8 @@ public class  HairInformation extends AppCompatActivity {
     public void showIn(String name){
         getPhoto(name);
         TextView Tv = (TextView)findViewById(R.id.ttv);
-        Tv.setText("半丸子头");
+//        Tv.setText("半丸子头");
+//        Tv.setText("苹果头");
     }
     public void getPhotoName() {
         Intent intent = getIntent();
