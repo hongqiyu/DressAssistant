@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    >
+    android:background="@color/background"
+    tools:context="com.example.dressassistant.MakeupDetails">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -19,11 +21,14 @@
         android:textSize="30dp"
         android:gravity="center"
         android:text="欧美风"
+        android:id="@+id/textt1"
         />
     <LinearLayout
         android:layout_height="150dp"
         android:layout_width="match_parent"
         android:orientation="horizontal"
+        android:layout_below="@+id/textt1"
+        android:id="@+id/lin1"
         >
         <ImageView
             android:layout_width="0dp"
@@ -42,6 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="horizontal"
+        android:layout_below="@+id/lin1"
+        android:id="@+id/lin2"
         >
         <TextView
             android:layout_width="0dp"
@@ -58,17 +65,77 @@
             android:text="波波头"
             />
     </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin2"
+                android:id="@+id/lc">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zxsc"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zxjh"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zxsc"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zxjh"/>
+                </LinearLayout>
+            </LinearLayout>
     <LinearLayout
         android:layout_height="150dp"
         android:layout_width="match_parent"
         android:orientation="horizontal"
+        android:layout_below="@+id/lc"
+        android:id="@+id/lin3"
         >
+
         <ImageView
+            android:id="@+id/imageView13"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/hdbl"
-            />
+            android:src="@drawable/hdbl" />
+
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -81,6 +148,8 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="horizontal"
+        android:layout_below="@+id/lin3"
+        android:id="@+id/lin4"
         >
         <TextView
             android:layout_width="0dp"
@@ -96,7 +165,63 @@
             android:gravity="center"
             android:text="半丸子"
             />
-    </LinearLayout>
-</LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin4"
+                android:id="@+id/la">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zxsc"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zxjh"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zxsc"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/zxjh"/>
+                </LinearLayout>
+            </LinearLayout>
+</RelativeLayout>
         </ScrollView>
-    </LinearLayout>
+    </RelativeLayout>

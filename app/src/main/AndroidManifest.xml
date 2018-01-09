@@ -39,10 +39,11 @@
         <activity android:name=".HairInformation"></activity>
         <activity android:name=".Myself"></activity>
         <activity android:name=".ChangeName"></activity>
-        <activity android:name=".ChangeSignature"></activity>
         <activity android:name=".ChangeTele"></activity>
         <activity android:name=".ChangeBirth"></activity>
         <activity android:name=".ChangePassword"></activity>
+        <activity android:name=".MyHistory"></activity>
+        <activity android:name=".MyPlan"></activity>
     </application>
 
 </manifest>
