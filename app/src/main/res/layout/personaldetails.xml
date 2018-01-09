@@ -243,32 +243,32 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="25dp"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:text=""/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:text=""/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="0.5"
+            android:background="#ffffff"
+            android:text=""/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:text=""/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="25dp"
             android:layout_weight="1"
             android:background="@drawable/zxsc"
-            android:text=""/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="25dp"
-            android:layout_weight="0.5"
-            android:background="#ffffff"
-            android:text=""/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="25dp"
-            android:layout_weight="1"
-            android:background="@drawable/zxdz"
-            android:text=""/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="25dp"
-            android:layout_weight="0.5"
-            android:background="#ffffff"
-            android:text=""/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="25dp"
-            android:layout_weight="1"
-            android:background="@drawable/zxfx"
             android:text=""/>
         <Button
             android:layout_width="0dp"
