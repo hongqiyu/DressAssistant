@@ -43,6 +43,7 @@
         <activity android:name=".ChangeTele"></activity>
         <activity android:name=".ChangeBirth"></activity>
         <activity android:name=".ChangePassword"></activity>
+        <activity android:name=".MyHistory"></activity>
     </application>
 
 </manifest>

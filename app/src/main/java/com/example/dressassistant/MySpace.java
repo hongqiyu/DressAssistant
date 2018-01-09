@@ -61,6 +61,13 @@ public class MySpace extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button bc=(Button)findViewById(R.id.buttonc);
+        bc.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(MySpace.this,MyHistory.class);
+                startActivity(intent);
+            }
+        });
         LinearLayout l=(LinearLayout)findViewById(R.id.Lin2);
         l.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
