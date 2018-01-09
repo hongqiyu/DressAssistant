@@ -45,20 +45,20 @@ public class DressStyle extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ImageView imv1=(ImageView)findViewById(R.id.imv1);
-        imv1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent=new Intent(DressStyle.this,Single.class);
-                startActivity(intent);
-            }
-        });
-        Button bu3=(Button) findViewById(R.id.button3);
-        bu3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent=new Intent(DressStyle.this,Personal.class);
-                startActivity(intent);
-            }
-        });
+//        ImageView imv1=(ImageView)findViewById(R.id.imv1);
+//        imv1.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent=new Intent(DressStyle.this,Single.class);
+//                startActivity(intent);
+//            }
+//        });
+//        Button bu3=(Button) findViewById(R.id.button3);
+//        bu3.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent=new Intent(DressStyle.this,Personal.class);
+//                startActivity(intent);
+//            }
+//        });
     }
     }
 
