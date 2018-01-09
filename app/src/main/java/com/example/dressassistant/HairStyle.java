@@ -12,10 +12,17 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class HairStyle extends AppCompatActivity {
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hairstyle);
+
+
+
         ImageView bu=(ImageView) findViewById(R.id.imageButton8);
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
