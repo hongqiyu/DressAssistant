@@ -13,16 +13,23 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-public class MySpace extends AppCompatActivity {
 
+public class MySpace extends AppCompatActivity {
+    private String UserName;
+    public void getUserName() {
+        Intent intent = getIntent();
+        UserName = intent.getStringExtra("UserName");
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.myspace);
+        getUserName();
+
         Button bu=(Button) findViewById(R.id.button8);
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent=new Intent(MySpace.this,HairStyle.class);
+                Intent intent=new Intent(MySpace.this,HairDetails.class);
                 startActivity(intent);
             }
         });
@@ -58,6 +65,11 @@ public class MySpace extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MySpace.this,MyCollect.class);
+                intent.putExtra("UserName",UserName);
+                if(UserName == null){
+                    Toast.makeText(MySpace.this, "未登陆!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 startActivity(intent);
             }
         });

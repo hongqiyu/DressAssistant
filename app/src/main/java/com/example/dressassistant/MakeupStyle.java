@@ -27,7 +27,7 @@ public class MakeupStyle extends AppCompatActivity {
         Button bu=(Button) findViewById(R.id.button8);
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent=new Intent(MakeupStyle.this,HairStyle.class);
+                Intent intent=new Intent(MakeupStyle.this,HairDetails.class);
                 startActivity(intent);
             }
         });
