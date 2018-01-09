@@ -150,11 +150,6 @@ public class MainActivity extends AppCompatActivity {
 
     //插入发型表、妆容表、图片汇总表(图片ID，视频地址，有无视频标志)
     public boolean insertHaOrMa(String type, int id, String photoId, String videoName, String Flag, int PoVa) {
-//        Cursor cursor = db.rawQuery("select * from AllPicture where alpi_PiID='" + photoId +"'", null);
-//        if(cursor.getCount()>0) {
-//            cursor.close();
-//            return true;
-//        }
         Resources res = getResources(); //打开drawable文件夹的资源
         Bitmap bmp = BitmapFactory.decodeResource(res, id);  // 此处id  例如为 R.drawable.co
         int size = bmp.getWidth() * bmp.getHeight() * 4;
@@ -167,7 +162,8 @@ public class MainActivity extends AppCompatActivity {
             if (cursor.getCount() > 0) {
                 cursor.close();
                 return false;
-            } else {
+            }
+            else {
                 //插入图片汇总表
                 ContentValues AllPicture = new ContentValues();
                 AllPicture.put("alpi_PiID", photoId);
@@ -183,18 +179,20 @@ public class MainActivity extends AppCompatActivity {
                 String local = "res/raw" + videoName;
                 Haircut.put("hair_VeTu", local);
                 Haircut.put("hair_Flag", "yes");
-            } else
+            }
+            else
                 Haircut.put("hair_Flag", "no");
             db.insert("Haircut", null, Haircut);
+            cursor.close();
             return true;
-        } else if (type == "makeup") {
-
-
+        }
+        else if (type == "makeup") {
             Cursor cursor = db.rawQuery("select * from AllPicture where alpi_PiID='" + photoId + "'", null);
             if (cursor.getCount() > 0) {
                 cursor.close();
                 return false;
-            } else {
+            }
+            else {
                 //插入图片汇总表
                 ContentValues AllPicture = new ContentValues();
                 AllPicture.put("alpi_PiID", photoId);
@@ -211,9 +209,11 @@ public class MainActivity extends AppCompatActivity {
                 String local = "res/raw" + videoName;
                 Makeup.put("make_VeTu", local);
                 Makeup.put("make_Flag", "yes");
-            } else
+            }
+            else
                 Makeup.put("make_Flag", "no");
             db.insert("Makeup", null, Makeup);
+            cursor.close();
             return true;
         }
         return false;
@@ -229,6 +229,9 @@ public class MainActivity extends AppCompatActivity {
         BitmapDrawable bd = new BitmapDrawable(getResources(), bmpout);
         ImageView imageView = (ImageView) findViewById(id);
         imageView.setImageDrawable(bd);
+        bmpout = null;
+        System.gc();
+        cur.close();
         return false;
     }
 
@@ -250,7 +253,6 @@ public class MainActivity extends AppCompatActivity {
             maxName = cur.getString(cur.getColumnIndex("alpi_PiID"));
             temp[i * 2] = maxName;
             getPhoto(maxName, id[(i + 1) * 2 - 2]);
-
             cur.moveToNext();
             maxPoVa = cur.getInt(cur.getColumnIndex("alpi_PoVa"));
             maxName = cur.getString(cur.getColumnIndex("alpi_PiID"));
@@ -291,6 +293,7 @@ public class MainActivity extends AppCompatActivity {
             addFavorite(id);
             Toast.makeText(MainActivity.this, "加入收藏夹成功!", Toast.LENGTH_SHORT).show();
         }
+        cur.close();
     }
 
     //加入收藏夹
@@ -332,6 +335,7 @@ public class MainActivity extends AppCompatActivity {
             addTomoPlan(id, type);
         } else
             updateTomoPlan(id, type);
+        cur.close();
     }
     //新建明日计划
     public void addTomoPlan(String id, String type) {
@@ -411,6 +415,7 @@ public class MainActivity extends AppCompatActivity {
                 db.execSQL(sql);
             }
         }
+        cur.close();
     }
     //替换明日计划
     public void exTomoPlan(String id, final String sql, final String flag){
@@ -449,6 +454,9 @@ public class MainActivity extends AppCompatActivity {
         else if (type == "haircut")
             sql = "delete from PlDe where plde_PlID = '" + UserName + "' and plde_HaID = '" + id + "'";
         db.execSQL(sql);
+    }
+    public void putUerName(){
+
     }
     private String UserName;
     private String[] temp;
@@ -564,7 +572,6 @@ public class MainActivity extends AppCompatActivity {
         butto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent in = getIntent();
-                String UserName = in.getStringExtra("UserName");
                 Intent intent=new Intent(MainActivity.this,MySpace.class);
                 intent.putExtra("UserName",UserName);
                 startActivity(intent);
