@@ -121,6 +121,7 @@ public class Login extends AppCompatActivity {
                                 String data = " Hello MainActivity";
                                 Intent intent=new Intent(Login.this,MainActivity.class);
                                 intent.putExtra("extra_data", data);
+                                intent.putExtra("UserName",strUserName);
                                 startActivity(intent);
                             }
                             else{
