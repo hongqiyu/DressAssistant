@@ -253,7 +253,6 @@ public class MainActivity extends AppCompatActivity {
             maxName = cur.getString(cur.getColumnIndex("alpi_PiID"));
             temp[i * 2] = maxName;
             getPhoto(maxName, id[(i + 1) * 2 - 2]);
-
             cur.moveToNext();
             maxPoVa = cur.getInt(cur.getColumnIndex("alpi_PoVa"));
             maxName = cur.getString(cur.getColumnIndex("alpi_PiID"));
