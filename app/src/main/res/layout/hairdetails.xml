@@ -30,18 +30,20 @@
         android:layout_below="@+id/textt1"
         android:id="@+id/lin1"
         >
+
         <ImageView
+            android:id="@+id/iv1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/hpgt"
-            />
+            android:src="@drawable/hpgt" />
+
         <ImageView
+            android:id="@+id/iv2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/hbbt"
-            />
+            android:src="@drawable/hbbt" />
     </LinearLayout>
     <LinearLayout
         android:layout_height="wrap_content"
@@ -130,19 +132,18 @@
         >
 
         <ImageView
-            android:id="@+id/imageView13"
+            android:id="@+id/iv3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/hdbl" />
 
         <ImageView
+            android:id="@+id/iv4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:id="@+id/ive1"
-            android:src="@drawable/hbwz"
-            />
+            android:src="@drawable/hbwz" />
     </LinearLayout>
     <LinearLayout
         android:layout_height="wrap_content"

@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MyCollect extends AppCompatActivity {
@@ -67,17 +68,26 @@ public class MyCollect extends AppCompatActivity {
         getUserName();
         Cursor cur = db.rawQuery("select * from FavoriteDetail where fade_FaID ='" + UserName +"'",null);
         int count = cur.getCount();
-        RelativeLayout group = (RelativeLayout) findViewById(R.id.viewGroup);
+        ViewGroup group = (ViewGroup) findViewById(R.id.viewGroup);
         group.removeAllViews();
+        ViewGroup group1 = (ViewGroup) findViewById(R.id.viewGroup1);
+        group1.removeAllViews();
         String name = null;
         for(int i = 0; i < count; i++){
             ImageView imageView = new ImageView(this);
-            imageView.setLayoutParams(new LinearLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,150));
+            TextView textView=new TextView(this);
+            LinearLayout.LayoutParams params= new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,150);
+            params.weight=1;
+            params.width=200;
+            imageView.setLayoutParams(params);
+            textView.setLayoutParams(params);
             cur.moveToNext();
             name = cur.getString(cur.getColumnIndex("fade_PiID"));
             getPhoto(name,imageView);
 //            imageView.setImageResource(R.drawable.cc);
             group.addView(imageView);
+            textView.setText("123");
+            group1.addView(textView);
         }
     }
 }

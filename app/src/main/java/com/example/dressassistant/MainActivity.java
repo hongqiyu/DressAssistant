@@ -242,8 +242,6 @@ public class MainActivity extends AppCompatActivity {
         int maxPoVa;
         String maxName;
         Cursor cur = null;
-        Cursor cur2 = null;
-        Cursor cur3 = null;
         temp = new String[6];
         while (i < 3) {
             cur = db.rawQuery("select * from AllPicture where alpi_Flag = '" + s[i] + "'" + "order by alpi_PoVa desc", null);
@@ -260,6 +258,7 @@ public class MainActivity extends AppCompatActivity {
             getPhoto(maxName, id[(i + 1) * 2 - 1]);
             i++;
         }
+        cur.close();
     }
 
     //移除收藏夹
@@ -375,7 +374,7 @@ public class MainActivity extends AppCompatActivity {
             if (cur.getCount() > 0) {
                 cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName + "' and plde_SuID = '" + id + "'", null);
                 if(cur.getCount() > 0) {
-                    sql = "delete from PlDe where plde_PlID = '" + UserName + "' and plde_SuID = '" + id + "'";
+                    sql = "update [PlDe] set plde_SuID ='" + null + "'where plde_PlID = '" + UserName + "'";
                     flag = "delete";
                 }
                 exTomoPlan(id, sql, flag);
@@ -391,7 +390,7 @@ public class MainActivity extends AppCompatActivity {
             if (cur.getCount() > 0) {
                 cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName + "' and plde_MaID = '" + id + "'", null);
                 if(cur.getCount() > 0) {
-                    sql = "delete from PlDe where plde_PlID = '" + UserName + "' and plde_MaID = '" + id + "'";
+                    sql = "update [PlDe] set plde_MaID ='" + null + "' where plde_PlID = '" + UserName + "'";
                     flag = "delete";
                 }
                 exTomoPlan(id, sql, flag);
@@ -406,7 +405,7 @@ public class MainActivity extends AppCompatActivity {
             if (cur.getCount() > 0) {
                 cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName + "' and plde_HaID = '" + id + "'", null);
                 if(cur.getCount() > 0) {
-                    sql = "delete from PlDe where plde_PlID = '" + UserName + "' and plde_HaID = '" + id + "'";
+                    sql = "update [PlDe] set plde_HaID ='" + null + "' where plde_PlID = '" + UserName + "'";
                     flag = "delete";
                 }
                 exTomoPlan(id, sql, flag);
@@ -448,15 +447,12 @@ public class MainActivity extends AppCompatActivity {
     public void deleteTomoPlan(String id, String type) {
         String sql = null;
         if (type == "suit")
-            sql = "delete from PlDe where plde_PlID = '" + UserName + "'and plde_SuID = '" + id + "'";
+            sql = "update [PlDe] set plde_SuID = '" + null + "' where plde_PlID = '" + UserName + "'";
         else if (type == "makeup")
-            sql = "delete from PlDe where plde_PlID = '" + UserName + "'and plde_MaID = '" + id + "'";
+            sql = "update [PlDe] set plde_MaID = '" + null + "' where plde_PlID = '" + UserName + "'";
         else if (type == "haircut")
-            sql = "delete from PlDe where plde_PlID = '" + UserName + "' and plde_HaID = '" + id + "'";
+            sql = "update [PlDe] set plde_HaID = '" + null + "' where plde_PlID = '" + UserName + "'";
         db.execSQL(sql);
-    }
-    public void putUerName(){
-
     }
     private String UserName;
     private String[] temp;
@@ -497,16 +493,16 @@ public class MainActivity extends AppCompatActivity {
                         Favorite(temp[5]);
                         break;
                     case R.id.IM4:
-                        tomorrowPlan(temp[2],"suit");
+                        tomorrowPlan(temp[0],"suit");
                         break;
                     case R.id.IM8:
-                        tomorrowPlan(temp[3],"suit");
+                        tomorrowPlan(temp[1],"suit");
                         break;
                     case R.id.IM12:
-                        tomorrowPlan(temp[4],"makeup");
+                        tomorrowPlan(temp[2],"makeup");
                         break;
                     case R.id.IM16:
-                        tomorrowPlan(temp[5],"makeup");
+                        tomorrowPlan(temp[3],"makeup");
                         break;
                     case R.id.IM20:
                         tomorrowPlan(temp[4],"haircut");
@@ -549,6 +545,7 @@ public class MainActivity extends AppCompatActivity {
         Button bu=(Button) findViewById(R.id.button8);
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                db.close();
                 Intent intent=new Intent(MainActivity.this,HairStyle.class);
                 startActivity(intent);
             }
@@ -556,6 +553,7 @@ public class MainActivity extends AppCompatActivity {
         Button b=(Button) findViewById(R.id.button5);
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                db.close();
                 Intent intent=new Intent(MainActivity.this,DressStyle.class);
                 startActivity(intent);
             }
@@ -563,6 +561,7 @@ public class MainActivity extends AppCompatActivity {
         Button but=(Button) findViewById(R.id.button6);
         but.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                db.close();
                 Intent intent=new Intent(MainActivity.this,MakeupStyle.class);
                 startActivity(intent);
             }
@@ -571,6 +570,7 @@ public class MainActivity extends AppCompatActivity {
         Button butto=(Button) findViewById(R.id.button7);
         butto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                db.close();
                 Intent in = getIntent();
                 Intent intent=new Intent(MainActivity.this,MySpace.class);
                 intent.putExtra("UserName",UserName);

@@ -18,11 +18,13 @@
                 android:textSize="30dp"
                 android:gravity="center"
                 android:id="@+id/ttv"/>
+
             <ImageView
+                android:id="@+id/iv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/hfxbwz"
-                android:layout_below="@+id/ttv"/>
+                android:layout_below="@+id/ttv"
+                android:src="@drawable/hfxbwz" />
             </RelativeLayout>
         </ScrollView>
     <LinearLayout

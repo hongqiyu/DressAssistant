@@ -84,6 +84,11 @@ public class MySpace extends AppCompatActivity {
         bn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MySpace.this,MyPlan.class);
+                intent.putExtra("UserName",UserName);
+                if(UserName == null){
+                    Toast.makeText(MySpace.this, "未登陆!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 startActivity(intent);
             }
         });
