@@ -52,14 +52,14 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-               android:src="@drawable/hqxf"/>
+               android:src="@drawable/zzrfgqx"/>
 
             <ImageView
                 android:id="@+id/imageButtonB"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-               android:src="@drawable/hyjf"
+               android:src="@drawable/zzrfgyj"
                 />
 
             <ImageView
@@ -67,14 +67,14 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:src="@drawable/homf" />
+                android:src="@drawable/zzrfgom" />
 
             <ImageView
                 android:id="@+id/imageButtonD"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:src="@drawable/hrmf" />
+                android:src="@drawable/zzrfgrm" />
 
         </LinearLayout>
 
@@ -131,14 +131,14 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:src="@drawable/hrxz" />
+                android:src="@drawable/zzrfgrx" />
 
             <ImageView
                 android:id="@+id/imageButtonF"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-               android:src="@drawable/hyxz"
+               android:src="@drawable/zzrfgyx"
 
                 />
 
@@ -147,14 +147,14 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/hyhz" />
+                android:src="@drawable/zzrfgyh" />
 
             <ImageView
                 android:id="@+id/imageButtonH"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:src="@drawable/hqsf" />
+                android:src="@drawable/zzrfgqs" />
 
         </LinearLayout>
 
@@ -221,19 +221,19 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                  android:src="@drawable/hyz"
+                  android:src="@drawable/zmm"
                   />
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/hcz"
+                    android:src="@drawable/zyz"
                     />
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:src="@drawable/hycz"/>
+                    android:src="@drawable/zcm"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -244,22 +244,22 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:text="眉毛"
+                    android:textSize="16dp"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="眼妆"
-                    android:textSize="20dp"
+                    android:textSize="16dp"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="唇妆"
-                    android:textSize="20dp"
-                    android:gravity="center"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="咬唇妆"
-                    android:textSize="20dp"
+                    android:textSize="16dp"
                     android:gravity="center"/>
             </LinearLayout>
             </RelativeLayout>
