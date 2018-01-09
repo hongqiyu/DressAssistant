@@ -81,13 +81,6 @@ public class Myself extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        LinearLayout l1=(LinearLayout)findViewById(R.id.lint3);
-        l1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent=new Intent(Myself.this,ChangeSignature.class);
-                startActivity(intent);
-            }
-        });
         LinearLayout l2=(LinearLayout)findViewById(R.id.lint4);
         l2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
