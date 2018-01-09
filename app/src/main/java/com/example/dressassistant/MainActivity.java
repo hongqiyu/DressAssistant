@@ -324,7 +324,6 @@ public class MainActivity extends AppCompatActivity {
         UserName = intent.getStringExtra("UserName");
     }
 
-
     //明日计划
     public void tomorrowPlan(String id, String type) {
         Cursor cur = null;
