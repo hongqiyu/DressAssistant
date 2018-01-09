@@ -118,10 +118,10 @@ public class Login extends AppCompatActivity {
                             if(isValidUser(strUserName,strUserPwd) == true){
                                 Toast.makeText(Login.this,"用户登录成功！",Toast.LENGTH_SHORT).show();
                                 //登陆成功时跳转到主页面，并传参数
-                                String data = " Hello MainActivity";
+
+                                String data = strUserName;
                                 Intent intent=new Intent(Login.this,MainActivity.class);
-                                intent.putExtra("extra_data", data);
-                                intent.putExtra("UserName",strUserName);
+                                intent.putExtra("userID", data);
                                 startActivity(intent);
                             }
                             else{
@@ -134,7 +134,7 @@ public class Login extends AppCompatActivity {
                         }
                     }
                     else{
-                        Toast.makeText(Login.this,"用户名不得为空！",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this,"用户名不得为空!！",Toast.LENGTH_SHORT).show();
                         editText.setFocusable(true);
                     }
                 }
