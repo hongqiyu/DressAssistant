@@ -44,6 +44,7 @@
         <activity android:name=".ChangePassword"></activity>
         <activity android:name=".MyHistory"></activity>
         <activity android:name=".MyPlan"></activity>
+        <activity android:name=".MakeupDetail"></activity>
     </application>
 
 </manifest>
