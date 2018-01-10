@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DressAssistant</string>
+    <color name="clr_normal">#FFFFFF</color>
+     <color name="clr_pressed">#99E5FE</color>
 </resources>
