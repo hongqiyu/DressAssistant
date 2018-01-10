@@ -11,7 +11,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,31 +29,26 @@ public class Single extends AppCompatActivity {
     private SQLiteDatabase db;
     private static final String DB_NAME = "dressassistant.db";
     private String SystemTime;
+    private String flag;
+    private String dresstype;
+    private String sepfid;
 
-    //获取用户ID
-    public void getUserName() {
-        Intent intent = getIntent();
-        UserName = intent.getStringExtra("UserName");
-    }
 
     //从sqlite读取图片，并显示在桌面上
     public boolean getPhoto(String photoName, int id) {
-        if (photoName.equals("null")) {
-            return false;
-        }
-        else {
-            Cursor cur = db.rawQuery("select * from AllPicture where alpi_PiID='" + photoName + "'", null);
-            cur.moveToFirst();
-            byte[] in = cur.getBlob(cur.getColumnIndex("alpi_PiLo"));
-            Bitmap bmpout = BitmapFactory.decodeByteArray(in, 0, in.length);
-            BitmapDrawable bd = new BitmapDrawable(getResources(), bmpout);
-            ImageView imageView = (ImageView) findViewById(id);
-            imageView.setImageDrawable(bd);
-            bmpout = null;
-            System.gc();
-            cur.close();
-            return true;
-        }
+        Cursor cur = db.rawQuery("select * from AllPicture where alpi_PiID='" + photoName + "'", null);
+        cur.moveToFirst();
+        byte[] in = cur.getBlob(cur.getColumnIndex("alpi_PiLo"));
+        Bitmap bmpout = BitmapFactory.decodeByteArray(in, 0, in.length);
+
+        BitmapDrawable bd = new BitmapDrawable(getResources(), bmpout);
+        ImageView imageView = (ImageView) findViewById(id);
+        imageView.setImageDrawable(bd);
+        imageView.invalidate();
+        bmpout = null;
+        System.gc();
+        cur.close();
+        return false;
     }
     //打开数据库
     public void OpenCreateDB() {
@@ -67,20 +66,76 @@ public class Single extends AppCompatActivity {
             Log.d("tag", String.format(msg, se.getClass(), se.getMessage()));
         }
     }
-
-    public void getSystemTime(){
-        //系统时间
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        Date curDate = new Date(System.currentTimeMillis());
-        SystemTime = formatter.format(curDate);
+    public void getInfomation(){
+        Intent intent = getIntent();
+        UserName = intent.getStringExtra("UserName");
+        flag = intent.getStringExtra("flag");
+        dresstype = intent.getStringExtra("type");
+        sepfid = intent.getStringExtra("id");
     }
-    //跳转下个页面
+    public void showSeparate(){
+        switch (sepfid){
+            case "sy":
+                showInsy();
+                break;
+            case "kz":
+                break;
+            case "qz":
+                break;
+            case "ps":
+                break;
+        }
+    }
+    private String[] temp;
+    public void showInsy() {
+        TextView text1=(TextView) findViewById(R.id.text1);
+        text1.setText("上衣推荐");
+        String[] s = {"mf", "dwt", "mndy","wy"};
+        int[] id = {R.id.mf1, R.id.mf2, R.id.dwt1, R.id.dwt2, R.id.mndy1, R.id.mndy2, R.id.wy1, R.id.wy2};
+        int i = 0;
+        int maxPoVa;
+        String maxName;
+        Cursor cur = null;
+        Cursor cur2 = null;
+        temp = new String[8];
+        while (i < 4) {
+            cur = db.rawQuery("select * from AllPicture where alpi_Flag ='Separate'" + "order by alpi_PoVa desc", null);
+            while(true) {
+                cur.moveToNext();
+                maxName = cur.getString(cur.getColumnIndex("alpi_PiID"));
+                cur2 = db.rawQuery("select * from Separate where sepa_SeID ='" + maxName + "'and sepa_Type = '" + s[i] + "'", null);
+                if (cur2.getCount() > 0) {
+                    temp[i * 2] = maxName;
+                    getPhoto(maxName, id[(i + 1) * 2 - 2]);
+                    break;
+                }
+            }
+            while(true) {
+                cur.moveToNext();
+                maxName = cur.getString(cur.getColumnIndex("alpi_PiID"));
+                cur2 = db.rawQuery("select * from Separate where sepa_SeID ='" + maxName + "'and sepa_Type = '" + s[i] + "'", null);
+                if (cur2.getCount() > 0) {
+                    temp[i * 2 + 1] = maxName;
+                    getPhoto(maxName, id[(i + 1) * 2 - 1]);
+                    break;
+                }
+            }
+            i++;
+        }
+        cur.close();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.single);
-        ImageView pictureA = (ImageView) findViewById(R.id.ima);
+        OpenCreateDB();
+        getInfomation();
+        if(dresstype.equals("separate"))
+            showSeparate();
+
+
+        ImageView pictureA = (ImageView) findViewById(R.id.mf1);
         pictureA.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

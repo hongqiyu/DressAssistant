@@ -101,8 +101,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //插入图片汇总表、套服、单品、图片属性推荐表（图片类型、资源id、图片名、人气值）除了单品的其他first=null，second=null
-    public boolean insertSuOrSe(String type, int id, String photoId, int PoVa, String first, String second) {
+    //插入图片汇总表、套服、单品、图片属性推荐表（图片类型、资源id、图片名、人气值）
+    public boolean insertSuOrSe(String type, int id, String photoId, int PoVa, String setype) {
         Cursor cursor = db.rawQuery("select * from AllPicture where alpi_PiID='" + photoId + "'", null);
         if (cursor.getCount() > 0) {
             cursor.close();
@@ -142,7 +142,8 @@ public class MainActivity extends AppCompatActivity {
             db.insert("AllPicture", null, AllPicture);
             //插入单品表
             ContentValues Separate = new ContentValues();
-            Separate.put("sepa_SuID", photoId);
+            Separate.put("sepa_SeID", photoId);
+            Separate.put("sepa_Type", setype);
             db.insert("Separate", null, Separate);
             //插入图片推荐属性表
             return true;
@@ -515,14 +516,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getUserName();
-        //打开数据库
-        OpenCreateDB();
-//        insertSuOrSe("suit", R.drawable.cc, "cc", 6);
-//        insertHaOrMa("haircut",R.drawable.lhbt, "lhbt", null, "no",-1);
-//        insertSTLN("1","上衣");
-//        insertSTFLD("上衣","棉服");
+        OpenCreateDB();//打开数据库
         getSystemTime();
         showInMain();
+//        insertSuOrSe("suit", R.drawable.cc, "cc", 6);
+//        insertHaOrMa("haircut",R.drawable.lhbt, "lhbt", null, "no",-1);
+//        insertSTLN("1","sy");
+//        insertSuOrSe("Separate", R.drawable.dwt1, "dwt1", 6, "dwt");
+
         ImageView.OnClickListener listener = new ImageView.OnClickListener() {
             @Override
             public void onClick(View v) {

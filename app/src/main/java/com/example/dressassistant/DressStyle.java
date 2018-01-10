@@ -85,13 +85,41 @@ public class DressStyle extends AppCompatActivity {
                 }
                 switch(v.getId()){
                     case R.id.d1:
+                        if(UserName == null){
+                            Toast.makeText(DressStyle.this, "未登陆！", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            intent.putExtra("id", "sy");
+                            intent.putExtra("type", "separate");
+                            startActivity(intent);
+                        }
+                        break;
                     case R.id.d2:
+                        if(UserName == null){
+                            Toast.makeText(DressStyle.this, "未登陆！", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            intent.putExtra("id", "kz");
+                            intent.putExtra("type", "separate");
+                            startActivity(intent);
+                        }
+                        break;
                     case R.id.d3:
+                        if(UserName == null){
+                            Toast.makeText(DressStyle.this, "未登陆！", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            intent.putExtra("id", "qz");
+                            intent.putExtra("type", "separate");
+                            startActivity(intent);
+                        }
+                        break;
                     case R.id.d4:
                         if(UserName == null){
                             Toast.makeText(DressStyle.this, "未登陆！", Toast.LENGTH_SHORT).show();
                         }
                         else {
+                            intent.putExtra("id","ps");
                             intent.putExtra("type", "separate");
                             startActivity(intent);
                         }
