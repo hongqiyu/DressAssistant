@@ -508,9 +508,13 @@ public class MainActivity extends AppCompatActivity {
 //        insertHaOrMa("haircut",R.drawable.lwgb, "lwgb", null, "no",-1);
 //        insertHaOrMa("haircut",R.drawable.lhswzt, "lhswzt", null, "no",-1);
 //        insertHaOrMa("haircut",R.drawable.ldbl, "ldbl", null, "no",-1);
-        insertHaOrMa("haircut",R.drawable.lbfmw, "lbfmw", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.hdmw, "hdmw", null, "no",0);
+//        insertHaOrMa("haircut",R.drawable.hfs, "hfs", null, "no",0);
+//        insertHaOrMa("haircut",R.drawable.hwz, "hwz", null, "no",0);
+//        insertHaOrMa("haircut",R.drawable.hhb, "hhb", null, "no",0);
+//        insertHaOrMa("haircut",R.drawable.hwg, "hwg", null, "no",0);
 //        insertHaOrMa("haircut",R.drawable.hfxbwz, "hfxbwz", null, "no",10);
-        getSystemTime();
+
 //
 //        if(UserName != null)
 //            goHistory();
@@ -598,6 +602,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 db.close();
                 Intent intent=new Intent(MainActivity.this,HairDetails.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });
