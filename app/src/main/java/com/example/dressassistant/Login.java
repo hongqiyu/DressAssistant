@@ -96,13 +96,7 @@ public class Login extends AppCompatActivity {
         }
         cur.close();
     }
-    private String SystemTime;
-    public void getSystemTime(){
-        //系统时间
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        Date curDate = new Date(System.currentTimeMillis());
-        SystemTime = formatter.format(curDate);
-    }
+
 
     //创建DBHelper对象
     private  DBHelper helper;

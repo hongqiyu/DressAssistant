@@ -595,7 +595,7 @@ public class MainActivity extends AppCompatActivity {
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 db.close();
-                Intent intent=new Intent(MainActivity.this,HairStyle.class);
+                Intent intent=new Intent(MainActivity.this,HairDetails.class);
                 startActivity(intent);
             }
         });
