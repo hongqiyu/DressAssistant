@@ -18,6 +18,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created by 洪祺瑜 on 2018-01-09.
  */
@@ -66,17 +69,20 @@ public class MyPlan extends AppCompatActivity {
             Log.d("tag", String.format(msg, se.getClass(), se.getMessage()));
         }
     }
+    private String SystemTime;
+    public void getSystemTime(){
+        //系统时间
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Date curDate = new Date(System.currentTimeMillis());
+        SystemTime = formatter.format(curDate);
+    }
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.myplan);
         OpenCreateDB();//打开数据库
         getUserName();
-        Cursor cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName +"'",null);
-        if(cur.getCount() == 0) {
-            Toast.makeText(MyPlan.this, "还未有计划，快去添加", Toast.LENGTH_SHORT).show();
-            cur.close();
-            return;
-        }
+        getSystemTime();
+        Cursor cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName + SystemTime +"'",null);
         String suit = null;
         String makeup = null;
         String hair = null;

@@ -16,7 +16,7 @@ public class HairDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hairdetails);
-        ImageView bu=(ImageView) findViewById(R.id.ive1);
+        ImageView bu=(ImageView) findViewById(R.id.iv1);
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(HairDetails.this,HairInformation.class);

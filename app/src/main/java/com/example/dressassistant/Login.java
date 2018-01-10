@@ -80,22 +80,7 @@ public class Login extends AppCompatActivity {
         Date curDate = new Date(System.currentTimeMillis());
         SystemTime = formatter.format(curDate);
     }
-    public void goHistory(){
-        //系统时间
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String date = sdf.format(new java.util.Date());
-        Cursor cur = null;
-        String dbdate = null;
-        String sql;
-        cur = db.rawQuery("select * from UHPl where uhpl_UsID = '" + UserName + "' and htpl_Time = '"+ SystemTime + "'", null);
-        cur.moveToFirst();
-        if(cur.getCount() == 0) {
-            dbdate = cur.getString(cur.getColumnIndex("plde_Time"));
-            sql = "delete from PlDe where plde_PlID = '" + UserName + "'";
-            db.execSQL(sql);
-        }
-        cur.close();
-    }
+
     //创建DBHelper对象
     private  DBHelper helper;
     private String UserName;
@@ -105,8 +90,6 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.login);
         //打开数据库
         OpenCreateDB();
-        if(UserName != null)
-            goHistory();
         getSystemTime();
         //创建数据库，从asserts将数据库导入工程中
         helper = new DBHelper(this);
