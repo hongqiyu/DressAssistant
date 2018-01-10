@@ -16,13 +16,13 @@ public class HairStyle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hairstyle);
-        ImageView bu=(ImageView) findViewById(R.id.imageButton8);
-        bu.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent=new Intent(HairStyle.this,HairDetails.class);
-                startActivity(intent);
-            }
-        });
+//        ImageView bu=(ImageView) findViewById(R.id.imageButton8);
+//        bu.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent=new Intent(HairStyle.this,HairDetails.class);
+//                startActivity(intent);
+//            }
+//        });
         Button b=(Button) findViewById(R.id.button5);
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
