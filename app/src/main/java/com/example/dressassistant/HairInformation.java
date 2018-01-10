@@ -13,7 +13,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by 洪祺瑜 on 2018-01-03.
@@ -64,12 +63,11 @@ public class  HairInformation extends AppCompatActivity {
         cur.close();
         return false;
     }
-    private String ID;
     public void showIn(String name){
         getPhoto(name);
-        TextView Tv = (TextView)findViewById(R.id.ttv);
-        Tv.setText("半丸子头222");
-        Toast.makeText(HairInformation.this, "成功!", Toast.LENGTH_SHORT).show();
+//        TextView Tv = (TextView)findViewById(R.id.ttv);
+//        Tv.setText("半丸子头222");
+//        Toast.makeText(HairInformation.this, "成功!", Toast.LENGTH_SHORT).show();
 
 
 
@@ -87,5 +85,9 @@ public class  HairInformation extends AppCompatActivity {
         getPhotoName();
         showIn(photoname);
     }
+
 }
+
+
+
 

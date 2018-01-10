@@ -502,11 +502,19 @@ public class MainActivity extends AppCompatActivity {
         //打开数据库
         OpenCreateDB();
 //        insertSuOrSe("suit", R.drawable.cc, "cc", 6);
+
+//        insertHaOrMa("haircut",R.drawable.lhbt, "lhbt", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.lsmw, "lsmw", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.lwgb, "lwgb", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.lhswzt, "lhswzt", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.ldbl, "ldbl", null, "no",-1);
+        insertHaOrMa("haircut",R.drawable.lbfmw, "lbfmw", null, "no",-1);
 //        insertHaOrMa("haircut",R.drawable.hfxbwz, "hfxbwz", null, "no",10);
         getSystemTime();
-//
-//        if(UserName != null)
-//            goHistory();
+
+        if(UserName != null)
+            goHistory();
+        getSystemTime();
         showInMain();
         ImageView.OnClickListener listener = new ImageView.OnClickListener() {
             @Override
@@ -589,7 +597,7 @@ public class MainActivity extends AppCompatActivity {
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 db.close();
-                Intent intent=new Intent(MainActivity.this,HairStyle.class);
+                Intent intent=new Intent(MainActivity.this,HairDetails.class);
                 startActivity(intent);
             }
         });
@@ -792,7 +800,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void run() {
-                TextView textView=(TextView)findViewById(R.id.textView2);
+                TextView textView=(TextView)findViewById(R.id.tv);
                 int top=textView.getTop();
                 ScrollView scrollView=(ScrollView)findViewById(R.id.sc1);
 //                scrollView.scrollTo(0, 3000);
