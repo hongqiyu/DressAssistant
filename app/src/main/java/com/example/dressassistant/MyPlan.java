@@ -45,6 +45,7 @@ public class MyPlan extends AppCompatActivity {
         else {
             Cursor cur = db.rawQuery("select * from AllPicture where alpi_PiID='" + photoName + "'", null);
             cur.moveToFirst();
+            Toast.makeText(MyPlan.this, photoName, Toast.LENGTH_SHORT).show();
             byte[] in = cur.getBlob(cur.getColumnIndex("alpi_PiLo"));
             Bitmap bmpout = BitmapFactory.decodeByteArray(in, 0, in.length);
             BitmapDrawable bd = new BitmapDrawable(getResources(), bmpout);

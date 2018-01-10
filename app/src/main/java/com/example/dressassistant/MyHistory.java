@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
@@ -81,10 +82,11 @@ public class MyHistory extends AppCompatActivity {
         String makeup = null;
         String hair = null;
         String plid = null;
-
+        TextView rq=(TextView) findViewById(R.id.rq);
         Cursor cur = db.rawQuery("select * from UHPl where uhpl_UsID = '" + UserName + "'order by uhpl_PlID desc", null);
         cur.move(count - now + 1);
         plid = cur.getString(cur.getColumnIndex("uhpl_PlID"));
+        rq.setText(cur.getString(cur.getColumnIndex("htpl_Time")));
         cur.close();
         Cursor cur2 = db.rawQuery("select * from PlDe where plde_PlID ='" + plid + "'", null);
         cur2.moveToFirst();

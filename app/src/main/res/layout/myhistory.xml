@@ -47,11 +47,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="前一天"/>
+
         <TextView
             android:id="@+id/rq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:contentDescription="true"
+            android:text="77777"
+            android:textAlignment="center"
+            android:textSize="18sp" />
         <Button
             android:id="@+id/hyt"
             android:layout_width="270dp"
