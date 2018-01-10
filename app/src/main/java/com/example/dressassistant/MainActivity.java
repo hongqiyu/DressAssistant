@@ -231,6 +231,7 @@ public class MainActivity extends AppCompatActivity {
         BitmapDrawable bd = new BitmapDrawable(getResources(), bmpout);
         ImageView imageView = (ImageView) findViewById(id);
         imageView.setImageDrawable(bd);
+        imageView.invalidate();
         bmpout = null;
         System.gc();
         cur.close();

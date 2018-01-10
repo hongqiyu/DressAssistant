@@ -46,7 +46,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="小太阳"
+                android:text="游客"
                 android:textSize="17dp"
                 android:gravity="center"
                 android:textStyle="bold" />

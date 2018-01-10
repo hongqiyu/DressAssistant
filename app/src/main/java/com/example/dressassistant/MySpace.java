@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
@@ -60,7 +61,10 @@ public class MySpace extends AppCompatActivity {
         getUserName();
         OpenCreateDB();//打开数据库
         getSystemTime();
-
+        if(UserName != null){
+            TextView textView2=(TextView) findViewById(R.id.textView2);
+            textView2.setText(UserName);
+        }
         Button bu=(Button) findViewById(R.id.button8);
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
