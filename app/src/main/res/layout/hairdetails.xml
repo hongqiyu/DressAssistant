@@ -564,7 +564,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:background="@drawable/zdbanthree"
+            android:background="@drawable/zdbanthreeh"
             android:text=" "
             />
         <Button
