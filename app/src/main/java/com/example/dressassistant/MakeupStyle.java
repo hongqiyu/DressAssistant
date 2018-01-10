@@ -52,6 +52,13 @@ public class MakeupStyle extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ImageView imbe=(ImageView)findViewById(R.id.imageButtonE);
+        imbe.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(MakeupStyle.this,MakeupDetail.class);
+                startActivity(intent);
+            }
+        });
     }
     }
 
