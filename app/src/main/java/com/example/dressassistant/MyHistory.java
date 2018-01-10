@@ -93,7 +93,7 @@ public class MyHistory extends AppCompatActivity {
         suit = String.valueOf(cur2.getString(cur2.getColumnIndex("plde_SuID")));
         makeup = String.valueOf(cur2.getString(cur2.getColumnIndex("plde_MaID")));
         hair = String.valueOf(cur2.getString(cur2.getColumnIndex("plde_HaID")));
-        getPhoto(suit, R.id.imageView13);
+        getPhoto(suit, R.id.iv3);
         getPhoto(makeup, R.id.imageView14);
         getPhoto(hair, R.id.imageView15);
         cur2.close();
