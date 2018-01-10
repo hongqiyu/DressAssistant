@@ -46,8 +46,8 @@ public class Question extends AppCompatActivity {
             Log.d("tag",String.format(msg,se.getClass(), se.getMessage()));
         }
     }
+    private String UserName;
     private void insertFQCDInfo(String strNeck,String strShoulder,String strChest,String strArm,String strWaist,String strLeWi,String strLeHe,String strHip){
-        String UserName;
         Intent intent = getIntent();
         UserName = intent.getStringExtra("UserName");
         ContentValues cvInfo = new ContentValues();
@@ -192,7 +192,9 @@ public class Question extends AppCompatActivity {
         Button TVV=(Button) findViewById(R.id.b1);
         TVV.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                insertFQCDInfo(neck,shoulder,chest,arm,waist,leWi,leHe,hip);
+                String sql = "update [FIDe] set fide_Neck = '" + neck + "' and fide_Shoulder = '" + shoulder + "' and fide_Chest =" + chest +"' and fide_Arm = '" + arm + "' and fide_Waist = '" + waist + "' and fide_LeWi = '" + leWi + "' and fide_LeHe = '" + leHe + "' and fide_Hip = '" + hip + "' where fide_FiNa = '" + UserName+"'";
+                db.execSQL(sql);
+// /                insertFQCDInfo(neck,shoulder,chest,arm,waist,leWi,leHe,hip);
             }
         });
     }

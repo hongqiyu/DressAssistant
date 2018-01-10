@@ -68,19 +68,35 @@ public class DressStyle extends AppCompatActivity {
         getSystemTime();
 
         final Intent intent = new Intent(DressStyle.this, Single.class);
+        final Intent intent2 = new Intent(DressStyle.this, Personal.class);
         intent.putExtra("UserName",UserName);
 
         ImageView.OnClickListener listener = new ImageView.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(UserName != null){
-//                    //推荐
-//                    intent.putExtra("flag","true");
-//                }
-//                else //正常按照，人气值展示
-                intent.putExtra("flag","false");
-                intent.putExtra("id",String.valueOf(v.getId()));
-                startActivity(intent);
+                if(UserName != null){
+                    //推荐
+                    intent.putExtra("flag","true");
+                    intent2.putExtra("flag","true");
+                }
+                else {//正常按照，人气值展示
+                    intent.putExtra("flag", "false");
+                    intent2.putExtra("flag", "false");
+                }
+                switch(v.getId()){
+                    case R.id.d1:
+                    case R.id.d2:
+                    case R.id.d3:
+                    case R.id.d4:
+                        intent.putExtra("type", "separate");
+                        startActivity(intent);
+                        break;
+
+                    default:
+                        intent.putExtra("type", "suit");
+                        startActivity(intent2);
+                        break;
+                }
             }
         };
         ImageView c1 =(ImageView) findViewById(R.id.c1);
@@ -119,10 +135,45 @@ public class DressStyle extends AppCompatActivity {
         Button button3 = (Button) findViewById(R.id.button3);
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                intent.putExtra("flag","indiv");
+                Intent intent = new Intent(DressStyle.this, Personal.class);
+                intent.putExtra("flag", "special");
                 startActivity(intent);
             }
         });
+
+        Button buttonn=(Button)findViewById(R.id.button);
+        buttonn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(DressStyle.this,MainActivity.class);
+                intent.putExtra("UserName",UserName);
+                startActivity(intent);
+            }
+        });
+        Button bu=(Button) findViewById(R.id.button8);
+        bu.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(DressStyle.this,HairDetails.class);
+                intent.putExtra("UserName",UserName);
+                startActivity(intent);
+            }
+        });
+        Button but=(Button) findViewById(R.id.button6);
+        but.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(DressStyle.this,MakeupStyle.class);
+                intent.putExtra("UserName",UserName);
+                startActivity(intent);
+            }
+        });
+        Button butt=(Button) findViewById(R.id.button7);
+        butt.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(DressStyle.this,MySpace.class);
+                intent.putExtra("UserName",UserName);
+                startActivity(intent);
+            }
+        });
+
     }
 }
 

@@ -508,11 +508,11 @@ public class MainActivity extends AppCompatActivity {
 //        insertHaOrMa("haircut",R.drawable.lwgb, "lwgb", null, "no",-1);
 //        insertHaOrMa("haircut",R.drawable.lhswzt, "lhswzt", null, "no",-1);
 //        insertHaOrMa("haircut",R.drawable.ldbl, "ldbl", null, "no",-1);
-//        insertHaOrMa("haircut",R.drawable.lbfmw, "lbfmw", null, "no",-1);
+        insertHaOrMa("haircut",R.drawable.lbfmw, "lbfmw", null, "no",-1);
 //        insertHaOrMa("haircut",R.drawable.hfxbwz, "hfxbwz", null, "no",10);
         getSystemTime();
-
-        if(UserName != null)
+//
+//        if(UserName != null)
 //            goHistory();
         getSystemTime();
         showInMain();
