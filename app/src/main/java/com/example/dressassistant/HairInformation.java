@@ -1,3 +1,4 @@
+
 package com.example.dressassistant;
 
 import android.content.Intent;
@@ -79,8 +80,13 @@ public class  HairInformation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hairinformation);
 
+
         OpenCreateDB();
         getPhotoName();
         showIn(photoname);
     }
+
 }
+
+
+
