@@ -159,14 +159,15 @@
             android:gravity="center"
             android:text="大波浪"
             />
+
         <TextView
+            android:id="@+id/textView15"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:gravity="center"
-            android:text="半丸子"
-            />
-            </LinearLayout>
+            android:text="半丸子" />
+    </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -230,18 +231,20 @@
                 android:layout_below="@+id/la"
                 android:id="@+id/lin5"
                 >
+
                 <ImageView
+                    android:id="@+id/iv5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hsmw"
-                    />
+                    android:src="@drawable/hsmw" />
+
                 <ImageView
+                    android:id="@+id/iv6"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hdmw"
-                    />
+                    android:src="@drawable/hdmw" />
             </LinearLayout>
             <LinearLayout
                 android:layout_height="wrap_content"
@@ -328,18 +331,20 @@
                 android:layout_below="@+id/ld"
                 android:id="@+id/lin7"
                 >
+
                 <ImageView
+                    android:id="@+id/iv7"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hfs"
-                    />
+                    android:src="@drawable/hfs" />
+
                 <ImageView
+                    android:id="@+id/iv8"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hwz"
-                    />
+                    android:src="@drawable/hwz" />
             </LinearLayout>
             <LinearLayout
                 android:layout_height="wrap_content"
@@ -426,15 +431,16 @@
                 android:layout_below="@+id/le"
                 android:id="@+id/lin9"
                 >
+
                 <ImageView
+                    android:id="@+id/iv9"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/hhb"
-                    />
+                    android:src="@drawable/hhb" />
 
                 <ImageView
-                    android:id="@+id/imageView16"
+                    android:id="@+id/iv10"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

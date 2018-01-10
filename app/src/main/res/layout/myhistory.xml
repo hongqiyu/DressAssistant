@@ -88,7 +88,7 @@
                 android:layout_below="@+id/textView14"/>
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/iv3"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_below="@+id/v"
@@ -98,7 +98,7 @@
                 android:id="@+id/v2"
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
-                android:layout_below="@+id/imageView13"/>
+                android:layout_below="@+id/iv3"/>
 
     <TextView
         android:id="@+id/testView14"
