@@ -101,8 +101,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //插入图片汇总表、套服、单品、图片属性推荐表（图片类型、资源id、图片名、人气值）
-    public boolean insertSuOrSe(String type, int id, String photoId, int PoVa) {
+    //插入图片汇总表、套服、单品、图片属性推荐表（图片类型、资源id、图片名、人气值）除了单品的其他first=null，second=null
+    public boolean insertSuOrSe(String type, int id, String photoId, int PoVa, String first, String second) {
         Cursor cursor = db.rawQuery("select * from AllPicture where alpi_PiID='" + photoId + "'", null);
         if (cursor.getCount() > 0) {
             cursor.close();
@@ -131,7 +131,8 @@ public class MainActivity extends AppCompatActivity {
             Suit.put("suit_SuID", photoId);
             db.insert("Suit", null, Suit);
             return true;
-        } else if (type == "Separate") {
+        }
+        else if (type == "Separate") {
             //插入图片汇总表
             ContentValues AllPicture = new ContentValues();
             AllPicture.put("alpi_PiID", photoId);
@@ -493,6 +494,21 @@ public class MainActivity extends AppCompatActivity {
         }
         cur.close();
     }
+    //插入单品类型层次名称表
+    public void insertSTLN(String id, String type){
+        ContentValues STLN = new ContentValues();
+        STLN.put("stfl_TypeID", id);
+        STLN.put("stfl_TypeName", type);
+        db.insert("STLN", null, STLN);
+    }
+    //插入单品类型第一层明细表
+    public void insertSTFLD(String t1, String t2){
+        ContentValues STFLD = new ContentValues();
+        STFLD.put("stfld_T1ID", t1);
+        STFLD.put("stfld_T2ID", t2);
+        db.insert("STFLD", null, STFLD);
+    }
+
     private String UserName;
     private String[] temp;
     protected void onCreate(Bundle savedInstanceState){
@@ -502,18 +518,9 @@ public class MainActivity extends AppCompatActivity {
         //打开数据库
         OpenCreateDB();
 //        insertSuOrSe("suit", R.drawable.cc, "cc", 6);
-
 //        insertHaOrMa("haircut",R.drawable.lhbt, "lhbt", null, "no",-1);
-//        insertHaOrMa("haircut",R.drawable.lsmw, "lsmw", null, "no",-1);
-//        insertHaOrMa("haircut",R.drawable.lwgb, "lwgb", null, "no",-1);
-//        insertHaOrMa("haircut",R.drawable.lhswzt, "lhswzt", null, "no",-1);
-//        insertHaOrMa("haircut",R.drawable.ldbl, "ldbl", null, "no",-1);
-        insertHaOrMa("haircut",R.drawable.lbfmw, "lbfmw", null, "no",-1);
-//        insertHaOrMa("haircut",R.drawable.hfxbwz, "hfxbwz", null, "no",10);
-        getSystemTime();
-//
-//        if(UserName != null)
-//            goHistory();
+//        insertSTLN("1","上衣");
+//        insertSTFLD("上衣","棉服");
         getSystemTime();
         showInMain();
         ImageView.OnClickListener listener = new ImageView.OnClickListener() {
@@ -598,6 +605,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 db.close();
                 Intent intent=new Intent(MainActivity.this,HairDetails.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });
@@ -606,6 +614,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 db.close();
                 Intent intent=new Intent(MainActivity.this,DressStyle.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });
@@ -614,6 +623,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 db.close();
                 Intent intent=new Intent(MainActivity.this,MakeupStyle.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });
@@ -622,7 +632,6 @@ public class MainActivity extends AppCompatActivity {
         butto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 db.close();
-                Intent in = getIntent();
                 Intent intent=new Intent(MainActivity.this,MySpace.class);
                 intent.putExtra("UserName",UserName);
                 startActivity(intent);
