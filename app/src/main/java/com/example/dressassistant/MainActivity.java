@@ -470,6 +470,27 @@ public class MainActivity extends AppCompatActivity {
             sql = "update [PlDe] set plde_HaID = '" + null + "' where plde_PlID = '" + UserName+SystemTime + "'";
         db.execSQL(sql);
     }
+    //修改计划表
+    public void goHistory(){
+        Cursor cur = null;
+        String plid = null;
+        String sql;
+        cur = db.rawQuery("select * from UHPl where uhpl_UsID = '" + UserName + "' and htpl_Time = '"+ SystemTime + "'", null);
+        cur.moveToFirst();
+        if(cur.getCount() == 0) {
+            cur = db.rawQuery("select * from UHPl where uhpl_UsID = '" + UserName + "'order by uhpl_PlID desc", null);
+            cur.moveToNext();
+            plid = cur.getString(cur.getColumnIndex("uhpl_PlID"));
+//            ??来个该用户历史计划的时间的排序，删除该计划ID
+            Toast.makeText(MainActivity.this, plid, Toast.LENGTH_SHORT).show();
+
+            sql = "delete from PlDe where plde_PlID = '" + plid + "'";
+            db.execSQL(sql);
+            Toast.makeText(MainActivity.this, "修改明日计划成功!", Toast.LENGTH_SHORT).show();
+
+        }
+        cur.close();
+    }
     private String UserName;
     private String[] temp;
     protected void onCreate(Bundle savedInstanceState){
@@ -487,6 +508,10 @@ public class MainActivity extends AppCompatActivity {
 //        insertHaOrMa("haircut",R.drawable.ldbl, "ldbl", null, "no",-1);
         insertHaOrMa("haircut",R.drawable.lbfmw, "lbfmw", null, "no",-1);
 //        insertHaOrMa("haircut",R.drawable.hfxbwz, "hfxbwz", null, "no",10);
+        getSystemTime();
+
+        if(UserName != null)
+            goHistory();
         getSystemTime();
         showInMain();
         ImageView.OnClickListener listener = new ImageView.OnClickListener() {

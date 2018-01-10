@@ -11,17 +11,13 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
             <TextView
-                android:id="@+id/ttv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="半丸子头"
+                android:textSize="30dp"
                 android:gravity="center"
-<<<<<<< .merge_file_a01868
-                android:textSize="30dp" />
-=======
                 android:id="@+id/ttv"/>
->>>>>>> .merge_file_a06020
 
             <ImageView
                 android:id="@+id/iv"
