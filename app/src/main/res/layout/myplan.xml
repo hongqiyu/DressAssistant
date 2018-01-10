@@ -34,7 +34,6 @@
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:src="@drawable/zrfxthree"
                 android:layout_below="@+id/ttvv2"
                 android:id="@+id/mr1"/>
             <TextView
@@ -48,8 +47,7 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_below="@+id/ttvv3"
-                android:id="@+id/mr2"
-                android:src="@drawable/hbbt"/>
+                android:id="@+id/mr2"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,7 +59,6 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_below="@+id/ttvv4"
-                android:src="@drawable/hgxh1"
                 android:id="@+id/mr3"/>
             </RelativeLayout>
         </ScrollView>

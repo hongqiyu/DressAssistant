@@ -39,19 +39,23 @@ public class MyPlan extends AppCompatActivity {
 
     //从sqlite读取图片，并显示在桌面上
     public boolean getPhoto(String photoName, int id) {
-        if (photoName == null)
+        if (photoName.equals("null")) {
             return false;
-        Cursor cur = db.rawQuery("select * from AllPicture where alpi_PiID='" + photoName + "'", null);
-        cur.moveToFirst();
-        byte[] in = cur.getBlob(cur.getColumnIndex("alpi_PiLo"));
-        Bitmap bmpout = BitmapFactory.decodeByteArray(in, 0, in.length);
-        BitmapDrawable bd = new BitmapDrawable(getResources(), bmpout);
-        ImageView imageView = (ImageView) findViewById(id);
-        imageView.setImageDrawable(bd);
-        bmpout = null;
-        System.gc();
-        cur.close();
-        return false;
+        }
+        else {
+            Cursor cur = db.rawQuery("select * from AllPicture where alpi_PiID='" + photoName + "'", null);
+            cur.moveToFirst();
+            Toast.makeText(MyPlan.this, photoName, Toast.LENGTH_SHORT).show();
+            byte[] in = cur.getBlob(cur.getColumnIndex("alpi_PiLo"));
+            Bitmap bmpout = BitmapFactory.decodeByteArray(in, 0, in.length);
+            BitmapDrawable bd = new BitmapDrawable(getResources(), bmpout);
+            ImageView imageView = (ImageView) findViewById(id);
+            imageView.setImageDrawable(bd);
+            bmpout = null;
+            System.gc();
+            cur.close();
+            return true;
+        }
     }
     //打开数据库
     public void OpenCreateDB() {
@@ -87,9 +91,9 @@ public class MyPlan extends AppCompatActivity {
         String makeup = null;
         String hair = null;
         cur.moveToFirst();
-        suit = cur.getString(cur.getColumnIndex("plde_SuID"));
-        makeup = cur.getString(cur.getColumnIndex("plde_MaID"));
-        hair = cur.getString(cur.getColumnIndex("plde_HaID"));
+        suit = String.valueOf(cur.getString(cur.getColumnIndex("plde_SuID")));
+        makeup = String.valueOf(cur.getString(cur.getColumnIndex("plde_MaID")));
+        hair = String.valueOf(cur.getString(cur.getColumnIndex("plde_HaID")));
         getPhoto(suit,R.id.mr1);
         getPhoto(makeup,R.id.mr2);
         getPhoto(hair,R.id.mr3);

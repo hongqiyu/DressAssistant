@@ -65,6 +65,7 @@ public class MySpace extends AppCompatActivity {
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MySpace.this,HairDetails.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });
@@ -72,6 +73,7 @@ public class MySpace extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MySpace.this,DressStyle.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });
@@ -79,6 +81,7 @@ public class MySpace extends AppCompatActivity {
         but.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MySpace.this,MakeupStyle.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });
@@ -86,6 +89,8 @@ public class MySpace extends AppCompatActivity {
         buu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MySpace.this,Login.class);
+                UserName = null;
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });
@@ -93,6 +98,7 @@ public class MySpace extends AppCompatActivity {
         bb.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MySpace.this,MainActivity.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });
@@ -112,6 +118,7 @@ public class MySpace extends AppCompatActivity {
                 }
                 else {
                     cur.close();
+                    intent.putExtra("UserName",UserName);
                     startActivity(intent);
                 }
             }
@@ -132,6 +139,7 @@ public class MySpace extends AppCompatActivity {
                 }
                 else {
                     cur.close();
+                    intent.putExtra("UserName",UserName);
                     startActivity(intent);
                 }
             }
@@ -152,6 +160,7 @@ public class MySpace extends AppCompatActivity {
                 }
                 else {
                     cur.close();
+                    intent.putExtra("UserName",UserName);
                     startActivity(intent);
                 }
             }
@@ -160,7 +169,6 @@ public class MySpace extends AppCompatActivity {
         l.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent in = getIntent();
-                String UserName = in.getStringExtra("UserName");
                 Intent intent = new Intent(MySpace.this,Myself.class);
                 intent.putExtra("UserName",UserName);
                 startActivity(intent);
