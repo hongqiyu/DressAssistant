@@ -15,23 +15,35 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 android:src="@drawable/hdpmf1"
-                android:id="@+id/iv1"/>
-            <TextView
+                android:id="@+id/iv1"
+                android:layout_centerHorizontal="true"/>
+            <View
+                android:id="@+id/kong"
                 android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/iv1"/>
+            <TextView
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/iv1"
-                android:text="      棉服女冬季短款羽绒棉衣外套韩版学生面包服宽松加厚bf原宿风"
+                android:layout_below="@+id/kong"
+                android:text="----冬季短款学生面包服宽松原宿风----"
                 android:textColor="#000000"
                 android:textSize="18dp"
-                android:id="@+id/tvi1"/>
+                android:id="@+id/tvi1"
+                android:layout_centerHorizontal="true"/>
+            <View
+                android:id="@+id/kong2"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/tvi1"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvi1"
-                android:text="推荐原因"
+                android:layout_below="@+id/kong2"
+                android:text=" ·推荐原因·"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:id="@+id/tvi2"/>
@@ -43,14 +55,7 @@
                 android:id="@+id/tvi3"
                 android:text="1、领部设计：时尚拉链门襟。索道顺滑不卡链，方便穿着，防风保暖。"
                 android:textColor="#000000"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvi3"
-                android:id="@+id/tvi4"
-                android:layout_marginTop="10dp"
-                android:text="2、口袋设计：两侧斜插口袋，可携带小物件方便使用。"
-                android:textColor="#000000"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -59,8 +64,21 @@
                 android:id="@+id/tvi5"
                 android:text="3、下摆设计：包容度好，不挑身材，长度适中很显腿长。"
                 android:textColor="#000000"/>
-            </RelativeLayout>
-        </ScrollView>
+
+            <TextView
+                android:id="@+id/tvi4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvi3"
+                android:layout_marginTop="10dp"
+                android:text="2、口袋设计：两侧斜插口袋，可携带小物件方便使用。"
+                android:textColor="#000000" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/tvi4"/>
+        </RelativeLayout>
+    </ScrollView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -121,4 +139,4 @@
             android:background="#ffffff"
             android:text=""/>
     </LinearLayout>
-    </RelativeLayout>
+</RelativeLayout>

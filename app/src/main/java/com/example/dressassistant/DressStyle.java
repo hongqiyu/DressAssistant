@@ -88,10 +88,14 @@ public class DressStyle extends AppCompatActivity {
                     case R.id.d2:
                     case R.id.d3:
                     case R.id.d4:
-                        intent.putExtra("type", "separate");
-                        startActivity(intent);
+                        if(UserName == null){
+                            Toast.makeText(DressStyle.this, "未登陆！", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            intent.putExtra("type", "separate");
+                            startActivity(intent);
+                        }
                         break;
-
                     default:
                         intent.putExtra("type", "suit");
                         startActivity(intent2);
@@ -136,7 +140,7 @@ public class DressStyle extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(DressStyle.this, Personal.class);
-                intent.putExtra("flag", "special");
+                intent.putExtra("type", "special");
                 startActivity(intent);
             }
         });

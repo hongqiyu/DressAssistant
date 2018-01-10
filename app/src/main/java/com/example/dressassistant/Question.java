@@ -71,6 +71,11 @@ public class Question extends AppCompatActivity {
 
 
     }
+    public void getUserName() {
+        Intent intent = getIntent();
+        UserName = intent.getStringExtra("UserName");
+    }
+
     String neck = "0", shoulder = "0", chest = "0",arm = "0",waist ="0",leWi = "0",leHe = "0",hip = "0";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +84,7 @@ public class Question extends AppCompatActivity {
 
         OpenCreateDB();
         CheckBox RB1 = (CheckBox) findViewById(R.id.rb1);
-
+        getUserName();
         RB1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -192,9 +197,16 @@ public class Question extends AppCompatActivity {
         Button TVV=(Button) findViewById(R.id.b1);
         TVV.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                String sql = "update [FIDe] set fide_Neck = '" + neck + "' and fide_Shoulder = '" + shoulder + "' and fide_Chest =" + chest +"' and fide_Arm = '" + arm + "' and fide_Waist = '" + waist + "' and fide_LeWi = '" + leWi + "' and fide_LeHe = '" + leHe + "' and fide_Hip = '" + hip + "' where fide_FiNa = '" + UserName+"'";
+                String sql = "update [FIDe] set fide_Neck = '" + neck + "' , fide_Shoulder = '" + shoulder + "',fide_Chest = '" + chest +"' ,fide_Arm = '" + arm + "' ,fide_Waist = '" + waist + "' , fide_LeWi = '" + leWi + "' , fide_LeHe = '" + leHe + "' , fide_Hip = '" + hip + "' where fide_FiID = '" + UserName+"'";
                 db.execSQL(sql);
-// /                insertFQCDInfo(neck,shoulder,chest,arm,waist,leWi,leHe,hip);
+//                if(db != null){
+//                    Toast.makeText(Question.this,"选择成功！", Toast.LENGTH_SHORT).show();
+//                    Intent in = new Intent(Question.this,Login.class);
+//                    in.putExtra("UserName",UserName);
+////                    db.close();
+//                    startActivity(in);
+//                }
+                insertFQCDInfo(neck,shoulder,chest,arm,waist,leWi,leHe,hip);
             }
         });
     }
