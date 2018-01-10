@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="前一天"/>
-        <EditText
+        <TextView
             android:id="@+id/rq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,8 +87,7 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_below="@+id/v"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/zrzrone" />
+        android:layout_centerHorizontal="true"/>
 
             <View
                 android:id="@+id/v2"
@@ -116,8 +115,7 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_below="@+id/v3"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/zrfxone"/>
+        android:layout_centerHorizontal="true"/>
 
             <View
                 android:id="@+id/v4"
@@ -145,8 +143,7 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_below="@+id/testView15"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/zrmdone"/>
+        android:layout_centerHorizontal="true"/>
 
             </RelativeLayout>
         </ScrollView>

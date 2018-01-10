@@ -336,6 +336,7 @@ public class MainActivity extends AppCompatActivity {
     public void tomorrowPlan(String id, String type) {
         Cursor cur = null;
         Cursor cur1 = null;
+        //添加到历史计划
         cur1 = db.rawQuery("select * from UHPl where uhpl_UsID = '" + UserName + "' and htpl_Time = '"+ SystemTime + "'", null);
         if(cur1.getCount() == 0){
             ContentValues UHPl = new ContentValues();
@@ -502,9 +503,9 @@ public class MainActivity extends AppCompatActivity {
 //        insertSuOrSe("suit", R.drawable.cc, "cc", 6);
 //        insertHaOrMa("haircut",R.drawable.hfxbwz, "hfxbwz", null, "no",10);
         getSystemTime();
-
-        if(UserName != null)
-            goHistory();
+//
+//        if(UserName != null)
+//            goHistory();
         showInMain();
         ImageView.OnClickListener listener = new ImageView.OnClickListener() {
             @Override
