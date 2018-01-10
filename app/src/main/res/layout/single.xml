@@ -70,6 +70,7 @@
                         />
 
                     <ImageView
+                        android:id="@+id/add1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -90,11 +91,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         />
+
                     <ImageView
+                        android:id="@+id/add2"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@drawable/zxsc"/>
+                        android:background="@drawable/zxsc" />
                 </LinearLayout>
             </LinearLayout>
             <TextView
@@ -142,7 +145,7 @@
                         />
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/add3"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -162,11 +165,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         />
+
                     <ImageView
+                        android:id="@+id/add4"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@drawable/zxsc"/>
+                        android:background="@drawable/zxsc" />
                 </LinearLayout>
             </LinearLayout>
             <TextView
@@ -214,11 +219,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         />
+
                     <ImageView
+                        android:id="@+id/add5"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:background="@drawable/zxsc"/>
+                        android:background="@drawable/zxsc" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"
@@ -234,11 +241,13 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         />
+
                     <ImageView
+                        android:id="@+id/add6"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:background="@drawable/zxsc"/>
+                        android:background="@drawable/zxsc" />
                 </LinearLayout>
             </LinearLayout>
             <TextView
@@ -266,6 +275,61 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear8"
+                android:layout_below="@+id/linear7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/add7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/zxsc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/add8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/zxsc" />
+                </LinearLayout>
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
