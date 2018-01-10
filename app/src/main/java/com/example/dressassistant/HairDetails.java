@@ -62,14 +62,31 @@ public class HairDetails extends AppCompatActivity {
                         hairInfo("lhiarpgt");
                         break;
                     case R.id.iv2:
-                        hairInfo("iv2");
+                        hairInfo("lbbt");
                         break;
                     case R.id.iv3:
-                        hairInfo("iv3");
+                        hairInfo("ldbl");
                         break;
                     case R.id.iv4:
                         hairInfo("hfxbwz");
                         break;
+                    case R.id.iv5:
+                        hairInfo("lsmw");
+                        break;
+                    case R.id.iv6:
+                        hairInfo("ldmw");
+                        break;
+                    case R.id.iv7:
+                        hairInfo("lbfmw");
+                        break;
+                    case R.id.iv8:
+                        hairInfo("lhswzt");
+                        break;
+                    case R.id.iv9:
+                        hairInfo("lhbt");
+                        break;
+                    case R.id.iv10:
+                        hairInfo("lwgb");
                     default:
                         break;
                 }
@@ -83,6 +100,19 @@ public class HairDetails extends AppCompatActivity {
         iv3.setOnClickListener(listener);
         ImageView iv4 = (ImageView)findViewById(R.id.iv4);
         iv4.setOnClickListener(listener);
+        ImageView iv5 = (ImageView)findViewById(R.id.iv5);
+        iv5.setOnClickListener(listener);
+        ImageView iv6 = (ImageView)findViewById(R.id.iv6);
+        iv6.setOnClickListener(listener);
+        ImageView iv7 = (ImageView)findViewById(R.id.iv7);
+        iv7.setOnClickListener(listener);
+        ImageView iv8 = (ImageView)findViewById(R.id.iv8);
+        iv8.setOnClickListener(listener);
+        ImageView iv9 = (ImageView)findViewById(R.id.iv9);
+        iv9.setOnClickListener(listener);
+        ImageView iv10 = (ImageView)findViewById(R.id.iv10);
+        iv10.setOnClickListener(listener);
+
     }
 }
 

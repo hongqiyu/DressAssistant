@@ -469,7 +469,12 @@ public class MainActivity extends AppCompatActivity {
         //打开数据库
         OpenCreateDB();
 //        insertSuOrSe("suit", R.drawable.cc, "cc", 6);
-        insertHaOrMa("haircut",R.drawable.lhairpgt, "lhiarpgt", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.lhbt, "lhbt", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.lsmw, "lsmw", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.lwgb, "lwgb", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.lhswzt, "lhswzt", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.ldbl, "ldbl", null, "no",-1);
+        insertHaOrMa("haircut",R.drawable.lbfmw, "lbfmw", null, "no",-1);
         showInMain();
         ImageView.OnClickListener listener = new ImageView.OnClickListener() {
             @Override
