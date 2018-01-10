@@ -71,9 +71,11 @@ public class MySpace extends AppCompatActivity {
         getUserName();
         OpenCreateDB();//打开数据库
         getSystemTime();
-        QueryQues(UserName);
-        TextView tv = (TextView)findViewById(R.id.tv);
-        tv.setText(NickName);
+        if(UserName != null){
+            QueryQues(UserName);
+            TextView tv = (TextView)findViewById(R.id.tv);
+            tv.setText(NickName);
+        }
         Button bu=(Button) findViewById(R.id.button8);
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
