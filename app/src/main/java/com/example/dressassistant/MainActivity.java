@@ -1,5 +1,6 @@
 package com.example.dressassistant;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.database.Cursor;
@@ -8,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -24,10 +26,20 @@ import android.widget.TextView;
 
 import android.widget.Toast;
 
+import android.support.v4.view.ViewPager;
 import android.view.Menu;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -35,6 +47,12 @@ import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Handler;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ScheduledExecutorService;
 
 public class MainActivity extends AppCompatActivity {
     private Handler handler = new Handler();
@@ -136,7 +154,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean insertHaOrMa(String type, int id, String photoId, String videoName, String Flag, int PoVa) {
         Resources res = getResources(); //打开drawable文件夹的资源
         Bitmap bmp = BitmapFactory.decodeResource(res, id);  // 此处id  例如为 R.drawable.co
-
         int size = bmp.getWidth() * bmp.getHeight() * 4;
         ByteArrayOutputStream os = new ByteArrayOutputStream(size); //设置读取大小
         bmp.compress(Bitmap.CompressFormat.PNG, 100, os); //设置压缩格式，存入流
@@ -214,6 +231,7 @@ public class MainActivity extends AppCompatActivity {
         BitmapDrawable bd = new BitmapDrawable(getResources(), bmpout);
         ImageView imageView = (ImageView) findViewById(id);
         imageView.setImageDrawable(bd);
+        imageView.invalidate();
         bmpout = null;
         System.gc();
         cur.close();
@@ -319,6 +337,7 @@ public class MainActivity extends AppCompatActivity {
     public void tomorrowPlan(String id, String type) {
         Cursor cur = null;
         Cursor cur1 = null;
+        //添加到历史计划
         cur1 = db.rawQuery("select * from UHPl where uhpl_UsID = '" + UserName + "' and htpl_Time = '"+ SystemTime + "'", null);
         if(cur1.getCount() == 0){
             ContentValues UHPl = new ContentValues();
@@ -483,20 +502,15 @@ public class MainActivity extends AppCompatActivity {
         //打开数据库
         OpenCreateDB();
 //        insertSuOrSe("suit", R.drawable.cc, "cc", 6);
-//        insertHaOrMa("makeup",R.drawable.mlomf, "mlomf", null, "no",10);
 
-//        insertHaOrMa("makeup",R.drawable.mlcz, "mlcz", null, "no",-1);//
-//        insertHaOrMa("makeup",R.drawable.mlomf, "mlomf", null, "no",-1);
-//        insertHaOrMa("makeup",R.drawable.mlqsz, "mlqsz", null, "no",-1);
-//        insertHaOrMa("makeup",R.drawable.mlqxf, "mlqxf", null, "no",-1);
-//        insertHaOrMa("makeup",R.drawable.mlrmf, "mlrmf", null, "no",-1);.
-//        insertHaOrMa("makeup",R.drawable.mlycz, "mlycz", null, "no",-1);
-//        insertHaOrMa("makeup",R.drawable.mlyxz, "mlyxz", null, "no",-1);
-//        insertHaOrMa("makeup",R.drawable.mlyjz, "mlyjz", null, "no",-1);
-//        insertHaOrMa("makeup",R.drawable.mlyz, "mlyz", null, "no",-1);
-//        insertHaOrMa("makeup",R.drawable.mlmz, "mlmz", null, "no",-1);
-        insertHaOrMa("makeup",R.drawable.hrxzr, "hrxzr", null, "no",-1);
-
+//        insertHaOrMa("haircut",R.drawable.lhbt, "lhbt", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.lsmw, "lsmw", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.lwgb, "lwgb", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.lhswzt, "lhswzt", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.ldbl, "ldbl", null, "no",-1);
+        insertHaOrMa("haircut",R.drawable.lbfmw, "lbfmw", null, "no",-1);
+//        insertHaOrMa("haircut",R.drawable.hfxbwz, "hfxbwz", null, "no",10);
+        getSystemTime();
 
         if(UserName != null)
             goHistory();

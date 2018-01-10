@@ -303,7 +303,7 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/zdpsy"
+            android:src="@drawable/zdpps"
             android:layout_margin="10dp"/>
         <ImageView
             android:layout_width="0dp"
@@ -315,7 +315,7 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:src="@drawable/zcjjh"
+            android:src="@drawable/zdpps"
             android:layout_margin="10dp"/>
     </LinearLayout>
     <LinearLayout

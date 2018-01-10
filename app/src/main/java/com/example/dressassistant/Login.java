@@ -25,7 +25,18 @@ import java.util.Date;
 public class Login extends AppCompatActivity {
     private static final String DB_NAME="dressassistant.db";
     private SQLiteDatabase db;
-
+    //    判断用户名和密码是否存在
+    private boolean isValidUser(String strUserName, String strUserPwd){
+        Cursor cursor = db.rawQuery("select * from PersInfo where pers_UsID='"+strUserName+"'and pers_Password='"+strUserPwd+"'",null);
+        if(cursor.getCount() == 1){
+            cursor.close();
+            return true;
+        }
+        else {
+            cursor.close();
+            return false;
+        }
+    }
 
     //打开数据库
     private void OpenCreateDB()
@@ -62,19 +73,6 @@ public class Login extends AppCompatActivity {
             return false;
         }
     }
-
-    //    判断用户名和密码是否存在
-    private boolean isValidUser(String strUserName, String strUserPwd){
-        Cursor cursor = db.rawQuery("select * from PersInfo where pers_UsID='"+strUserName+"'and pers_Password='"+strUserPwd+"'",null);
-        if(cursor.getCount() == 1){
-            cursor.close();
-            return true;
-        }
-        else {
-            cursor.close();
-            return false;
-        }
-    }
     private String SystemTime;
     public void getSystemTime(){
         //系统时间
@@ -82,23 +80,6 @@ public class Login extends AppCompatActivity {
         Date curDate = new Date(System.currentTimeMillis());
         SystemTime = formatter.format(curDate);
     }
-    public void goHistory(){
-        //系统时间
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String date = sdf.format(new java.util.Date());
-        Cursor cur = null;
-        String dbdate = null;
-        String sql;
-        cur = db.rawQuery("select * from UHPl where uhpl_UsID = '" + UserName + "' and htpl_Time = '"+ SystemTime + "'", null);
-        cur.moveToFirst();
-        if(cur.getCount() == 0) {
-            dbdate = cur.getString(cur.getColumnIndex("plde_Time"));
-            sql = "delete from PlDe where plde_PlID = '" + UserName + "'";
-            db.execSQL(sql);
-        }
-        cur.close();
-    }
-
 
     //创建DBHelper对象
     private  DBHelper helper;
@@ -109,8 +90,6 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.login);
         //打开数据库
         OpenCreateDB();
-        if(UserName != null)
-            goHistory();
         getSystemTime();
         //创建数据库，从asserts将数据库导入工程中
         helper = new DBHelper(this);
@@ -154,6 +133,7 @@ public class Login extends AppCompatActivity {
                                 String data = " Hello MainActivity";
                                 Intent intent=new Intent(Login.this,MainActivity.class);
                                 intent.putExtra("extra_data", data);
+                                UserName = strUserName;
                                 intent.putExtra("UserName",strUserName);
                                 startActivity(intent);
                             }

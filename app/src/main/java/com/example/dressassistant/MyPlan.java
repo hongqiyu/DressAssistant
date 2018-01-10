@@ -20,10 +20,6 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by 洪祺瑜 on 2018-01-09.
@@ -43,19 +39,22 @@ public class MyPlan extends AppCompatActivity {
 
     //从sqlite读取图片，并显示在桌面上
     public boolean getPhoto(String photoName, int id) {
-        if (photoName == null)
+        if (photoName.equals("null")) {
             return false;
-        Cursor cur = db.rawQuery("select * from AllPicture where alpi_PiID='" + photoName + "'", null);
-        cur.moveToFirst();
-        byte[] in = cur.getBlob(cur.getColumnIndex("alpi_PiLo"));
-        Bitmap bmpout = BitmapFactory.decodeByteArray(in, 0, in.length);
-        BitmapDrawable bd = new BitmapDrawable(getResources(), bmpout);
-        ImageView imageView = (ImageView) findViewById(id);
-        imageView.setImageDrawable(bd);
-        bmpout = null;
-        System.gc();
-        cur.close();
-        return false;
+        }
+        else {
+            Cursor cur = db.rawQuery("select * from AllPicture where alpi_PiID='" + photoName + "'", null);
+            cur.moveToFirst();
+            byte[] in = cur.getBlob(cur.getColumnIndex("alpi_PiLo"));
+            Bitmap bmpout = BitmapFactory.decodeByteArray(in, 0, in.length);
+            BitmapDrawable bd = new BitmapDrawable(getResources(), bmpout);
+            ImageView imageView = (ImageView) findViewById(id);
+            imageView.setImageDrawable(bd);
+            bmpout = null;
+            System.gc();
+            cur.close();
+            return true;
+        }
     }
     //打开数据库
     public void OpenCreateDB() {
@@ -73,10 +72,6 @@ public class MyPlan extends AppCompatActivity {
             Log.d("tag", String.format(msg, se.getClass(), se.getMessage()));
         }
     }
-
-
-
-
     private String SystemTime;
     public void getSystemTime(){
         //系统时间
@@ -89,30 +84,15 @@ public class MyPlan extends AppCompatActivity {
         setContentView(R.layout.myplan);
         OpenCreateDB();//打开数据库
         getUserName();
-        Cursor cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName +"'",null);
-        if(cur.getCount() == 0) {
-            Toast.makeText(MyPlan.this, "还未有计划，快去添加", Toast.LENGTH_SHORT).show();
-            cur.close();
-            return;
-        }
+        getSystemTime();
+        Cursor cur = db.rawQuery("select * from PlDe where plde_PlID ='" + UserName + SystemTime +"'",null);
         String suit = null;
         String makeup = null;
         String hair = null;
         cur.moveToFirst();
-        suit = cur.getString(cur.getColumnIndex("plde_SuID"));
-        makeup = cur.getString(cur.getColumnIndex("plde_MaID"));
-        hair = cur.getString(cur.getColumnIndex("plde_HaID"));
-        getPhoto(suit,R.id.mr1);
-        getPhoto(makeup,R.id.mr2);
-        getPhoto(hair,R.id.mr3);
-        cur.close();
-        OpenCreateDB();//打开数据库
-        getUserName();
-        getSystemTime();
-        cur.moveToFirst();
-        suit = cur.getString(cur.getColumnIndex("plde_SuID"));
-        makeup = cur.getString(cur.getColumnIndex("plde_MaID"));
-        hair = cur.getString(cur.getColumnIndex("plde_HaID"));
+        suit = String.valueOf(cur.getString(cur.getColumnIndex("plde_SuID")));
+        makeup = String.valueOf(cur.getString(cur.getColumnIndex("plde_MaID")));
+        hair = String.valueOf(cur.getString(cur.getColumnIndex("plde_HaID")));
         getPhoto(suit,R.id.mr1);
         getPhoto(makeup,R.id.mr2);
         getPhoto(hair,R.id.mr3);

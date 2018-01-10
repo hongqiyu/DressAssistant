@@ -86,7 +86,7 @@ public class MyCollect extends AppCompatActivity {
             getPhoto(name,imageView);
 //            imageView.setImageResource(R.drawable.cc);
             group.addView(imageView);
-            textView.setText("123");
+            textView.setText(name);
             group1.addView(textView);
         }
     }
