@@ -23,6 +23,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:text="穿粉色棉衣，做快乐公主"
                 android:layout_below="@+id/imv1"
                 android:textSize="20dp"
@@ -32,10 +33,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:layout_below="@+id/tv1"
+                android:lineSpacingMultiplier="2"
                 android:id="@+id/tv2"
                 android:textSize="15dp"
+                android:textColor="#000000"
                 android:text="\t\t粉色总是带给我们更加甜美的想像空间，正如这件棉衣这样，简单中透着一丝可爱，而这也恰恰是我十分喜欢的一点。 搭件基础款的卫衣，再来条破洞的牛仔裤，十分休闲的组合却很难穿出少女感，然后小白鞋再一穿，更显美丽动人。"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv2"/>
         </RelativeLayout>
         </ScrollView>
     <LinearLayout
