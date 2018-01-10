@@ -1,5 +1,6 @@
 package com.example.dressassistant;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -14,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by 洪祺瑜 on 2017-12-13.
@@ -47,7 +50,6 @@ public class Login extends AppCompatActivity {
             Log.e("tag","open error:" + e.getMessage());
             db = null;
         }
-
         try
         {
             db.execSQL("CREATE TABLE IF NOT EXISTS PersInfo(_id INTEGER PRIMARY KEY AUTOINCREMENT, pers_UsID VARCHAR, pers_UsNa VARCHAR, pers_Password VARCHAR, pers_Phone VARCHAR, pers_HePi VARCHAR, pers_Birthday VARCHAR, pers_FILID VARCHAR, pers_FLID VARCHAR, pers_FaID VARCHAR, pers_CUID VARCHAR, pers_PlID VARCHAR, pers_FeID VARCHAR, pers_GDUID VARCHAR, pers_MyMe VARCHAR, pers_CPLID VARCHAR, pers_FCID VARCHAR, pers_Q1 VARCHAR, pers_Q2 VARCHAR, pers_Q3 VARCHAR, pers_A1 VARCHAR, pers_A2 VARCHAR, pers_A3 VARCHAR)");
@@ -70,14 +72,41 @@ public class Login extends AppCompatActivity {
             return false;
         }
     }
+    private String SystemTime;
+    public void getSystemTime(){
+        //系统时间
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        Date curDate = new Date(System.currentTimeMillis());
+        SystemTime = formatter.format(curDate);
+    }
+    public void goHistory(){
+        //系统时间
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String date = sdf.format(new java.util.Date());
+        Cursor cur = null;
+        String dbdate = null;
+        String sql;
+        cur = db.rawQuery("select * from UHPl where uhpl_UsID = '" + UserName + "' and htpl_Time = '"+ SystemTime + "'", null);
+        cur.moveToFirst();
+        if(cur.getCount() == 0) {
+            dbdate = cur.getString(cur.getColumnIndex("plde_Time"));
+            sql = "delete from PlDe where plde_PlID = '" + UserName + "'";
+            db.execSQL(sql);
+        }
+        cur.close();
+    }
     //创建DBHelper对象
     private  DBHelper helper;
+    private String UserName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-
-
+        //打开数据库
+        OpenCreateDB();
+        if(UserName != null)
+            goHistory();
+        getSystemTime();
         //创建数据库，从asserts将数据库导入工程中
         helper = new DBHelper(this);
         try{
@@ -85,8 +114,7 @@ public class Login extends AppCompatActivity {
         }catch (IOException e){
             e.printStackTrace();
         }
-        //打开数据库
-        OpenCreateDB();
+
         //点击我要注册
         TextView TVV=(TextView)findViewById(R.id.button20);
         TVV.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +149,7 @@ public class Login extends AppCompatActivity {
                                 String data = " Hello MainActivity";
                                 Intent intent=new Intent(Login.this,MainActivity.class);
                                 intent.putExtra("extra_data", data);
+                                UserName = strUserName;
                                 intent.putExtra("UserName",strUserName);
                                 startActivity(intent);
                             }
