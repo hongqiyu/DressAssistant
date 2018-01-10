@@ -15,216 +15,27 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <RelativeLayout
+            <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/hgxh3"
-                android:id="@+id/imvi1"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="简约百搭高领打底"
-                    android:background="#FF82AB"
-                    android:textColor="#ffffff"
-                    android:textSize="14dp"
-                    android:layout_marginRight="44dp"
-                    android:layout_marginEnd="44dp"
-                    android:layout_marginTop="48dp"
-                    android:id="@+id/textView36"
-                    android:layout_below="@+id/textView39"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="极简风纯色过膝羽绒服"
-                    android:background="#FF82AB"
-                    android:textColor="#ffffff"
-                    android:textSize="14dp"
-                    android:id="@+id/textView35"
-                    android:layout_marginTop="53dp"
-                    android:layout_below="@+id/textView36"
-                    android:layout_toLeftOf="@+id/textView36"
-                    android:layout_toStartOf="@+id/textView36"
-                    android:layout_marginRight="12dp"
-                    android:layout_marginEnd="12dp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="显瘦又百搭黑色半身裙"
-                    android:background="#FF82AB"
-                    android:textColor="#ffffff"
-                    android:textSize="14dp"
-                    android:layout_marginTop="46dp"
-                    android:id="@+id/textView37"
-                    android:layout_below="@+id/textView35"
-                    android:layout_toLeftOf="@+id/textView36"
-                    android:layout_toStartOf="@+id/textView36" />
-                <TextView
-                    android:id="@+id/textView38"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="小皮鞋"
-                    android:background="#FF82AB"
-                    android:textColor="#ffffff"
-                    android:textSize="14dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_below="@+id/textView37"
-                    android:layout_toRightOf="@+id/textView37"
-                    android:layout_toEndOf="@+id/textView37"
-                    android:layout_marginTop="51dp" />
-                <TextView
-                    android:id="@+id/textView39"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="针织帽"
-                    android:background="#FF82AB"
-                    android:textColor="#ffffff"
-                    android:textSize="14dp"
-                    android:layout_marginRight="37dp"
-                    android:layout_marginEnd="37dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_toLeftOf="@+id/textView38"
-                    android:layout_toStartOf="@+id/textView38" />
-            </RelativeLayout>
-            <!--<ImageView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:src="@drawable/hgxh3"-->
-                <!--android:id="@+id/imvi1"/>-->
+                android:src="@drawable/htf7"
+                android:id="@+id/imv1"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imvi1"
-                android:id="@+id/tev1"
-                android:text="寒潮来袭,我有过膝羽绒服我怕谁"
-                android:textSize="23dp"
-                android:gravity="center"
-                android:textColor="#000000"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tev1"
-                android:id="@+id/tev2"
-                android:text="这个冬天很冷，作为怕冷星人，我早就准备了一件简约版型的过膝长羽绒服！纯色简洁的版型更加百搭哦，白色比黑色更加显得温柔哟~寒潮来袭我只需内搭高领打底衫+半身裙，就可以暖暖出门！另外搭配小皮鞋比靴子会更显轻盈和少女心哦~"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tev2"
-                android:id="@+id/tev3"
-                android:text="文中相关单品"
+                android:text="穿粉色棉衣，做快乐公主"
+                android:layout_below="@+id/imv1"
                 android:textSize="20dp"
+                android:gravity="center"
+                android:id="@+id/tv1"
                 android:textColor="#000000"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_below="@+id/tev3"
-                android:id="@+id/linea1">
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@drawable/hgxh1"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/hgxh3"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/hgxh1"/>
-            </LinearLayout>
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/linea1"
-                android:id="@+id/linea2">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="白色过膝长羽绒服"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="黑色半身裙"
-                    android:gravity="center"
-                    android:textColor="#000000"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:text="高领打底"
-                    android:gravity="center"
-                    android:textColor="#000000"
-                    android:layout_weight="1"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_below="@+id/linea2"
-                android:id="@+id/linea3">
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/hgxh1"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/hgxh2"/>
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linea3"
-                android:id="@+id/linea4">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textColor="#000000"
-                    android:gravity="center"
-                    android:text="针织帽"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textColor="#000000"
-                    android:gravity="center"
-                    android:text="小皮鞋"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:textColor="#000000"
-                    android:gravity="center"/>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/Empty"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_below="@+id/linea4">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:background="#FFFFFF"/>
-            </LinearLayout>
-
+                android:layout_below="@+id/tv1"
+                android:id="@+id/tv2"
+                android:textSize="15dp"
+                android:text="\t\t粉色总是带给我们更加甜美的想像空间，正如这件棉衣这样，简单中透着一丝可爱，而这也恰恰是我十分喜欢的一点。 搭件基础款的卫衣，再来条破洞的牛仔裤，十分休闲的组合却很难穿出少女感，然后小白鞋再一穿，更显美丽动人。"/>
         </RelativeLayout>
         </ScrollView>
     <LinearLayout
