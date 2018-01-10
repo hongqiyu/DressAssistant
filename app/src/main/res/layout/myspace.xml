@@ -38,39 +38,18 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="30dp"
         android:layout_below="@+id/view2"
+        android:background="#ffffff"
         android:id="@+id/Lin2">
-        <ImageView
-            android:id="@+id/imageButton"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:background="#ffffff"
-             />
-
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="7"
-            android:background="#ffffff">
-
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="小太阳"
                 android:textSize="17dp"
+                android:gravity="center"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView2"
-                android:text="超超小太阳...(一句话简介)" />
-        </RelativeLayout>
-
     </LinearLayout>
 
 
