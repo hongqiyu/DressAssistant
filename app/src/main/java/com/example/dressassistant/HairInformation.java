@@ -65,7 +65,7 @@ public class  HairInformation extends AppCompatActivity {
     }
     public void showIn(String name){
         getPhoto(name);
-        TextView Tv = (TextView)findViewById(R.id.ttv);
+//        TextView Tv = (TextView)findViewById(R.id.ttv);
 //        Tv.setText("半丸子头222");
 //        Toast.makeText(HairInformation.this, "成功!", Toast.LENGTH_SHORT).show();
 

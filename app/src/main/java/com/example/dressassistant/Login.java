@@ -25,18 +25,7 @@ import java.util.Date;
 public class Login extends AppCompatActivity {
     private static final String DB_NAME="dressassistant.db";
     private SQLiteDatabase db;
-    //    判断用户名和密码是否存在
-    private boolean isValidUser(String strUserName, String strUserPwd){
-        Cursor cursor = db.rawQuery("select * from PersInfo where pers_UsID='"+strUserName+"'and pers_Password='"+strUserPwd+"'",null);
-        if(cursor.getCount() == 1){
-            cursor.close();
-            return true;
-        }
-        else {
-            cursor.close();
-            return false;
-        }
-    }
+
 
     //打开数据库
     private void OpenCreateDB()
@@ -70,6 +59,19 @@ public class Login extends AppCompatActivity {
         }
         else
         {
+            return false;
+        }
+    }
+
+    //    判断用户名和密码是否存在
+    private boolean isValidUser(String strUserName, String strUserPwd){
+        Cursor cursor = db.rawQuery("select * from PersInfo where pers_UsID='"+strUserName+"'and pers_Password='"+strUserPwd+"'",null);
+        if(cursor.getCount() == 1){
+            cursor.close();
+            return true;
+        }
+        else {
+            cursor.close();
             return false;
         }
     }
@@ -109,9 +111,6 @@ public class Login extends AppCompatActivity {
         OpenCreateDB();
         if(UserName != null)
             goHistory();
-        getSystemTime();
-        //打开数据库
-        OpenCreateDB();
         getSystemTime();
         //创建数据库，从asserts将数据库导入工程中
         helper = new DBHelper(this);

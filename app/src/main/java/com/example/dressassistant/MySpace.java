@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
@@ -52,6 +53,16 @@ public class MySpace extends AppCompatActivity {
         Date curDate = new Date(System.currentTimeMillis());
         SystemTime = formatter.format(curDate);
     }
+    String NickName;
+    //将昵称取出
+    private void QueryQues(String strUserName){
+        Cursor cursor = db.rawQuery("select * from PersInfo where pers_UsID='" + strUserName + "'",null);
+        if(cursor.moveToFirst()){  //循环遍历查找数组
+            NickName= cursor.getString(cursor.getColumnIndex("pers_UsNa"));
+            // Toast.makeText(Forgetpagetwo.this,Q1,Toast.LENGTH_SHORT).show();
+        }
+        cursor.close();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +71,9 @@ public class MySpace extends AppCompatActivity {
         getUserName();
         OpenCreateDB();//打开数据库
         getSystemTime();
-
+        QueryQues(UserName);
+        TextView tv = (TextView)findViewById(R.id.tv);
+        tv.setText(NickName);
         Button bu=(Button) findViewById(R.id.button8);
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

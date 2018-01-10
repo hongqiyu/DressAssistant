@@ -56,19 +56,16 @@
             android:background="#ffffff">
 
             <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="小太阳"
                 android:textSize="17dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView2"
-                android:text="超超小太阳...(一句话简介)" />
+                android:layout_below="@+id/tv" />
         </RelativeLayout>
 
     </LinearLayout>
