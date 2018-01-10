@@ -511,9 +511,9 @@ public class MainActivity extends AppCompatActivity {
         insertHaOrMa("haircut",R.drawable.lbfmw, "lbfmw", null, "no",-1);
 //        insertHaOrMa("haircut",R.drawable.hfxbwz, "hfxbwz", null, "no",10);
         getSystemTime();
-
-        if(UserName != null)
-            goHistory();
+//
+//        if(UserName != null)
+//            goHistory();
         getSystemTime();
         showInMain();
         ImageView.OnClickListener listener = new ImageView.OnClickListener() {
