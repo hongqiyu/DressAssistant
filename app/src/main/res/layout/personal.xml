@@ -14,13 +14,14 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <TextView
+                android:id="@+id/ta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="个性化服装定制"
-                android:textSize="30dp"
                 android:gravity="center"
-                android:id="@+id/ta"/>
+                android:text="服装"
+                android:textSize="30dp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
