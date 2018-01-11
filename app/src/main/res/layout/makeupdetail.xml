@@ -24,6 +24,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/hrxzr" />
-            </RelativeLayout>
-        </ScrollView>
-    </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

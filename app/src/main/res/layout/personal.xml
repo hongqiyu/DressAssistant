@@ -133,7 +133,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@drawable/hgxh3" />
+                    android:background="@drawable/tf7" />
 
                 <ImageView
                     android:id="@+id/ii4"

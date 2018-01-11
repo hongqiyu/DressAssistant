@@ -11,17 +11,31 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MakeupStyle extends AppCompatActivity {
-
+    private String UserName;
     public void makeupInfo(String id){
-        Intent intent = new Intent(MakeupStyle.this,HairInformation.class);
+        Intent intent = new Intent(MakeupStyle.this,MakeupDetail.class);
         intent.putExtra("id",id);
         startActivity(intent);
+    }
+
+    public void getUserName() {
+        Intent intent = getIntent();
+        UserName = intent.getStringExtra("UserName");
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.makeupstyle);
+
+        ImageView iv7 = (ImageView)findViewById(R.id.imageButtonG);
+        iv7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MakeupStyle.this,MakeupDetails.class);
+                startActivity(intent);
+            }
+        });
 
         ImageView.OnClickListener listener = new ImageView.OnClickListener(){
             public void onClick(View v){
@@ -56,8 +70,10 @@ public class MakeupStyle extends AppCompatActivity {
                         break;
                     case R.id.imageButtonJ:
                         makeupInfo("mlyz");//
+                        break;
                     case R.id.imageButtonK:
                         makeupInfo("mlycz");//
+                        break;
                     default:
                         break;
                 }
@@ -71,8 +87,8 @@ public class MakeupStyle extends AppCompatActivity {
         iv3.setOnClickListener(listener);
         ImageView iv4 = (ImageView)findViewById(R.id.imageButtonD);
         iv4.setOnClickListener(listener);
-//        ImageView iv5 = (ImageView)findViewById(R.id.imageButtonE);
-//        iv5.setOnClickListener(listener);
+        ImageView iv5 = (ImageView)findViewById(R.id.imageButtonE);
+        iv5.setOnClickListener(listener);
         ImageView iv6 = (ImageView)findViewById(R.id.imageButtonF);
         iv6.setOnClickListener(listener);
 //        ImageView iv7 = (ImageView)findViewById(R.id.imageButtonG);
@@ -90,6 +106,7 @@ public class MakeupStyle extends AppCompatActivity {
         bu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MakeupStyle.this,HairDetails.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });
@@ -97,6 +114,7 @@ public class MakeupStyle extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MakeupStyle.this,DressStyle.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });
@@ -104,6 +122,7 @@ public class MakeupStyle extends AppCompatActivity {
         butto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MakeupStyle.this,MySpace.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });
@@ -111,16 +130,11 @@ public class MakeupStyle extends AppCompatActivity {
         buttonn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent=new Intent(MakeupStyle.this,MainActivity.class);
+                intent.putExtra("UserName",UserName);
                 startActivity(intent);
             }
         });
-        ImageView imbe=(ImageView)findViewById(R.id.imageButtonE);
-        imbe.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent=new Intent(MakeupStyle.this,MakeupDetail.class);
-                startActivity(intent);
-            }
-        });
+
     }
-    }
+}
 

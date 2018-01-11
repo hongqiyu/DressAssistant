@@ -11,13 +11,13 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <TextView
+                android:id="@+id/ttv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="半丸子头"
-                android:textSize="30dp"
                 android:gravity="center"
-                android:id="@+id/ttv"/>
+                android:textSize="30dp" />
 
             <ImageView
                 android:id="@+id/iv"
@@ -66,12 +66,6 @@
             android:layout_weight="1"
             android:background="#ffffff"
             android:text="" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="25dp"
-            android:layout_weight="1"
-            android:background="@drawable/zxsc"
-            android:text=""/>
 
         <Button
             android:layout_width="0dp"
@@ -79,12 +73,7 @@
             android:layout_weight="0.5"
             android:background="#ffffff"
             android:text=""/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="25dp"
-            android:layout_weight="1"
-            android:background="@drawable/zxjh"
-            android:text=""/>
+
         <Button
             android:layout_width="0dp"
             android:layout_height="25dp"

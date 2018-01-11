@@ -87,8 +87,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/view8"
                 android:layout_centerHorizontal="true"
-                android:text="----------妆容----------"
-                android:textSize="20dp"/>
+                android:text="----------穿搭----------"
+                android:textSize="20dp" />
 
             <View
                 android:id="@+id/v"
@@ -136,8 +136,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/v4"
                 android:layout_centerHorizontal="true"
-                android:text="----------穿搭----------"
-                android:textSize="20dp"/>
+                android:text="----------妆容----------"
+                android:textSize="20dp" />
 
             <View
                 android:id="@+id/v5"

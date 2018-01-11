@@ -329,7 +329,7 @@
             android:layout_height="70dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:src="@drawable/zdpps" />
+            android:src="@drawable/hkz" />
 
         <ImageView
             android:id="@+id/d3"

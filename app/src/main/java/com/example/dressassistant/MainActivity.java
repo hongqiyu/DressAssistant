@@ -520,7 +520,9 @@ public class MainActivity extends AppCompatActivity {
         getSystemTime();
         showInMain();
 //        insertSuOrSe("suit", R.drawable.tf1, "tf1", 7, null);
-//        insertHaOrMa("haircut",R.drawable.lhbt, "lhbt", null, "no",-1);
+        insertHaOrMa("makeup",R.drawable.hrxzr, "hrxzr", null, "no",-1);
+//        insertHaOrMa("makeup",R.drawable.hrxz, "hrxzr", null, "no",-1);
+
 //        insertSTLN("1","sy");
 //        insertSuOrSe("Separate", R.drawable.dwt1, "dwt1", 6, "dwt");
 
