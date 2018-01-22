@@ -133,6 +133,7 @@ public class DressStyle extends AppCompatActivity {
                 }
             }
         };
+
         ImageView c1 =(ImageView) findViewById(R.id.c1);
         c1.setOnClickListener(listener);
         ImageView c2 =(ImageView) findViewById(R.id.c2);
